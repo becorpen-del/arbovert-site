@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #111111;
+  background-color: #F5F1E8;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  background-color: #F5F1E8;
+  color: #111111;
+  min-height: 100vh;
+}
+
+a {
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-md px-5 py-3 text-sm font-semibold transition-colors duration-200;
+}
+
+.btn-primary {
+  @apply bg-forest text-white hover:bg-leaf;
+}
+
+.btn-outline {
+  @apply border border-forest text-forest hover:bg-forest hover:text-white;
+}
+
+.section {
+  @apply py-12 lg:py-20;
+}
+
+.section-heading {
+  @apply text-3xl font-semibold text-forest font-heading mb-6;
+}
+
+::selection {
+  background: #5E8A5F;
+  color: #FFFFFF;
+}
