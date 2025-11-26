@@ -39,10 +39,17 @@ const realisations: RealisationCardProps[] = [
   },
   {
     title: 'Démontage d’un Pin parasol',
-    location: 'Colomiers',
-    description: '',
+    location: 'Haute-Garonne (31)',
+    description:
+      "Abattage préventif d'un pin parasol implanté à moins de 3 mètres de l'habitation. L'accumulation chronique d'aiguilles sur la couverture engendrait un risque avéré d'infiltration par obstruction des évacuations pluviales et rétention d'humidité. Face à ce risque structurel pour le bâti, le client a opté pour une suppression raisonnée de l'arbre. Intervention réalisée par démontage descendant avec rétention systématique des billons pour préserver l'intégrité de la toiture et des façades.",
+    highlights: [
+      'Démantèlement contrôlé sans impact sur la structure',
+      'Suppression définitive des risques d’infiltration',
+      'Évacuation complète des rémanents et aiguilles'
+    ],
+    footer: "📍 Haute-Garonne (31) | 🛠️ Abattage d'arbres dangereux près des habitations",
     beforeImage: '/realisations/Colomiers - avant.jpg',
-    afterImage: '/realisations/colomiers-apres.jpg'
+    afterImage: '/realisations/Colomiers - après.jpg'
   },
   {
     title: 'Démontage de peuplier en zone multi-contraintes',
