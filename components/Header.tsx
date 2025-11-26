@@ -14,7 +14,7 @@ const Header = () => {
         <div className="flex items-center justify-between pt-3 pb-[2px]">
           <Link href="/" className="group flex items-center gap-3">
             <Image
-              src="/Arbovert- sans fond.png"
+              src="/Arbovert-sans-fond.png"
               alt="Logo Arbovert"
               width={198}
               height={138}
