@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const realisations: RealisationCardProps[] = [
   {
     title: "Abattage préventif d'un pin parasol à proximité d'habitation",
-    location: 'Haute-Garonne (31)',
+    location: 'Saint-Julien-Sur-Garonne (31)',
     description:
       'Démontage par démantèlement d’un pin parasol implanté à moins de 3 mètres de l’habitation. L’accumulation permanente d’aiguilles sur la toiture créait un risque majeur d’infiltration et d’obstruction des gouttières. Pour prévenir tout dommage structurel, le client a opté pour une suppression raisonnée de l’arbre. Intervention réalisée avec nacelle pour garantir la sécurité et préserver l’intégrité du bâti.',
     highlights: [
@@ -21,7 +21,7 @@ const realisations: RealisationCardProps[] = [
     ],
     footer: '📍 Haute-Garonne (31) | 🛠️ Abattage d’arbres près des habitations',
     beforeImage: '/realisations/Saint-Julien-sur-Garonne - Avant.jpg',
-    afterImage: '/realisations/Saint-Julien-sur-Garonne - Après.jpg'
+    afterImage: '/realisations/Saint-Julien-sur-Garonne - Après.jpg'
   },
   {
     title: "Abattage d'un eucalyptus en zone contrainte",
