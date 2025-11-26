@@ -21,7 +21,7 @@ const realisations: RealisationCardProps[] = [
     ],
     footer: '📍 Haute-Garonne (31) | 🛠️ Abattage d’arbres près des habitations',
     beforeImage: '/realisations/Saint-Julien-sur-Garonne - Avant.jpg',
-    afterImage: '/realisations/Saint-Julien-sur-Garonne - Après.jpg'
+    afterImage: '/realisations/saint-julien-sur-garonne-apres.jpg'
   },
   {
     title: "Abattage d'un eucalyptus en zone contrainte",
@@ -42,7 +42,7 @@ const realisations: RealisationCardProps[] = [
     location: 'Colomiers',
     description: '',
     beforeImage: '/realisations/Colomiers - avant.jpg',
-    afterImage: '/realisations/Colomiers - après.jpg'
+    afterImage: '/realisations/colomiers-apres.jpg'
   },
   {
     title: 'Démontage de peuplier en zone multi-contraintes',
