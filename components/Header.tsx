@@ -18,10 +18,10 @@ const Header = () => {
               alt="Logo Arbovert"
               width={198}
               height={138}
-              className="h-[138px] w-auto object-contain drop-shadow-sm transition group-hover:scale-[1.02]"
+              className="h-14 w-auto object-contain drop-shadow-sm transition group-hover:scale-[1.02] md:h-[138px]"
               priority
             />
-            <div className="flex flex-col leading-tight">
+            <div className="hidden flex-col leading-tight md:flex">
               <span className="font-heading text-xl font-semibold text-forest">ARBOVERT</span>
               <span className="text-xs uppercase tracking-[0.08em] text-night/70">
                 Élagage & entretien
@@ -37,7 +37,7 @@ const Header = () => {
           </nav>
           <a
             href="tel:0600000000"
-            className="btn btn-primary text-xs sm:text-sm"
+            className="btn btn-primary rounded-md px-3 py-2 text-xs whitespace-nowrap sm:text-sm md:rounded-lg md:px-4 md:py-2.5 md:text-sm"
             aria-label="Téléphoner à Arbovert"
           >
             📞 06 00 00 00 00
