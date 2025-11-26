@@ -56,7 +56,7 @@ const realisations: RealisationCardProps[] = [
     ],
     footer: "📍 Haute-Garonne (31) | 🛠️ Abattage d'arbres en espace contraint",
     beforeImage: '/realisations/Peuplier - Avant.jpg',
-    afterImage: '/realisations/Peuplier - Après.jpg'
+    afterImage: '/realisations/Peuplier - Après.jpg'
   }
 ];
 
