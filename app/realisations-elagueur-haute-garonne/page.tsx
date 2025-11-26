@@ -49,7 +49,7 @@ const realisations: RealisationCardProps[] = [
     ],
     footer: "📍 Haute-Garonne (31) | 🛠️ Abattage d'arbres dangereux près des habitations",
     beforeImage: '/realisations/Colomiers - avant.jpg',
-    afterImage: '/realisations/Colomiers - après.jpg'
+    afterImage: '/realisations/saint-julien-sur-garonne-apres.jpg'
   },
   {
     title: 'Démontage de peuplier en zone multi-contraintes',
