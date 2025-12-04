@@ -43,7 +43,7 @@ const Hero = () => {
         <div className="space-y-4 rounded-2xl bg-forest/90 p-8 text-white">
           <div className="overflow-hidden rounded-xl border border-white/10">
             <Image
-              src="https://picsum.photos/seed/elagage-action/680/440"
+              src="/bandeau-accueil.JPG"
               alt="Équipe d'élagage en intervention"
               width={680}
               height={440}

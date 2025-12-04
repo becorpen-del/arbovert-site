@@ -3,9 +3,9 @@ import Link from 'next/link';
 import RealisationCard, { RealisationCardProps } from '../../components/RealisationCard';
 
 export const metadata: Metadata = {
-  title: 'Réalisations Arbovert – Élagage & entretien d\'arbres en Haute-Garonne (31)',
+  title: `Réalisations Arbovert – Élagage & entretien d'arbres en Haute-Garonne (31)`,
   description:
-    'Découvrez quelques réalisations d\'Arbovert : élagage, abattage, taille de haies et entretien de jardins en Haute-Garonne. Avant / après, chantiers typiques.'
+    `Découvrez quelques réalisations d'Arbovert : élagage, abattage, taille de haies et entretien de jardins en Haute-Garonne. Avant / après, chantiers typiques.`
 };
 
 const realisations: RealisationCardProps[] = [

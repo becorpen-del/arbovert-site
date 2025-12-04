@@ -6,9 +6,9 @@ import Testimonials from '../components/Testimonials';
 import ContactForm from '../components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Élagage & entretien d\'arbres en Haute-Garonne (31) – Arbovert',
+  title: `Élagage & entretien d'arbres en Haute-Garonne (31) – Arbovert`,
   description:
-    'Arbovert, élagueur grimpeur en Haute-Garonne (31) : élagage, abattage, taille de haies, tonte de pelouse et entretien de jardins. Devis gratuit, intervention rapide dans tout le 31.'
+    `Arbovert, élagueur grimpeur en Haute-Garonne (31) : élagage, abattage, taille de haies, tonte de pelouse et entretien de jardins. Devis gratuit, intervention rapide dans tout le 31.`
 };
 
 const interventionCities = ['Toulouse', 'Muret', 'Cugnaux', 'Colomiers', 'Blagnac', 'Tournefeuille', 'Labège', 'Balma'];
@@ -51,6 +51,55 @@ export default function HomePage() {
               <p className="text-lg">🚚</p>
               <p className="mt-2 font-semibold text-night">Gestion & évacuation des déchets verts</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="mx-auto max-w-6xl rounded-3xl border border-forest/10 bg-white p-8 shadow-sm">
+          <h2 className="section-heading">Rencontrez vos élagueurs en Haute-Garonne</h2>
+          <p className="text-lg text-night/80">
+            Deux passionnés, une même exigence : des interventions soignées et respectueuses de vos arbres.
+          </p>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <article className="rounded-2xl border border-forest/10 bg-beige/60 p-6 shadow-sm">
+              <div className="flex justify-center">
+                <div className="overflow-hidden rounded-full border-2 border-forest/20">
+                  <Image
+                    src="/guillaume.jpg"
+                    alt="Guillaume, co-gérant et élagueur Arbovert en Haute-Garonne"
+                    width={300}
+                    height={300}
+                    className="h-48 w-48 object-cover"
+                  />
+                </div>
+              </div>
+              <h3 className="mt-6 font-heading text-2xl text-forest">Guillaume — Co-gérant & élagueur grimpeur</h3>
+              <p className="mt-4 text-night/80">
+                Titulaire d'un CAPA Travaux Forestiers, j'ai passé 6 ans dans l'armée où j'ai forgé ma rigueur et mon sens des
+                responsabilités. Passionné de trail en montagne, je reste connecté à la nature que je m'engage à préserver.
+                Mon crédo : un travail soigné, une écoute attentive et le respect de chaque arbre.
+              </p>
+            </article>
+            <article className="rounded-2xl border border-forest/10 bg-beige/60 p-6 shadow-sm">
+              <div className="flex justify-center">
+                <div className="overflow-hidden rounded-full border-2 border-forest/20">
+                  <Image
+                    src="/Portrait-Clément.JPG"
+                    alt="Clément, co-gérant et élagueur grimpeur Arbovert en Haute-Garonne"
+                    width={300}
+                    height={300}
+                    className="h-48 w-48 object-cover"
+                  />
+                </div>
+              </div>
+              <h3 className="mt-6 font-heading text-2xl text-forest">Clément — Co-gérant & élagueur grimpeur</h3>
+              <p className="mt-4 text-night/80">
+                Formé sur le terrain, j'ai acquis une solide expérience en élagage et abattage auprès de particuliers et
+                collectivités. Ancien entrepreneur, j'ai cofondé Arbovert avec une exigence claire : des interventions sûres,
+                efficaces et durables. La sécurité et votre satisfaction guident chacune de mes prestations.
+              </p>
+            </article>
           </div>
         </div>
       </section>

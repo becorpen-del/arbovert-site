@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Services d\'élagage, abattage et entretien d\'espaces verts – Arbovert Haute-Garonne',
+  title: `Services d'élagage, abattage et entretien d'espaces verts – Arbovert Haute-Garonne`,
   description:
-    'Découvrez les services Arbovert : élagage d\'arbres, abattage, taille de haies, tonte de pelouse et entretien de jardins en Haute-Garonne (31). Devis gratuit.'
+    `Découvrez les services Arbovert : élagage d'arbres, abattage, taille de haies, tonte de pelouse et entretien de jardins en Haute-Garonne (31). Devis gratuit.`
 };
 
 const serviceSections = [
@@ -15,7 +15,7 @@ const serviceSections = [
       "Taille de formation, taille douce ou sécuritaire : nous adaptons nos interventions à l'essence, à l'âge de l'arbre et aux contraintes de votre environnement pour favoriser une reprise saine.",
     points: [
       'Diagnostic sanitaire et conseils personnalisés',
-      'Élagage sur corde ou nacelle selon l’accès',
+      `Élagage sur corde ou nacelle selon l'accès`,
       'Gestion des bois et broyage des branches',
       'Nettoyage du chantier en fin d’intervention'
     ],
@@ -40,15 +40,15 @@ const serviceSections = [
     points: [
       'Taille au cordeau ou au gabarit souhaité',
       'Ramassage et évacuation des déchets',
-      'Contrats d’entretien sur l’année',
+      `Contrats d'entretien sur l'année`,
       'Conseils sur les essences et périodes optimales'
     ],
-    image: 'https://picsum.photos/seed/haie-lignee/780/520'
+    image: '/tailles_de_haies_arbustes.jpg'
   },
   {
     title: 'Tonte de pelouse et entretien de jardins',
     description:
-      'Entretenez votre extérieur toute l’année : tonte, débroussaillage, nettoyage et finitions pour des espaces verts toujours accueillants.',
+      `Entretenez votre extérieur toute l'année : tonte, débroussaillage, nettoyage et finitions pour des espaces verts toujours accueillants.`,
     points: [
       'Tonte et finition des bordures',
       'Débroussaillage et remise à niveau des terrains',

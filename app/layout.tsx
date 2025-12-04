@@ -17,9 +17,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Arbovert – Élagage et entretien d\'arbres en Haute-Garonne',
+  title: `Arbovert – Élagage et entretien d'arbres en Haute-Garonne`,
   description:
-    'Arbovert accompagne particuliers et professionnels pour l\'élagage, l\'abattage et l\'entretien d\'espaces verts dans toute la Haute-Garonne (31).'
+    `Arbovert accompagne particuliers et professionnels pour l'élagage, l'abattage et l'entretien d'espaces verts dans toute la Haute-Garonne (31).`
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

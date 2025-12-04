@@ -6,25 +6,25 @@ const services = [
     title: "Élagage d'arbres",
     description: 'Taille douce, mise en sécurité, éclaircie et réduction adaptées à chaque essence.',
     href: '/services-elagage-haute-garonne',
-    image: 'https://picsum.photos/seed/elagage-corde/600/360'
+    image: '/élagage.JPG'
   },
   {
     title: 'Abattage & démontage',
     description: 'Abattage des arbres malades ou dangereux, démontage par tronçons et sécurisation du chantier.',
     href: '/services-elagage-haute-garonne',
-    image: 'https://picsum.photos/seed/abattage-nacelle/600/360'
+    image: '/Abattage & démontage.JPG'
   },
   {
     title: 'Taille de haies',
-    description: 'Haies de clôture, remise en forme et entretien régulier pour des bordures nettes toute l’année.',
+    description: `Haies de clôture, remise en forme et entretien régulier pour des bordures nettes toute l'année.`,
     href: '/services-elagage-haute-garonne',
-    image: 'https://picsum.photos/seed/haie-propre/600/360'
+    image: '/taille-de-haies.jpg'
   },
   {
     title: 'Tonte & entretien de jardins',
     description: 'Tonte de pelouse, débroussaillage, nettoyage de fin de chantier et entretien saisonnier.',
     href: '/services-elagage-haute-garonne',
-    image: 'https://picsum.photos/seed/tonte-verte/600/360'
+    image: '/tonte_entretien_de_jardins.JPG'
   }
 ];
 
