@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, type ChangeEvent, type FormEvent } from 'react';
+import { useState, type ChangeEvent } from 'react';
 
 const initialForm = {
   name: '',
@@ -22,14 +22,6 @@ const ContactForm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // Simple feedback for the static form
-    console.log('Demande de devis Arbovert', formData);
-    alert('Votre demande a bien été envoyée. Nous revenons vers vous sous 24h.');
-    setFormData(initialForm);
-  };
-
   return (
     <section id="contact" className="section">
       <div className="mx-auto max-w-4xl rounded-3xl border border-forest/10 bg-white p-8 shadow-sm">
@@ -37,7 +29,15 @@ const ContactForm = () => {
         <p className="text-night/80">
           Le devis est gratuit partout en Haute-Garonne. Remplissez le formulaire et nous vous contactons sous 24h.
         </p>
-        <form onSubmit={handleSubmit} className="mt-8 grid gap-6">
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          className="mt-8 grid gap-6"
+        >
+          <input type="hidden" name="access_key" value="121eb34e-2a3f-4a5a-b4b9-f9e31d279b9a" />
+          <input type="hidden" name="subject" value="Nouveau lead depuisArbovert-31.fr" />
+          <input type="hidden" name="redirect" value="https://www.arbovert-31.fr/#contact" />
+          <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
           <div className="grid gap-6 md:grid-cols-2">
             <label className="text-sm font-semibold text-night">
               Nom *

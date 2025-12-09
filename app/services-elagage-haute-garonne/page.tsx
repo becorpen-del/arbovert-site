@@ -19,7 +19,7 @@ const serviceSections = [
       'Gestion des bois et broyage des branches',
       'Nettoyage du chantier en fin d’intervention'
     ],
-    image: 'https://picsum.photos/seed/elagage-corde/780/520'
+    image: '/elagage-services.JPG'
   },
   {
     title: "Abattage et démontage d'arbres",
@@ -31,7 +31,7 @@ const serviceSections = [
       'Broyage ou rognage possible sur demande',
       'Valorisation ou évacuation des déchets verts'
     ],
-    image: 'https://picsum.photos/seed/abattage-nacelle/780/520'
+    image: '/abattage-demontage-arbres-services.JPG'
   },
   {
     title: 'Taille de haies et arbustes',
