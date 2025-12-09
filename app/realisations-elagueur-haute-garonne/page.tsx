@@ -10,16 +10,58 @@ export const metadata: Metadata = {
 
 const realisations: RealisationCardProps[] = [
   {
-    title: "Abattage préventif d'un pin parasol à proximité d'habitation",
-    location: 'Saint-Julien-Sur-Garonne (31)',
+    title: "Démontage d'un peuplier malade",
+    location: 'LE FAUGA (31)',
     description:
-      'Démontage par démantèlement d’un pin parasol implanté à moins de 3 mètres de l’habitation. L’accumulation permanente d’aiguilles sur la toiture créait un risque majeur d’infiltration et d’obstruction des gouttières. Pour prévenir tout dommage structurel, le client a opté pour une suppression raisonnée de l’arbre. Intervention réalisée avec nacelle pour garantir la sécurité et préserver l’intégrité du bâti.',
+      `Intervention d'abattage contrôlé sur un peuplier affaibli présentant des signes de dépérissement avancé. L'arbre, situé au-dessus d'un cabanon, occasionnait des chutes de branches régulières et représentait un risque pour le voisinage. Le démontage a été réalisé par tronçons avec rétention des charges, technique indispensable pour préserver les structures environnantes. Travail en grimpe avec accès sur corde, évacuation complète des rémanents et sécurisation du site.`,
     highlights: [
-      'Démontage contrôlé sans impact sur la structure',
-      'Suppression des risques d’infiltration',
-      'Évacuation complète des rémanents'
+      'Démontage par tronçons avec rétention des charges',
+      'Préservation des structures environnantes',
+      'Évacuation complète et sécurisation du site'
     ],
-    footer: '📍 Haute-Garonne (31) | 🛠️ Abattage d’arbres près des habitations',
+    footer: `📍 Le Fauga | 🛠️ Abattage & démontage d'arbres malades`,
+    beforeImage: '/realisations/fauga-avant.jpg',
+    afterImage: '/realisations/fauga-apres.jpg'
+  },
+  {
+    title: "Taille d'éclaircissement sur deux pins parasol",
+    location: 'LACROIX-FALGARDE (31)',
+    description:
+      `Intervention sur deux pins parasol n'ayant jamais fait l'objet d'un élagage. L'objectif : alléger la structure, sécuriser les charpentières et favoriser la pénétration lumineuse dans le houppier pour améliorer la vitalité des sujets. Taille douce réalisée dans le respect de l'architecture naturelle des arbres. Suppression du bois mort, éclaircissement raisonné et conservation de la silhouette caractéristique du pin parasol. Travail soigné avec évacuation des déchets verts.`,
+    highlights: [
+      `Taille douce respectueuse de l'architecture naturelle`,
+      'Amélioration de la vitalité et sécurisation des charpentières',
+      'Conservation de la silhouette caractéristique'
+    ],
+    footer: `📍 Lacroix-Falgarde | 🛠️ Élagage & taille d'arbres`,
+    beforeImage: '/realisations/lacroix-avant.jpg',
+    afterImage: '/realisations/lacroix-apres.jpg'
+  },
+  {
+    title: "Démontage d'un chêne creux près de l'aéroport",
+    location: 'BLAGNAC — SECTEUR AÉROPORT TOULOUSE-BLAGNAC',
+    description:
+      `Intervention en sous-traitance pour le démontage d'un vieux chêne situé à proximité des locaux de Météo France, sur le site de l'aéroport Toulouse-Blagnac. L'arbre, totalement creux, abritait successivement une colonie d'abeilles puis un nid de frelons asiatiques. Après neutralisation du nid par une entreprise spécialisée, nous avons procédé au démontage complet par tronçons. Chaque coupe a été sécurisée pour garantir l'intégrité des bâtiments et infrastructures environnantes.`,
+    highlights: [
+      'Démontage sécurisé en zone sensible',
+      'Protection des infrastructures aéroportuaires',
+      'Intervention coordonnée avec spécialistes'
+    ],
+    footer: `📍 Blagnac - Aéroport | 🛠️ Abattage & démontage d'arbres dangereux`,
+    beforeImage: '/realisations/aeroport-toulouse-avant.jpg',
+    afterImage: '/realisations/aeroport-toulouse-apres.jpg'
+  },
+  {
+    title: "Démontage d'un noyer en zone sensible",
+    location: 'SAINT-JULIEN-SUR-GARONNE (31)',
+    description:
+      `Intervention délicate pour sécuriser un noyer de 12m menaçant de s'effondrer dans la Garonne. Grâce à un démontage par rétention et un système d'ancrage adapté, l'arbre a été retiré sans impact sur la berge ni le cours d'eau.`,
+    highlights: [
+      'Démontage maîtrisé en zone à risque',
+      `Protection des berges et de l'écosystème`,
+      'Évacuation complète des déchets verts'
+    ],
+    footer: `📍 Saint-Julien-sur-Garonne | 🛠️ Abattage & démontage d'arbres dangereux`,
     beforeImage: '/realisations/Saint-Julien-sur-Garonne - Avant.jpg',
     afterImage: '/realisations/saint-julien-sur-garonne-apres.jpg'
   },
@@ -27,7 +69,7 @@ const realisations: RealisationCardProps[] = [
     title: "Abattage d'un eucalyptus en zone contrainte",
     location: 'Lavelanet-de-Comminges (31)',
     description:
-      'Démontage par démantèlement d’un eucalyptus de 20 mètres présentant un port déséquilibré vers le garage voisin. Enchevêtré dans une haie dense et en zone d’évolution restreinte, le chantier a exigé une intervention technique pointue : étude du houppier, axes de chute maîtrisés, et descente par rétention avec évacuation progressive des billons, sans impact sur les structures ni la végétation environnante.',
+      `Démontage par démantèlement d'un eucalyptus de 20 mètres présentant un port déséquilibré vers le garage voisin. Enchevêtré dans une haie dense et en zone d'évolution restreinte, le chantier a exigé une intervention technique pointue : étude du houppier, axes de chute maîtrisés, et descente par rétention avec évacuation progressive des billons, sans impact sur les structures ni la végétation environnante.`,
     highlights: [
       "Démontage maîtrisé malgré l'accès contraint",
       'Sécurisation totale des biens voisins',
@@ -38,13 +80,13 @@ const realisations: RealisationCardProps[] = [
     afterImage: '/realisations/Lavelanet-De-Comminges-apres.jpg'
   },
   {
-    title: 'Démontage d’un Pin parasol',
+    title: "Démontage d'un Pin parasol",
     location: 'Haute-Garonne (31)',
     description:
       "Abattage préventif d'un pin parasol implanté à moins de 3 mètres de l'habitation. L'accumulation chronique d'aiguilles sur la couverture engendrait un risque avéré d'infiltration par obstruction des évacuations pluviales et rétention d'humidité. Face à ce risque structurel pour le bâti, le client a opté pour une suppression raisonnée de l'arbre. Intervention réalisée par démontage descendant avec rétention systématique des billons pour préserver l'intégrité de la toiture et des façades.",
     highlights: [
       'Démantèlement contrôlé sans impact sur la structure',
-      'Suppression définitive des risques d’infiltration',
+      "Suppression définitive des risques d'infiltration",
       'Évacuation complète des rémanents et aiguilles'
     ],
     footer: "📍 Haute-Garonne (31) | 🛠️ Abattage d'arbres dangereux près des habitations",
@@ -55,7 +97,7 @@ const realisations: RealisationCardProps[] = [
     title: 'Démontage de peuplier en zone multi-contraintes',
     location: 'Haute-Garonne (31)',
     description:
-      'Abattage par démantèlement d’un peuplier implanté dans un environnement complexe : à proximité immédiate d’un cabanon et à la jonction de trois haies arbustives. La configuration du site imposait une rétention systématique de chaque section. Intervention réalisée par démontage descendant avec longe de rétention, chaque billon étant guidé et déposé au sol de manière contrôlée pour préserver les structures et la végétation environnante.',
+      `Abattage par démantèlement d'un peuplier implanté dans un environnement complexe : à proximité immédiate d'un cabanon et à la jonction de trois haies arbustives. La configuration du site imposait une rétention systématique de chaque section. Intervention réalisée par démontage descendant avec longe de rétention, chaque billon étant guidé et déposé au sol de manière contrôlée pour préserver les structures et la végétation environnante.`,
     highlights: [
       'Démantèlement méthodique en zone exiguë',
       'Préservation totale des haies et du cabanon',
@@ -94,7 +136,7 @@ export default function RealisationsPage() {
         </div>
       </header>
 
-      <section className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
+      <section className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2 md:items-stretch">
         {realisations.map((realisation) => (
           <RealisationCard key={realisation.title} {...realisation} />
         ))}

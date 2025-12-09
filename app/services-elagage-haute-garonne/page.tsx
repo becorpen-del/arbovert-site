@@ -55,7 +55,7 @@ const serviceSections = [
       'Nettoyage souffleur des allées et terrasses',
       'Interventions ponctuelles ou régulières'
     ],
-    image: 'https://picsum.photos/seed/tonte-jardin/780/520'
+    image: '/tonte_de_jardin.jpeg'
   }
 ];
 
@@ -63,7 +63,7 @@ const serviceShots = [
   {
     title: 'Démontage en rétention',
     caption: 'Tronçons guidés en zone sensible pour sécuriser les biens voisins.',
-    image: 'https://picsum.photos/seed/retenue-elagueur/760/480'
+    image: '/abattage_avec_rentention_services.JPG'
   },
   {
     title: 'Taille en nacelle',
@@ -114,7 +114,7 @@ export default function ServicesPage() {
                     alt={shot.title}
                     width={760}
                     height={480}
-                    className="h-48 w-full object-cover"
+                    className="h-[292px] w-full object-cover"
                   />
                 </div>
                 <h3 className="mt-3 font-heading text-2xl text-forest">{shot.title}</h3>
@@ -131,7 +131,14 @@ export default function ServicesPage() {
           >
             <div className="grid gap-6 md:grid-cols-[1.1fr,0.9fr] md:items-center">
               <div>
-                <h2 className="font-heading text-3xl text-forest">{service.title}</h2>
+                <div className="flex items-center gap-3 flex-wrap">
+                  <h2 className="font-heading text-3xl text-forest">{service.title}</h2>
+                  {(service.title === 'Taille de haies et arbustes' || service.title === 'Tonte de pelouse et entretien de jardins') && (
+                    <span className="rounded-full bg-leaf/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-leaf border border-leaf/30">
+                      Crédit d'impôt 50%
+                    </span>
+                  )}
+                </div>
                 <p className="mt-4 text-night/80">{service.description}</p>
                 <ul className="mt-4 list-disc space-y-2 pl-5 text-night/80">
                   {service.points.map((point) => (
@@ -145,7 +152,7 @@ export default function ServicesPage() {
                   alt={service.title}
                   width={780}
                   height={520}
-                  className="h-56 w-full object-cover"
+                  className="h-[324px] w-full object-cover"
                 />
               </div>
             </div>
@@ -163,7 +170,7 @@ export default function ServicesPage() {
           {gearShots.map((shot) => (
             <article key={shot.title} className="rounded-2xl border border-forest/10 bg-white p-4 shadow-sm">
               <div className="overflow-hidden rounded-xl border border-forest/10 bg-beige/60">
-                <Image src={shot.image} alt={shot.title} width={460} height={320} className="h-36 w-full object-cover" />
+                <Image src={shot.image} alt={shot.title} width={460} height={320} className="h-[244px] w-full object-cover" />
               </div>
               <h3 className="mt-3 font-heading text-xl text-forest">{shot.title}</h3>
             </article>

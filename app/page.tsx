@@ -15,12 +15,12 @@ const interventionCities = ['Toulouse', 'Muret', 'Cugnaux', 'Colomiers', 'Blagna
 const highlightShots = [
   {
     title: 'Abattage avec rétention',
-    caption: 'Pin parasol démonté en sécurité à proximité d’une maison.',
-    image: 'https://picsum.photos/seed/retenue-pin/700/460'
+    caption: "Pin parasol démonté en sécurité à proximité d'une maison.",
+    image: '/abattage_avec_rentention.JPG'
   },
   {
     title: 'Taille douce en nacelle',
-    caption: 'Éclaircie légère pour laisser passer la lumière sans stresser l’arbre.',
+    caption: "Éclaircie légère pour laisser passer la lumière sans stresser l'arbre.",
     image: 'https://picsum.photos/seed/nacelle-arbre/700/460'
   }
 ];
@@ -107,6 +107,23 @@ export default function HomePage() {
       <ServicesPreview />
 
       <section className="section">
+        <div className="mx-auto max-w-6xl rounded-3xl border border-leaf/20 bg-leaf/10 p-8 shadow-sm">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0 text-3xl">💰</div>
+            <div>
+              <h2 className="font-heading text-3xl text-forest">Crédit d'impôt jardinage : récupérez 50% de vos dépenses</h2>
+              <p className="mt-4 text-lg text-night/80">
+                Les travaux d'entretien de jardin (tonte de pelouse, taille de haies, débroussaillage) sont éligibles au crédit
+                d'impôt Services à la Personne. Arbovert est un organisme déclaré : nous vous fournissons l'attestation fiscale
+                annuelle pour votre déclaration de revenus. Plafond : 5 000 € de dépenses par an, soit jusqu'à 2 500 € de crédit
+                d'impôt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="mx-auto max-w-6xl rounded-3xl bg-white p-8 shadow-sm">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <h2 className="section-heading mb-0">En intervention</h2>
@@ -121,7 +138,7 @@ export default function HomePage() {
                     alt={shot.title}
                     width={700}
                     height={460}
-                    className="h-56 w-full object-cover"
+                    className="h-[324px] w-full object-cover"
                   />
                 </div>
                 <h3 className="mt-3 font-heading text-2xl text-forest">{shot.title}</h3>

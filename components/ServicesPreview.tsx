@@ -42,10 +42,17 @@ const ServicesPreview = () => {
                   alt={service.title}
                   width={600}
                   height={360}
-                  className="h-40 w-full object-cover"
+                  className="h-[260px] w-full object-cover"
                 />
               </div>
-              <h3 className="mt-4 font-heading text-2xl text-forest">{service.title}</h3>
+              <div className="mt-4 flex items-center justify-between">
+                <h3 className="font-heading text-2xl text-forest">{service.title}</h3>
+                {(service.title === 'Taille de haies' || service.title === 'Tonte & entretien de jardins') && (
+                  <span className="rounded-full bg-leaf/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-leaf border border-leaf/30">
+                    Crédit d'impôt 50%
+                  </span>
+                )}
+              </div>
               <p className="mt-3 text-night/80">{service.description}</p>
               <Link
                 href={service.href}

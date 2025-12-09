@@ -106,6 +106,10 @@ const ContactForm = () => {
             Envoyer ma demande
           </button>
         </form>
+        <p className="mt-6 flex items-center gap-2 text-sm text-night/70">
+          <span className="text-leaf">✓</span>
+          <span>Nos prestations d'entretien sont éligibles au crédit d'impôt 50% (attestation fiscale fournie)</span>
+        </p>
       </div>
     </section>
   );

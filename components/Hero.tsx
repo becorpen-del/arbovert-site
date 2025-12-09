@@ -38,6 +38,9 @@ const Hero = () => {
                 {pill}
               </span>
             ))}
+            <span className="rounded-full bg-leaf/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-leaf border border-leaf/30">
+              ✓ Crédit d'impôt 50%
+            </span>
           </div>
         </div>
         <div className="space-y-4 rounded-2xl bg-forest/90 p-8 text-white">
@@ -47,7 +50,7 @@ const Hero = () => {
               alt="Équipe d'élagage en intervention"
               width={680}
               height={440}
-              className="h-56 w-full object-cover"
+              className="h-[324px] w-full object-cover"
               priority
             />
           </div>

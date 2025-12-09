@@ -12,11 +12,13 @@ export type RealisationCardProps = {
 
 const RealisationCard = ({ title, location, description, beforeImage, afterImage, highlights, footer }: RealisationCardProps) => {
   return (
-    <article className="rounded-2xl border border-forest/10 bg-white shadow-sm">
-      <div className="grid gap-4 p-6">
+    <article className="flex h-full flex-col rounded-2xl border border-forest/10 bg-white shadow-sm">
+      <div className="flex flex-grow flex-col gap-4 p-6">
         <div>
           <p className="text-xs uppercase tracking-widest text-forest/70">{location}</p>
           <h3 className="mt-1 font-heading text-2xl text-forest">{title}</h3>
+        </div>
+        <div className="flex-grow">
           <p className="mt-2 text-night/80">{description}</p>
           {highlights?.length ? (
             <ul className="mt-3 space-y-1 text-sm text-night/80">
@@ -30,7 +32,7 @@ const RealisationCard = ({ title, location, description, beforeImage, afterImage
           ) : null}
           {footer ? <p className="mt-3 text-xs uppercase tracking-wide text-night/60">{footer}</p> : null}
         </div>
-        <div className="grid grid-cols-2 gap-3 text-sm">
+        <div className="mt-auto grid grid-cols-2 gap-3 pt-4 text-sm">
           <div>
             <p className="mb-2 font-semibold text-night">Avant</p>
             <div className="overflow-hidden rounded-xl border border-forest/10">
@@ -39,7 +41,7 @@ const RealisationCard = ({ title, location, description, beforeImage, afterImage
                 alt={`Avant - ${title}`}
                 width={400}
                 height={320}
-                className="h-56 w-full object-cover"
+                className="h-[324px] w-full object-cover"
               />
             </div>
           </div>
@@ -51,7 +53,7 @@ const RealisationCard = ({ title, location, description, beforeImage, afterImage
                 alt={`Après - ${title}`}
                 width={400}
                 height={320}
-                className="h-56 w-full object-cover"
+                className="h-[324px] w-full object-cover"
               />
             </div>
           </div>
