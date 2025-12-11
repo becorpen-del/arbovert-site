@@ -22,8 +22,8 @@ const Footer = () => {
             Mentions légales
           </Link>
         </div>
-        <a href="tel:0600000000" className="btn btn-outline border-white text-white hover:border-leaf">
-          📞 06 00 00 00 00
+        <a href="tel:0648768515" className="btn border border-white text-white hover:bg-white/10">
+          📞 06 48 76 85 15
         </a>
       </div>
     </footer>

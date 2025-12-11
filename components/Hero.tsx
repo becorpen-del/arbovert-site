@@ -22,7 +22,7 @@ const Hero = () => {
             verts avec soin et professionnalisme.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <a href="tel:0600000000" className="btn btn-primary text-base">
+            <a href="tel:0648768515" className="btn btn-primary text-base">
               Appeler Arbovert
             </a>
             <Link href="#contact" className="btn btn-outline text-base">

@@ -67,15 +67,15 @@ const serviceShots = [
   },
   {
     title: 'Taille en nacelle',
-    caption: 'Travail précis et sécurisé pour éclaircir sans fragiliser l’arbre.',
-    image: 'https://picsum.photos/seed/nacelle-precision/760/480'
+    caption: "Travail précis et sécurisé pour éclaircir sans fragiliser l'arbre.",
+    image: '/taille-en-nacelle.JPG'
   }
 ];
 
 const gearShots = [
   {
     title: 'EPI & ancrages',
-    image: 'https://picsum.photos/seed/epi-forest/460/320'
+    image: '/epi-ancrage.webp'
   },
   {
     title: 'Broyage & évacuation',
@@ -83,7 +83,7 @@ const gearShots = [
   },
   {
     title: 'Rétention sur corde',
-    image: 'https://picsum.photos/seed/corde-retention/460/320'
+    image: '/rétention-sur-corde.png'
   }
 ];
 

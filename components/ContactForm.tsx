@@ -73,7 +73,7 @@ const ContactForm = () => {
               value={formData.phone}
               onChange={handleChange}
               className="mt-2 w-full rounded-lg border border-forest/20 bg-beige/40 px-4 py-3 focus:border-forest focus:outline-none"
-              placeholder="06 00 00 00 00"
+              placeholder="06 48 76 85 15"
             />
           </label>
           <label className="text-sm font-semibold text-night">
