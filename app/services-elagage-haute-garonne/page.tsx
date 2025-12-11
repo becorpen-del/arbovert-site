@@ -79,7 +79,7 @@ const gearShots = [
   },
   {
     title: 'Broyage & évacuation',
-    image: 'https://picsum.photos/seed/broyeur-vert/460/320'
+    image: '/broyage-evacuation-vegetaux.jpg'
   },
   {
     title: 'Rétention sur corde',
@@ -112,9 +112,9 @@ export default function ServicesPage() {
                   <Image
                     src={shot.image}
                     alt={shot.title}
-                    width={760}
-                    height={480}
-                    className="h-[292px] w-full object-cover"
+                    width={400}
+                    height={320}
+                    className="h-[324px] w-full object-cover"
                   />
                 </div>
                 <h3 className="mt-3 font-heading text-2xl text-forest">{shot.title}</h3>
@@ -150,8 +150,8 @@ export default function ServicesPage() {
                 <Image
                   src={service.image}
                   alt={service.title}
-                  width={780}
-                  height={520}
+                  width={400}
+                  height={320}
                   className="h-[324px] w-full object-cover"
                 />
               </div>
@@ -170,7 +170,14 @@ export default function ServicesPage() {
           {gearShots.map((shot) => (
             <article key={shot.title} className="rounded-2xl border border-forest/10 bg-white p-4 shadow-sm">
               <div className="overflow-hidden rounded-xl border border-forest/10 bg-beige/60">
-                <Image src={shot.image} alt={shot.title} width={460} height={320} className="h-[244px] w-full object-cover" />
+                <Image 
+                  src={shot.image} 
+                  alt={shot.title} 
+                  width={400} 
+                  height={320} 
+                  className="h-[324px] w-full object-cover"
+                  style={shot.title === 'Broyage & évacuation' ? { objectPosition: 'left' } : undefined}
+                />
               </div>
               <h3 className="mt-3 font-heading text-xl text-forest">{shot.title}</h3>
             </article>

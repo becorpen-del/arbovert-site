@@ -21,7 +21,7 @@ const highlightShots = [
   {
     title: 'Taille douce en nacelle',
     caption: "Éclaircie légère pour laisser passer la lumière sans stresser l'arbre.",
-    image: 'https://picsum.photos/seed/nacelle-arbre/700/460'
+    image: '/taille-douce-nacelle.png'
   }
 ];
 
@@ -132,12 +132,12 @@ export default function HomePage() {
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             {highlightShots.map((shot) => (
               <article key={shot.title} className="rounded-2xl border border-forest/10 bg-beige/60 p-4 shadow-sm">
-                <div className="overflow-hidden rounded-xl border border-forest/10 bg-white">
+                <div className="overflow-hidden rounded-xl border border-forest/10">
                   <Image
                     src={shot.image}
                     alt={shot.title}
-                    width={700}
-                    height={460}
+                    width={400}
+                    height={320}
                     className="h-[324px] w-full object-cover"
                   />
                 </div>

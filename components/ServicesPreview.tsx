@@ -40,9 +40,9 @@ const ServicesPreview = () => {
                 <Image
                   src={service.image}
                   alt={service.title}
-                  width={600}
-                  height={360}
-                  className="h-[260px] w-full object-cover"
+                  width={400}
+                  height={320}
+                  className="h-[324px] w-full object-cover"
                 />
               </div>
               <div className="mt-4 flex items-center justify-between">
