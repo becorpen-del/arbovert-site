@@ -74,7 +74,7 @@ export default function HomePage() {
                   />
                 </div>
               </div>
-              <h3 className="mt-6 font-heading text-2xl text-forest">Guillaume — Co-gérant & élagueur grimpeur</h3>
+              <h3 className="mt-6 font-heading text-2xl text-forest">Guillaume — élagueur grimpeur</h3>
               <p className="mt-4 text-night/80">
                 Titulaire d'un CAPA Travaux Forestiers, j'ai passé 6 ans dans l'armée où j'ai forgé ma rigueur et mon sens des
                 responsabilités. Passionné de trail en montagne, je reste connecté à la nature que je m'engage à préserver.
@@ -93,7 +93,7 @@ export default function HomePage() {
                   />
                 </div>
               </div>
-              <h3 className="mt-6 font-heading text-2xl text-forest">Clément — Co-gérant & élagueur grimpeur</h3>
+              <h3 className="mt-6 font-heading text-2xl text-forest">Clément — élagueur grimpeur</h3>
               <p className="mt-4 text-night/80">
                 Formé sur le terrain, j'ai acquis une solide expérience en élagage et abattage auprès de particuliers et
                 collectivités. Ancien entrepreneur, j'ai cofondé Arbovert avec une exigence claire : des interventions sûres,
