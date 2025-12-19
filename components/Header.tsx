@@ -13,12 +13,17 @@ const Header = () => {
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between pt-3 pb-[2px]">
           <Link href="/" className="group flex items-center gap-3">
+            {/* NOTE DX :
+               - Le fichier doit rester exactement nommé `/public/Arbovert-sans-fond.png`
+               - La casse est importante (surtout en prod Linux) : ne pas renommer en `arbovert-sans-fond.png` ou autre variante.
+            */}
             <Image
               src="/Arbovert-sans-fond.png"
               alt="Logo Arbovert"
-              width={198}
+              width={185}
               height={138}
-              className="h-14 w-auto object-contain drop-shadow-sm transition group-hover:scale-[1.02] md:h-[138px]"
+              sizes="(max-width: 768px) 145px, 258px"
+              className="h-[146px] w-auto object-contain drop-shadow-sm transition group-hover:scale-[1.02] md:h-[228px]"
               priority
             />
             <div className="hidden flex-col leading-tight md:flex">

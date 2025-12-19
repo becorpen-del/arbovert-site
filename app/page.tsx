@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import ServicesPreview from '../components/ServicesPreview';
 import Testimonials from '../components/Testimonials';
 import ContactForm from '../components/ContactForm';
+import ReviewsWrapper from '@/components/ReviewsWrapper';
 
 export const metadata: Metadata = {
   title: `Élagage & entretien d'arbres en Haute-Garonne (31) – Arbovert`,
@@ -168,6 +169,11 @@ export default function HomePage() {
       </section>
 
       <Testimonials />
+
+      <ReviewsWrapper 
+        maxReviews={6}
+        showRating={true}
+      />
 
       <ContactForm />
     </div>
