@@ -1,5 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+// Cache simple en mémoire (pour le développement)
+// En production, vous pourriez utiliser Redis ou un autre système de cache
+let cache: {
+  data: any;
+  timestamp: number;
+} | null = null;
+
+const CACHE_DURATION = 60 * 60 * 1000; // 1 heure en millisecondes
+
 // Gérer les requêtes OPTIONS pour CORS
 export async function OPTIONS(request: NextRequest) {
   return new NextResponse(null, {
@@ -14,13 +23,28 @@ export async function OPTIONS(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
-    // Utiliser les variables d'environnement au lieu des paramètres de requête
+    // Vérifier le cache
+    if (cache && Date.now() - cache.timestamp < CACHE_DURATION) {
+      console.log('[API Google Reviews] Données servies depuis le cache');
+      return NextResponse.json(cache.data, {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET, OPTIONS',
+          'Access-Control-Allow-Headers': 'Content-Type',
+          'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+        },
+      });
+    }
+
+    // Utiliser les variables d'environnement
     const placeId = process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID;
-    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
+    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_PLACES_API_KEY;
 
     console.log('[API Google Reviews] Requête reçue');
     console.log('[API Google Reviews] Place ID présent:', !!placeId);
+    console.log('[API Google Reviews] Place ID (premiers caractères):', placeId ? `${placeId.substring(0, 10)}...` : 'MANQUANT');
     console.log('[API Google Reviews] API Key présente:', !!apiKey);
+    console.log('[API Google Reviews] API Key (premiers caractères):', apiKey ? `${apiKey.substring(0, 10)}...` : 'MANQUANT');
 
     if (!placeId || !apiKey) {
       console.error('[API Google Reviews] Variables d\'environnement manquantes');
@@ -30,18 +54,27 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Utiliser l'API Google Places (ancienne version) pour récupérer les détails du lieu
-    // URL: https://maps.googleapis.com/maps/api/place/details/json
-    const apiUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,reviews&key=${apiKey}&language=fr`;
-    console.log('[API Google Reviews] Appel à l\'API Google Places');
+    // Utiliser la nouvelle API Google Places v1
+    // Note: les champs sont spécifiés dans X-Goog-FieldMask, pas dans l'URL
+    const url = `https://places.googleapis.com/v1/places/${placeId}`;
+
+    console.log('[API Google Reviews] Appel à l\'API Google Places v1');
+    console.log('[API Google Reviews] URL:', url);
+    console.log('[API Google Reviews] Place ID:', placeId);
 
     // Ajouter un timeout pour éviter que le site plante si Google met du temps à répondre
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 secondes de timeout
 
     try {
-      const response = await fetch(apiUrl, {
-        signal: controller.signal
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Goog-Api-Key': apiKey,
+          'X-Goog-FieldMask': 'reviews,rating,userRatingCount,displayName',
+        },
+        signal: controller.signal,
       });
 
       clearTimeout(timeoutId);
@@ -50,14 +83,39 @@ export async function GET(request: NextRequest) {
 
       if (!response.ok) {
         const errorText = await response.text().catch(() => 'Impossible de lire la réponse d\'erreur');
+        
+        // Essayer de parser l'erreur en JSON
+        let errorData: any = {};
+        try {
+          errorData = JSON.parse(errorText);
+        } catch {
+          errorData = { message: errorText };
+        }
+        
         console.error('[API Google Reviews] Réponse non-OK de Google:', {
           status: response.status,
           statusText: response.statusText,
-          body: errorText.substring(0, 500) // Limiter la taille du log
+          body: errorText.substring(0, 1000), // Limiter la taille du log
+          parsedError: errorData,
         });
+
+        // Construire un message d'erreur détaillé
+        const errorMessage = errorData.error?.message || 
+                           errorData.message || 
+                           `Erreur API Google Places: ${response.status} ${response.statusText}`;
+
+        // Si c'est une erreur serveur de Google, retourner une erreur 502
+        if (response.status >= 500) {
+          return NextResponse.json(
+            { error: errorMessage },
+            { status: 502 }
+          );
+        }
+
+        // Pour les erreurs client (400, 401, 403, etc.), retourner 400
         return NextResponse.json(
-          { error: `Erreur API Google Places: ${response.status} ${response.statusText}` },
-          { status: response.status >= 500 ? 502 : 400 }
+          { error: errorMessage },
+          { status: 400 }
         );
       }
 
@@ -67,47 +125,37 @@ export async function GET(request: NextRequest) {
       });
 
       console.log('[API Google Reviews] Réponse de Google:', {
-        status: data.status,
-        hasResult: !!data.result,
-        resultName: data.result?.name,
-        reviewsCount: data.result?.reviews?.length || 0,
-        errorMessage: data.error_message
+        hasReviews: !!data.reviews,
+        reviewsCount: data.reviews?.length || 0,
+        rating: data.rating,
+        userRatingCount: data.userRatingCount,
       });
 
-      if (data.status !== 'OK' && data.status !== 'ZERO_RESULTS') {
-        console.error('[API Google Reviews] Erreur Google Places:', {
-          status: data.status,
-          errorMessage: data.error_message
-        });
-        return NextResponse.json(
-          { error: `Erreur Google Places: ${data.status}${data.error_message ? ` - ${data.error_message}` : ''}` },
-          { status: 400 }
-        );
-      }
+      // Formater les données pour le client
+      const formattedData = {
+        reviews: data.reviews || [],
+        rating: data.rating || null,
+        userRatingCount: data.userRatingCount || 0,
+        displayName: data.displayName || null,
+      };
 
-      if (!data.result) {
-        console.warn('[API Google Reviews] Aucun résultat trouvé');
-        return NextResponse.json(
-          { error: 'Aucun résultat trouvé' },
-          { status: 404 }
-        );
-      }
+      // Mettre en cache
+      cache = {
+        data: formattedData,
+        timestamp: Date.now(),
+      };
 
-      console.log('[API Google Reviews] Données préparées avec succès');
-      return NextResponse.json({
-        name: data.result.name,
-        rating: data.result.rating,
-        reviews: data.result.reviews || []
-      }, {
+      return NextResponse.json(formattedData, {
         headers: {
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'GET, OPTIONS',
           'Access-Control-Allow-Headers': 'Content-Type',
-        }
+          'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+        },
       });
     } catch (fetchError: any) {
       clearTimeout(timeoutId);
-      
+
       if (fetchError.name === 'AbortError') {
         console.error('[API Google Reviews] Timeout: Google a mis trop de temps à répondre');
         return NextResponse.json(
@@ -115,7 +163,7 @@ export async function GET(request: NextRequest) {
           { status: 504 }
         );
       }
-      
+
       throw fetchError; // Relancer l'erreur pour le catch externe
     }
   } catch (error) {

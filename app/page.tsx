@@ -2,7 +2,6 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import Hero from '../components/Hero';
 import ServicesPreview from '../components/ServicesPreview';
-import Testimonials from '../components/Testimonials';
 import ContactForm from '../components/ContactForm';
 import ReviewsWrapper from '@/components/ReviewsWrapper';
 
@@ -167,8 +166,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <Testimonials />
 
       <ReviewsWrapper 
         maxReviews={6}

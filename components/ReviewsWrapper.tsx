@@ -22,3 +22,4 @@ const ReviewsWrapper = ({ maxReviews = 6, showRating = true }: ReviewsWrapperPro
 
 export default ReviewsWrapper;
 
+
