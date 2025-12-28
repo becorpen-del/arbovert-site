@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import Hero from '../components/Hero';
 import ServicesPreview from '../components/ServicesPreview';
@@ -158,11 +159,31 @@ export default function HomePage() {
             Muret, Cugnaux, Colomiers, Blagnac et bien plus encore.
           </p>
           <div className="mt-6 grid gap-3 text-sm uppercase tracking-wide text-night/70 sm:grid-cols-2 lg:grid-cols-4">
-            {interventionCities.map((city) => (
-              <span key={city} className="rounded-full border border-forest/20 bg-beige/70 px-4 py-2 text-center">
-                {city}
-              </span>
-            ))}
+            {interventionCities.map((city) => {
+              const isCugnaux = city === 'Cugnaux';
+              const content = (
+                <span className={`rounded-full border border-forest/20 bg-beige/70 px-4 py-2 text-center transition-colors ${
+                  isCugnaux ? 'hover:bg-forest/10 hover:border-forest/40 cursor-pointer' : ''
+                }`}>
+                  {city}
+                </span>
+              );
+              return isCugnaux ? (
+                <Link key={city} href="/elagueur-cugnaux">
+                  {content}
+                </Link>
+              ) : (
+                <span key={city}>{content}</span>
+              );
+            })}
+          </div>
+          <div className="mt-6 text-center">
+            <Link
+              href="/nos-villes"
+              className="text-forest hover:underline font-medium"
+            >
+              Voir toutes nos villes d'intervention →
+            </Link>
           </div>
         </div>
       </section>

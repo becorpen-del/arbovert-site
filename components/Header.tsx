@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { VillesMenuDesktop, VillesMenuMobile } from './VillesMenu';
 
 const navigation = [
   { label: 'Accueil', href: '/' },
@@ -39,6 +40,7 @@ const Header = () => {
                 {item.label}
               </Link>
             ))}
+            <VillesMenuDesktop />
           </nav>
           <a
             href="tel:0648768515"
@@ -48,12 +50,17 @@ const Header = () => {
             📞 06 48 76 85 15
           </a>
         </div>
-        <nav className="flex items-center justify-between gap-4 border-t border-forest/10 py-2 text-xs font-medium text-night lg:hidden">
-          {navigation.map((item) => (
-            <Link key={item.href} href={item.href} className="flex-1 text-center transition-colors hover:text-forest">
-              {item.label}
-            </Link>
-          ))}
+        <nav className="flex flex-col border-t border-forest/10 py-2 text-xs font-medium text-night lg:hidden">
+          <div className="flex items-center justify-between gap-4">
+            {navigation.map((item) => (
+              <Link key={item.href} href={item.href} className="flex-1 text-center transition-colors hover:text-forest py-2">
+                {item.label}
+              </Link>
+            ))}
+          </div>
+          <div className="border-t border-forest/10 mt-2 pt-2">
+            <VillesMenuMobile />
+          </div>
         </nav>
       </div>
     </header>

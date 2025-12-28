@@ -33,19 +33,36 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="flex flex-1 flex-wrap items-center gap-4 text-white/80 lg:justify-center">
-          <Link href="/" className="transition-colors hover:text-white">
-            Accueil
-          </Link>
-          <Link href="/services-elagage-haute-garonne" className="transition-colors hover:text-white">
-            Services
-          </Link>
-          <Link href="/realisations-elagueur-haute-garonne" className="transition-colors hover:text-white">
-            Réalisations
-          </Link>
-          <Link href="#" className="transition-colors hover:text-white">
-            Mentions légales
-          </Link>
+        <div className="flex flex-1 flex-col gap-6 lg:flex-row lg:items-center lg:justify-center">
+          <div className="flex flex-wrap items-center gap-4 text-white/80">
+            <Link href="/" className="transition-colors hover:text-white">
+              Accueil
+            </Link>
+            <Link href="/services-elagage-haute-garonne" className="transition-colors hover:text-white">
+              Services
+            </Link>
+            <Link href="/realisations-elagueur-haute-garonne" className="transition-colors hover:text-white">
+              Réalisations
+            </Link>
+            <Link href="#" className="transition-colors hover:text-white">
+              Mentions légales
+            </Link>
+          </div>
+          <div className="border-t border-white/20 pt-4 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-6 lg:ml-6">
+            <h4 className="font-heading text-white mb-2 text-sm uppercase tracking-wide">Nos villes</h4>
+            <ul className="space-y-1 text-sm text-white/80">
+              <li>
+                <Link href="/elagueur-cugnaux" className="transition-colors hover:text-white">
+                  Élagueur Cugnaux
+                </Link>
+              </li>
+              <li>
+                <Link href="/nos-villes" className="transition-colors hover:text-white">
+                  Toutes nos villes
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
         <a href="tel:0648768515" className="btn border border-white text-white hover:bg-white/10">
           📞 06 48 76 85 15
