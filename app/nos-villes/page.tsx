@@ -20,7 +20,7 @@ const villes = [
   {
     nom: 'Muret',
     slug: 'elagueur-muret',
-    disponible: false,
+    disponible: true,
     habitants: '25 000',
     codePostal: '31600',
     description: 'Élagage et abattage pour particuliers et professionnels',
@@ -187,5 +187,6 @@ export default function NosVilles() {
     </div>
   );
 }
+
 
 

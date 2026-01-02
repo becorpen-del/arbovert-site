@@ -4,12 +4,12 @@ import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Élagueur Cugnaux (31270) – Arbovert | Élagage, abattage & entretien',
+  title: 'Élagueur Muret (31600) – Arbovert | Élagage, abattage & entretien',
   description:
-    'Élagueur grimpeur à Cugnaux (31) : élagage, abattage, taille de haies et entretien de jardins. Intervention rapide dans tous les quartiers. Devis gratuit.',
+    'Élagueur grimpeur à Muret (31) : élagage, abattage, taille de haies et entretien de jardins. Intervention rapide dans tous les quartiers. Devis gratuit.',
   openGraph: {
-    title: 'Élagueur Cugnaux (31270) – Arbovert',
-    description: 'Élagueur grimpeur professionnel à Cugnaux. Intervention rapide pour vos travaux d\'élagage et d\'entretien d\'espaces verts.',
+    title: 'Élagueur Muret (31600) – Arbovert',
+    description: 'Élagueur grimpeur professionnel à Muret. Intervention rapide pour vos travaux d\'élagage et d\'entretien d\'espaces verts.',
     type: 'website',
     locale: 'fr_FR',
   },
@@ -17,50 +17,50 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    title: "Élagage d'arbres à Cugnaux",
+    title: "Élagage d'arbres à Muret",
     description:
-      "Taille de formation, taille douce ou sécuritaire : nous adaptons nos interventions à l'essence, à l'âge de l'arbre et aux contraintes de votre environnement pour favoriser une reprise saine.",
+      "Taille raisonnée, élagage sanitaire ou sécuritaire : nous intervenons sur tous types d'arbres en respectant leur physiologie et les contraintes urbaines ou péri-urbaines de Muret.",
     points: [
-      'Diagnostic sanitaire et conseils personnalisés',
-      'Élagage sur corde ou nacelle selon l\'accès',
-      'Gestion des bois et broyage des branches',
-      'Nettoyage du chantier en fin d\'intervention'
+      'Diagnostic phytosanitaire avant intervention',
+      'Techniques d\'élagage sur corde adaptées au milieu urbain',
+      'Évacuation et broyage des rémanents',
+      'Conseils sur la gestion future de vos arbres'
     ],
     image: '/elagage-services.JPG'
   },
   {
     title: "Abattage et démontage d'arbres",
     description:
-      "Quand un arbre devient dangereux ou gêne un projet, nous réalisons un abattage contrôlé, avec ou sans rétention, pour sécuriser les biens alentours.",
+      "Arbre dangereux, malade ou gênant un projet d'aménagement : nous réalisons l'abattage en toute sécurité avec démontage par tronçons si nécessaire.",
     points: [
-      'Étude de la zone et balisage du périmètre',
-      'Démontage par tronçons avec rétention si besoin',
-      'Broyage ou rognage possible sur demande',
-      'Valorisation ou évacuation des déchets verts'
+      'Analyse des risques et sécurisation du périmètre',
+      'Démontage avec rétention pour zones sensibles',
+      'Dessouchage et rognage sur demande',
+      'Évacuation complète des déchets végétaux'
     ],
     image: '/abattage-demontage-arbres-services.JPG'
   },
   {
     title: 'Taille de haies et arbustes',
     description:
-      'Haies de clôture, massifs ou arbustes : nous redonnons une forme nette et densifions la végétation tout en respectant les périodes de taille.',
+      'Haies champêtres, taillées ou libres : nous redonnons structure et densité à vos clôtures végétales en respectant les cycles de végétation.',
     points: [
-      'Taille au cordeau ou au gabarit souhaité',
-      'Ramassage et évacuation des déchets',
-      'Contrats d\'entretien sur l\'année',
-      'Conseils sur les essences et périodes optimales'
+      'Taille géométrique ou naturelle selon vos besoins',
+      'Respect des périodes de nidification',
+      'Ramassage systématique des déchets',
+      'Forfaits annuels d\'entretien disponibles'
     ],
     image: '/tailles_de_haies_arbustes.jpg'
   },
   {
-    title: 'Tonte de pelouse et entretien de jardins',
+    title: 'Tonte et entretien de jardins',
     description:
-      `Entretenez votre extérieur toute l'année : tonte, débroussaillage, nettoyage et finitions pour des espaces verts toujours accueillants.`,
+      'Tonte, débroussaillage, nettoyage : entretenez vos espaces verts toute l\'année avec un service régulier et soigné.',
     points: [
-      'Tonte et finition des bordures',
-      'Débroussaillage et remise à niveau des terrains',
-      'Nettoyage souffleur des allées et terrasses',
-      'Interventions ponctuelles ou régulières'
+      'Tonte avec finition des bordures et massifs',
+      'Débroussaillage de terrains en friche',
+      'Nettoyage au souffleur des allées et cours',
+      'Services ponctuels ou contrats d\'entretien annuels'
     ],
     image: '/tonte_de_jardin.jpeg'
   }
@@ -68,7 +68,7 @@ const services = [
 
 const villesIntervention = ['TOULOUSE', 'MURET', 'CUGNAUX', 'COLOMIERS', 'BLAGNAC', 'TOURNEFEUILLE', 'LABÈGE', 'BALMA'];
 
-export default function ElagueurCugnaux() {
+export default function ElagueurMuret() {
   return (
     <div className="space-y-0">
       {/* Hero Section - Fond beige avec layout 60/40 */}
@@ -77,16 +77,16 @@ export default function ElagueurCugnaux() {
           <div className="grid md:grid-cols-[60%_40%] gap-8 items-center">
             <div>
               <h1 className="font-heading text-4xl md:text-5xl text-forest mb-6">
-                Élagueur Cugnaux (31270)
+                Élagueur Muret (31600)
               </h1>
               <p className="text-lg md:text-xl text-night/80 leading-relaxed">
-                Arbovert intervient rapidement à Cugnaux et dans toute l'agglomération toulousaine pour vos travaux d'élagage, abattage et entretien d'espaces verts.
+                Arbovert intervient rapidement à Muret et dans toute l'agglomération sud de Toulouse pour vos travaux d'élagage, abattage et entretien d'espaces verts.
               </p>
             </div>
             <div className="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden border border-forest/10 shadow-sm">
               <Image
                 src="/elagage-services.JPG"
-                alt="Élagueur grimpeur Arbovert en intervention à Cugnaux"
+                alt="Élagueur grimpeur Arbovert en intervention à Muret"
                 fill
                 className="object-cover"
                 priority={true}
@@ -99,27 +99,27 @@ export default function ElagueurCugnaux() {
       {/* Section Pourquoi nous choisir */}
       <section className="py-16 md:py-20 bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading text-center mb-12">Pourquoi choisir Arbovert à Cugnaux ?</h2>
+          <h2 className="section-heading text-center mb-12">Pourquoi choisir Arbovert à Muret ?</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="rounded-2xl border border-forest/10 bg-beige/70 p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-4xl mb-4">⚡</div>
-              <h3 className="font-heading text-xl text-forest mb-3">Intervention locale rapide</h3>
+              <h3 className="font-heading text-xl text-forest mb-3">Proximité et réactivité</h3>
               <p className="text-night/80">
-                Basés en Haute-Garonne, nous intervenons sous 48h à Cugnaux pour vos urgences ou interventions programmées.
+                Basés en Haute-Garonne, nous intervenons sous 48h à Muret pour toutes urgences ou travaux planifiés.
               </p>
             </div>
             <div className="rounded-2xl border border-forest/10 bg-beige/70 p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-4xl mb-4">🌳</div>
-              <h3 className="font-heading text-xl text-forest mb-3">Expertise arboricole certifiée</h3>
+              <h3 className="font-heading text-xl text-forest mb-3">Qualification professionnelle</h3>
               <p className="text-night/80">
-                CAPA Travaux Forestiers et expérience militaire. Notre équipe maîtrise toutes les techniques d'élagage adaptées aux essences locales.
+                CAPA Travaux Forestiers, expérience militaire et maîtrise des techniques d'élagage adaptées aux essences de la région.
               </p>
             </div>
             <div className="rounded-2xl border border-forest/10 bg-beige/70 p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-4xl mb-4">💰</div>
               <h3 className="font-heading text-xl text-forest mb-3">Crédit d'impôt 50%</h3>
               <p className="text-night/80">
-                Services à la Personne : déduisez 50% pour l'entretien de jardin (tonte, taille de haies, débroussaillage).
+                Agrément Services à la Personne : bénéficiez de 50% de crédit d'impôt sur l'entretien de jardin (hors élagage et abattage).
               </p>
             </div>
           </div>
@@ -129,7 +129,7 @@ export default function ElagueurCugnaux() {
       {/* Section Nos services */}
       <section className="py-16 md:py-20 bg-beige">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading text-center mb-12">Nos services d'élagage à Cugnaux</h2>
+          <h2 className="section-heading text-center mb-12">Nos services d'élagage à Muret</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service) => (
               <article
@@ -161,21 +161,21 @@ export default function ElagueurCugnaux() {
       {/* Section Zones d'intervention */}
       <section className="py-16 md:py-20 bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading text-center mb-6">Intervention à Cugnaux et communes voisines</h2>
+          <h2 className="section-heading text-center mb-6">Intervention à Muret et communes limitrophes</h2>
           <p className="text-center text-lg text-night/80 mb-8 max-w-3xl mx-auto">
-            Nous intervenons rapidement sur Cugnaux et l'ensemble de l'agglomération toulousaine pour vos travaux d'élagage et d'entretien d'espaces verts.
+            Nous intervenons rapidement à Muret et dans toute l'agglomération toulousaine pour vos travaux d'élagage et d'entretien d'espaces verts.
           </p>
           <div className="grid gap-8 md:gap-10 text-sm uppercase tracking-wide text-night/70 sm:grid-cols-2 lg:grid-cols-4">
             {villesIntervention.map((ville) => {
-              const isCugnaux = ville === 'CUGNAUX';
+              const isMuret = ville === 'MURET';
               const content = (
                 <span className={`rounded-full border border-forest/20 bg-beige/70 px-4 py-3 text-center transition-colors ${
-                  isCugnaux ? 'bg-forest/10 border-forest/40 font-semibold' : ''
+                  isMuret ? 'bg-forest/10 border-forest/40 font-semibold' : ''
                 }`}>
                   {ville}
                 </span>
               );
-              return isCugnaux ? (
+              return isMuret ? (
                 <span key={ville}>{content}</span>
               ) : (
                 <span key={ville}>{content}</span>
@@ -188,16 +188,16 @@ export default function ElagueurCugnaux() {
       {/* Section Spécificités locales */}
       <section className="py-16 md:py-20 bg-beige">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading text-center mb-8">Élagage à Cugnaux : nos spécificités</h2>
+          <h2 className="section-heading text-center mb-8">Élagage à Muret : contexte local et savoir-faire</h2>
           <div className="rounded-3xl border border-forest/10 bg-white p-8 shadow-sm">
             <p className="text-lg text-night/80 mb-4">
-              Notre équipe qualifiée maîtrise l'ensemble des techniques d'élagage adaptées aux essences locales qui composent le paysage de Cugnaux et de la Haute-Garonne : <strong>chênes, platanes, pins, frênes et arbres fruitiers</strong>.
+              Située au sud de Toulouse, en bordure de la Garonne, <strong>Muret</strong> présente un patrimoine arboré riche entre zones urbaines, résidentielles et espaces péri-urbains. Notre équipe intervient sur l'ensemble des quartiers : <strong>centre-ville, Leyran, Ox, Saint-Jean, Bouconne</strong> et les lotissements récents.
             </p>
             <p className="text-lg text-night/80 mb-4">
-              Nous effectuons nos interventions dans le respect des végétaux, des <strong>normes de sécurité</strong> et du <strong>voisinage</strong>, avec un matériel professionnel régulièrement contrôlé. Chaque chantier fait l'objet d'un <strong>diagnostic préalable</strong> pour garantir des travaux adaptés à l'âge, l'essence et l'état sanitaire de vos arbres.
+              Les essences locales typiques incluent les <strong>platanes</strong> alignés en centre-bourg, les <strong>chênes pédonculés</strong>, les <strong>frênes communs</strong>, les <strong>pins parasols</strong> et de nombreux <strong>arbres fruitiers</strong> dans les jardins des particuliers. La proximité de la Garonne et les sols alluviaux favorisent un développement vigoureux de la végétation, nécessitant un entretien régulier et adapté.
             </p>
             <p className="text-lg text-night/80">
-              La proximité de la Garonne et le climat toulousain favorisent le développement rapide de la végétation, nécessitant un entretien régulier. Les platanes alignés en bord de voirie, les pins parasols caractéristiques de nos jardins et les haies de lauriers palmes requièrent une attention particulière aux périodes de taille optimales.
+              Nous réalisons chaque intervention dans le respect des <strong>normes de sécurité</strong>, du <strong>voisinage</strong> et du <strong>patrimoine végétal</strong>, avec un diagnostic phytosanitaire préalable et un matériel professionnel certifié. Nos interventions sont adaptées aux contraintes urbaines de Muret : accès restreints, proximité des habitations, lignes électriques aériennes.
             </p>
           </div>
         </div>
@@ -208,10 +208,10 @@ export default function ElagueurCugnaux() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl border border-forest/10 bg-white p-8 md:p-12 shadow-sm text-center">
             <h2 className="font-heading text-3xl md:text-4xl text-forest mb-6">
-              Un projet d'élagage ou d'entretien de jardin ?
+              Un projet d'élagage ou d'entretien de jardin à Muret ?
             </h2>
             <p className="text-lg text-night/80 mb-8 max-w-2xl mx-auto">
-              Contactez-nous pour un devis gratuit. Nous analysons votre chantier et planifions une intervention adaptée à vos besoins à Cugnaux et dans toute l'agglomération toulousaine.
+              Contactez-nous pour un devis gratuit. Nous analysons votre chantier et planifions une intervention rapide et adaptée à vos besoins.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="tel:0648768515" className="btn btn-primary whitespace-nowrap">
@@ -229,7 +229,7 @@ export default function ElagueurCugnaux() {
       <section className="py-16 md:py-20 bg-beige" id="contact">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl border border-forest/10 bg-white p-8 shadow-sm">
-            <h2 className="section-heading text-center mb-6">Demandez votre devis gratuit à Cugnaux</h2>
+            <h2 className="section-heading text-center mb-6">Demandez votre devis gratuit à Muret</h2>
             <p className="text-center text-lg text-night/80 mb-8">
               Remplissez le formulaire ci-dessous et nous vous recontacterons rapidement.
             </p>
@@ -240,3 +240,4 @@ export default function ElagueurCugnaux() {
     </div>
   );
 }
+

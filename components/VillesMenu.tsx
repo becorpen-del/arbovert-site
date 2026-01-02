@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const villesMenu = [
   { nom: 'Cugnaux', slug: 'elagueur-cugnaux', disponible: true },
-  { nom: 'Muret', slug: 'elagueur-muret', disponible: false },
+  { nom: 'Muret', slug: 'elagueur-muret', disponible: true },
   { nom: 'Toulouse', slug: 'elagueur-toulouse', disponible: false },
   { nom: 'Tournefeuille', slug: 'elagueur-tournefeuille', disponible: false },
   { nom: 'Blagnac', slug: 'elagueur-blagnac', disponible: false },
