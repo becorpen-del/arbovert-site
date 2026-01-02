@@ -42,8 +42,3 @@ const GoogleReviewsWidget = ({ placeId, maxReviews = 6 }: GoogleReviewsWidgetPro
 };
 
 export default GoogleReviewsWidget;
-
-
-
-
-

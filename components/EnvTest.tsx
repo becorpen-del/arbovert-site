@@ -12,7 +12,3 @@ export default function EnvTest() {
 
   return null; // Ce composant n'affiche rien, il log juste dans la console
 }
-
-
-
-
