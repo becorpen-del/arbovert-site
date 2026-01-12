@@ -5,7 +5,17 @@ import RealisationCard, { RealisationCardProps } from '../../components/Realisat
 export const metadata: Metadata = {
   title: `Réalisations Arbovert – Élagage & entretien d'arbres en Haute-Garonne (31)`,
   description:
-    `Découvrez quelques réalisations d'Arbovert : élagage, abattage, taille de haies et entretien de jardins en Haute-Garonne. Avant / après, chantiers typiques.`
+    `Découvrez quelques réalisations d'Arbovert : élagage, abattage, taille de haies et entretien de jardins en Haute-Garonne. Avant / après, chantiers typiques.`,
+  alternates: {
+    canonical: '/realisations-elagueur-haute-garonne'
+  },
+  openGraph: {
+    title: `Réalisations Arbovert – Élagage & entretien d'arbres en Haute-Garonne (31)`,
+    description: `Découvrez quelques réalisations d'Arbovert : élagage, abattage, taille de haies et entretien de jardins en Haute-Garonne. Avant / après, chantiers typiques.`,
+    type: 'website',
+    locale: 'fr_FR',
+    url: '/realisations-elagueur-haute-garonne'
+  },
 };
 
 const realisations: RealisationCardProps[] = [

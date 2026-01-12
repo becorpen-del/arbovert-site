@@ -9,7 +9,17 @@ import ReviewsWrapper from '@/components/ReviewsWrapper';
 export const metadata: Metadata = {
   title: `Élagage & entretien d'arbres en Haute-Garonne (31) – Arbovert`,
   description:
-    `Arbovert, élagueur grimpeur en Haute-Garonne (31) : élagage, abattage, taille de haies, tonte de pelouse et entretien de jardins. Devis gratuit, intervention rapide dans tout le 31.`
+    `Arbovert, élagueur grimpeur en Haute-Garonne (31) : élagage, abattage, taille de haies, tonte de pelouse et entretien de jardins. Devis gratuit, intervention rapide dans tout le 31.`,
+  alternates: {
+    canonical: '/'
+  },
+  openGraph: {
+    title: `Élagage & entretien d'arbres en Haute-Garonne (31) – Arbovert`,
+    description: `Arbovert, élagueur grimpeur en Haute-Garonne (31) : élagage, abattage, taille de haies, tonte de pelouse et entretien de jardins. Devis gratuit, intervention rapide dans tout le 31.`,
+    type: 'website',
+    locale: 'fr_FR',
+    url: '/'
+  }
 };
 
 const interventionCities = ['Toulouse', 'Muret', 'Cugnaux', 'Colomiers', 'Blagnac', 'Tournefeuille', 'Labège', 'Balma'];
@@ -160,16 +170,17 @@ export default function HomePage() {
           </p>
           <div className="mt-6 grid gap-3 text-sm uppercase tracking-wide text-night/70 sm:grid-cols-2 lg:grid-cols-4">
             {interventionCities.map((city) => {
-              const isCugnaux = city === 'Cugnaux';
+              const isClickable = city === 'Cugnaux' || city === 'Muret';
+              const slug = city === 'Cugnaux' ? 'elagueur-cugnaux' : city === 'Muret' ? 'elagueur-muret' : '';
               const content = (
                 <span className={`rounded-full border border-forest/20 bg-beige/70 px-4 py-2 text-center transition-colors ${
-                  isCugnaux ? 'hover:bg-forest/10 hover:border-forest/40 cursor-pointer' : ''
+                  isClickable ? 'hover:bg-forest/10 hover:border-forest/40 cursor-pointer' : ''
                 }`}>
                   {city}
                 </span>
               );
-              return isCugnaux ? (
-                <Link key={city} href="/elagueur-cugnaux">
+              return isClickable ? (
+                <Link key={city} href={`/${slug}`}>
                   {content}
                 </Link>
               ) : (

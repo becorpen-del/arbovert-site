@@ -7,11 +7,15 @@ export const metadata: Metadata = {
   title: 'Élagueur Cugnaux (31270) – Arbovert | Élagage, abattage & entretien',
   description:
     'Élagueur grimpeur à Cugnaux (31) : élagage, abattage, taille de haies et entretien de jardins. Intervention rapide dans tous les quartiers. Devis gratuit.',
+  alternates: {
+    canonical: '/elagueur-cugnaux'
+  },
   openGraph: {
     title: 'Élagueur Cugnaux (31270) – Arbovert',
     description: 'Élagueur grimpeur professionnel à Cugnaux. Intervention rapide pour vos travaux d\'élagage et d\'entretien d\'espaces verts.',
     type: 'website',
     locale: 'fr_FR',
+    url: '/elagueur-cugnaux'
   },
 };
 
@@ -226,17 +230,9 @@ export default function ElagueurCugnaux() {
       </section>
 
       {/* Formulaire de contact */}
-      <section className="py-16 md:py-20 bg-beige" id="contact">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl border border-forest/10 bg-white p-8 shadow-sm">
-            <h2 className="section-heading text-center mb-6">Demandez votre devis gratuit à Cugnaux</h2>
-            <p className="text-center text-lg text-night/80 mb-8">
-              Remplissez le formulaire ci-dessous et nous vous recontacterons rapidement.
-            </p>
-            <ContactForm />
-          </div>
-        </div>
-      </section>
+      <div className="py-16 md:py-20 bg-beige">
+        <ContactForm />
+      </div>
     </div>
   );
 }

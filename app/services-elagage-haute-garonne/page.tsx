@@ -5,7 +5,17 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: `Services d'élagage, abattage et entretien d'espaces verts – Arbovert Haute-Garonne`,
   description:
-    `Découvrez les services Arbovert : élagage d'arbres, abattage, taille de haies, tonte de pelouse et entretien de jardins en Haute-Garonne (31). Devis gratuit.`
+    `Découvrez les services Arbovert : élagage d'arbres, abattage, taille de haies, tonte de pelouse et entretien de jardins en Haute-Garonne (31). Devis gratuit.`,
+  alternates: {
+    canonical: '/services-elagage-haute-garonne'
+  },
+  openGraph: {
+    title: `Services d'élagage, abattage et entretien d'espaces verts – Arbovert Haute-Garonne`,
+    description: `Découvrez les services Arbovert : élagage d'arbres, abattage, taille de haies, tonte de pelouse et entretien de jardins en Haute-Garonne (31). Devis gratuit.`,
+    type: 'website',
+    locale: 'fr_FR',
+    url: '/services-elagage-haute-garonne'
+  },
 };
 
 const serviceSections = [

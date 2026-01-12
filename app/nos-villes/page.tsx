@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -6,6 +5,16 @@ export const metadata: Metadata = {
   title: 'Nos zones d\'intervention - Élagueur Haute-Garonne | Arbovert',
   description:
     'Découvrez toutes nos zones d\'intervention en Haute-Garonne : Cugnaux, Muret, Toulouse, Tournefeuille, Blagnac et plus encore.',
+  alternates: {
+    canonical: '/nos-villes'
+  },
+  openGraph: {
+    title: 'Nos zones d\'intervention - Élagueur Haute-Garonne | Arbovert',
+    description: 'Découvrez toutes nos zones d\'intervention en Haute-Garonne : Cugnaux, Muret, Toulouse, Tournefeuille, Blagnac et plus encore.',
+    type: 'website',
+    locale: 'fr_FR',
+    url: '/nos-villes'
+  },
 };
 
 const villes = [
