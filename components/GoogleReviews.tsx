@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 interface GoogleReview {
   name: string;
@@ -45,190 +46,72 @@ export default function GoogleReviews({ maxReviews = 5, showRating = true }: Goo
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        // Récupérer les variables d'environnement (essayer les deux noms possibles)
         const apiKey = process.env.NEXT_PUBLIC_GOOGLE_PLACES_API_KEY || process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
         const placeId = process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID;
 
-        console.log('═══════════════════════════════════════════════════════');
-        console.log('[GoogleReviews] 🔍 DÉBUT DE LA RÉCUPÉRATION DES AVIS');
-        console.log('═══════════════════════════════════════════════════════');
-        
-        // Vérification détaillée des variables
-        console.log('[GoogleReviews] 📋 VÉRIFICATION DES VARIABLES:');
-        console.log('  - API Key présente:', !!apiKey);
-        console.log('  - API Key (premiers 15 caractères):', apiKey ? `${apiKey.substring(0, 15)}...` : 'MANQUANTE');
-        console.log('  - API Key longueur:', apiKey?.length || 0);
-        console.log('  - Place ID présent:', !!placeId);
-        console.log('  - Place ID valeur:', placeId || 'MANQUANT');
-        console.log('  - Place ID format valide:', placeId ? /^ChIJ/.test(placeId) : false);
-
         if (!apiKey || !placeId) {
-          console.error('❌ [GoogleReviews] ERREUR: Variables d\'environnement manquantes');
-          console.error('   → Vérifiez votre fichier .env.local à la racine du projet');
-          console.error('   → Variables requises:');
-          console.error('      NEXT_PUBLIC_GOOGLE_PLACES_API_KEY=AIzaSy...');
-          console.error('      NEXT_PUBLIC_GOOGLE_PLACE_ID=ChIJ...');
           setError(true);
           setLoading(false);
           return;
         }
 
-        // Vérifier le format du Place ID
-        if (!placeId.startsWith('ChIJ')) {
-          console.warn('⚠️ [GoogleReviews] ATTENTION: Place ID ne commence pas par "ChIJ"');
-          console.warn('   → Format attendu: ChIJ...');
-          console.warn('   → Place ID actuel:', placeId);
-        }
-
-        // Vérifier le cache (24h)
+        // Vérifier le cache (24h) - avec vérification côté client
         const CACHE_KEY = 'arbovert_google_reviews';
-        const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 heures
-        
-        const cached = localStorage.getItem(CACHE_KEY);
-        if (cached) {
-          try {
-            const { data, timestamp } = JSON.parse(cached);
-            const age = Date.now() - timestamp;
-            if (age < CACHE_DURATION) {
-              console.log('[GoogleReviews] ✅ Utilisation du cache (âge:', Math.floor(age / 1000 / 60), 'minutes)');
-              setPlaceData(data);
-              setLoading(false);
-              return;
-            } else {
-              console.log('[GoogleReviews] ⏰ Cache expiré, rafraîchissement...');
+        const CACHE_DURATION = 24 * 60 * 60 * 1000;
+
+        if (typeof window !== 'undefined') {
+          const cached = localStorage.getItem(CACHE_KEY);
+          if (cached) {
+            try {
+              const { data, timestamp } = JSON.parse(cached);
+              const age = Date.now() - timestamp;
+              if (age < CACHE_DURATION) {
+                setPlaceData(data);
+                setLoading(false);
+                return;
+              }
+            } catch {
+              // Cache invalide, on continue
             }
-          } catch (e) {
-            console.warn('[GoogleReviews] ⚠️ Erreur lors de la lecture du cache, continuation...');
           }
         }
 
-        // Construction de l'URL
         const url = `https://places.googleapis.com/v1/places/${placeId}?fields=displayName,rating,userRatingCount,reviews&languageCode=fr&key=${apiKey}`;
-        
-        console.log('[GoogleReviews] 🌐 CONFIGURATION DE LA REQUÊTE:');
-        console.log('  - URL complète:', url.replace(apiKey, 'API_KEY_MASQUÉE'));
-        console.log('  - Base URL:', 'https://places.googleapis.com/v1/places/');
-        console.log('  - Place ID dans URL:', placeId);
-        console.log('  - Paramètres:', 'fields=displayName,rating,userRatingCount,reviews&languageCode=fr');
-        console.log('  - Clé API dans URL:', '✅ Présente (masquée pour sécurité)');
-
-        console.log('[GoogleReviews] 📡 ENVOI DE LA REQUÊTE...');
-        const startTime = Date.now();
 
         const response = await fetch(url);
-        const requestDuration = Date.now() - startTime;
-
-        console.log('[GoogleReviews] 📥 RÉPONSE REÇUE:');
-        console.log('  - Status Code:', response.status);
-        console.log('  - Status Text:', response.statusText);
-        console.log('  - Durée de la requête:', requestDuration, 'ms');
-        console.log('  - Headers:', Object.fromEntries(response.headers.entries()));
-        
-        // Lire le texte brut de la réponse
         const responseText = await response.text();
-        console.log('  - Taille de la réponse:', responseText.length, 'caractères');
-        console.log('  - Début de la réponse (200 premiers caractères):', responseText.substring(0, 200));
-        
+
         if (!response.ok) {
-          console.error('═══════════════════════════════════════════════════════');
-          console.error('❌ [GoogleReviews] ERREUR HTTP:', response.status);
-          console.error('═══════════════════════════════════════════════════════');
-          
-          let errorData: any = {};
+          let errorData: { error?: { message?: string } } = {};
           try {
             errorData = JSON.parse(responseText);
-            console.error('📋 DÉTAILS DE L\'ERREUR GOOGLE:');
-            console.error('  - Code d\'erreur:', errorData.error?.code || 'N/A');
-            console.error('  - Message:', errorData.error?.message || 'N/A');
-            console.error('  - Status:', errorData.error?.status || 'N/A');
-            console.error('  - Détails:', errorData.error?.details || 'N/A');
-            console.error('  - Réponse complète:', JSON.stringify(errorData, null, 2));
-          } catch (parseError) {
-            console.error('  - Réponse non-JSON:', responseText);
-            errorData = { raw: responseText };
+          } catch {
+            errorData = {};
           }
-
-          // Messages d'aide selon le code d'erreur
-          console.error('🔧 INSTRUCTIONS DE CORRECTION:');
-          if (response.status === 400) {
-            console.error('   → Erreur 400: Requête invalide');
-            console.error('   → Vérifiez que:');
-            console.error('      • Le Place ID est correct (format: ChIJ...)');
-            console.error('      • La clé API est valide et activée');
-            console.error('      • L\'API "Places API (New)" est activée dans Google Cloud Console');
-          } else if (response.status === 401) {
-            console.error('   → Erreur 401: Non autorisé');
-            console.error('   → Vérifiez que:');
-            console.error('      • La clé API est correcte');
-            console.error('      • La clé API n\'a pas été révoquée');
-          } else if (response.status === 403) {
-            console.error('   → Erreur 403: Accès refusé');
-            console.error('   → Vérifiez que:');
-            console.error('      • L\'API "Places API (New)" est activée');
-            console.error('      • Les restrictions de la clé API autorisent votre domaine');
-            console.error('      • Le quota n\'est pas dépassé');
-          } else if (response.status === 404) {
-            console.error('   → Erreur 404: Place ID introuvable');
-            console.error('   → Vérifiez que:');
-            console.error('      • Le Place ID est correct');
-            console.error('      • Le lieu existe bien sur Google Maps');
-          } else {
-            console.error('   → Erreur inconnue, consultez la documentation Google Places API');
-          }
-
           throw new Error(`HTTP ${response.status}: ${errorData.error?.message || response.statusText}`);
         }
 
-        // Parser la réponse JSON
         let data: PlaceData;
         try {
           data = JSON.parse(responseText);
-        } catch (parseError) {
-          console.error('❌ [GoogleReviews] Erreur de parsing JSON:', parseError);
-          console.error('   Réponse brute:', responseText);
+        } catch {
           throw new Error('Réponse invalide de l\'API Google');
         }
 
-        console.log('═══════════════════════════════════════════════════════');
-        console.log('[GoogleReviews] ✅ DONNÉES REÇUES AVEC SUCCÈS');
-        console.log('═══════════════════════════════════════════════════════');
-        console.log('📊 STRUCTURE DES DONNÉES:');
-        console.log('  - Display Name:', data.displayName?.text || 'N/A');
-        console.log('  - Rating:', data.rating || 'N/A');
-        console.log('  - User Rating Count:', data.userRatingCount || 0);
-        console.log('  - Nombre d\'avis:', data.reviews?.length || 0);
-        console.log('  - Données complètes:', JSON.stringify(data, null, 2));
-
-        if (data.reviews && data.reviews.length > 0) {
-          console.log('📝 PREMIER AVIS (exemple):');
-          const firstReview = data.reviews[0];
-          console.log('  - Auteur:', firstReview.authorAttribution?.displayName);
-          console.log('  - Note:', firstReview.rating);
-          console.log('  - Texte (premiers 100 caractères):', firstReview.text?.text?.substring(0, 100) || 'N/A');
+        // Mettre en cache côté client
+        if (typeof window !== 'undefined') {
+          localStorage.setItem(CACHE_KEY, JSON.stringify({
+            data,
+            timestamp: Date.now()
+          }));
         }
 
-        // Mettre en cache
-        localStorage.setItem(CACHE_KEY, JSON.stringify({
-          data,
-          timestamp: Date.now()
-        }));
-
         setPlaceData(data);
-        console.log('[GoogleReviews] ✅ Données mises en cache et affichées');
 
-      } catch (err: any) {
-        console.error('═══════════════════════════════════════════════════════');
-        console.error('❌ [GoogleReviews] ERREUR GLOBALE');
-        console.error('═══════════════════════════════════════════════════════');
-        console.error('  - Type:', err?.name || 'Unknown');
-        console.error('  - Message:', err?.message || 'Erreur inconnue');
-        console.error('  - Stack:', err?.stack || 'N/A');
-        console.error('═══════════════════════════════════════════════════════');
+      } catch {
         setError(true);
       } finally {
         setLoading(false);
-        console.log('[GoogleReviews] 🏁 FIN DU PROCESSUS');
-        console.log('═══════════════════════════════════════════════════════');
       }
     };
 
@@ -263,7 +146,6 @@ export default function GoogleReviews({ maxReviews = 5, showRating = true }: Goo
   }
 
   if (error || !placeData?.reviews?.length) {
-    console.warn('[GoogleReviews] Aucun avis à afficher');
     return null;
   }
 
@@ -350,10 +232,13 @@ function ReviewCard({ review }: { review: GoogleReview }) {
       {/* En-tête avec photo et nom */}
       <div className="flex items-center gap-3 mb-4">
         {review.authorAttribution?.photoUri ? (
-          <img
+          <Image
             src={review.authorAttribution.photoUri}
             alt={review.authorAttribution.displayName}
+            width={48}
+            height={48}
             className="w-12 h-12 rounded-full object-cover"
+            unoptimized
           />
         ) : (
           <div className="w-12 h-12 rounded-full bg-[#4A7C59] flex items-center justify-center text-white font-bold text-lg">

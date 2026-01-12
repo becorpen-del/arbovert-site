@@ -44,8 +44,11 @@ const Footer = () => {
             <Link href="/realisations-elagueur-haute-garonne" className="transition-colors hover:text-white">
               Réalisations
             </Link>
-            <Link href="#" className="transition-colors hover:text-white">
-              Mentions légales
+            <Link href="/credit-impot-jardinage" className="transition-colors hover:text-white">
+              💰 Crédit d'Impôt 50%
+            </Link>
+            <Link href="/#contact" className="transition-colors hover:text-white">
+              Contact
             </Link>
           </div>
           <div className="border-t border-white/20 pt-4 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-6 lg:ml-6">
@@ -54,6 +57,11 @@ const Footer = () => {
               <li>
                 <Link href="/elagueur-cugnaux" className="transition-colors hover:text-white">
                   Élagueur Cugnaux
+                </Link>
+              </li>
+              <li>
+                <Link href="/elagueur-muret" className="transition-colors hover:text-white">
+                  Élagueur Muret
                 </Link>
               </li>
               <li>

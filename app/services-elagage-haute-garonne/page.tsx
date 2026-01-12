@@ -144,12 +144,22 @@ export default function ServicesPage() {
                 <div className="flex items-center gap-3 flex-wrap">
                   <h2 className="font-heading text-3xl text-forest">{service.title}</h2>
                   {(service.title === 'Taille de haies et arbustes' || service.title === 'Tonte de pelouse et entretien de jardins') && (
-                    <span className="rounded-full bg-leaf/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-leaf border border-leaf/30">
+                    <Link
+                      href="/credit-impot-jardinage"
+                      className="rounded-full bg-leaf/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-leaf border border-leaf/30 hover:bg-leaf/30 transition-colors"
+                    >
                       Crédit d'impôt 50%
-                    </span>
+                    </Link>
                   )}
                 </div>
                 <p className="mt-4 text-night/80">{service.description}</p>
+                {(service.title === 'Taille de haies et arbustes' || service.title === 'Tonte de pelouse et entretien de jardins') && (
+                  <p className="mt-2 text-sm">
+                    <Link href="/credit-impot-jardinage" className="text-forest hover:underline font-medium">
+                      💰 En savoir plus sur le crédit d'impôt 50% →
+                    </Link>
+                  </p>
+                )}
                 <ul className="mt-4 list-disc space-y-2 pl-5 text-night/80">
                   {service.points.map((point) => (
                     <li key={point}>{point}</li>

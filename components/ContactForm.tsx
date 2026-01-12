@@ -35,7 +35,7 @@ const ContactForm = () => {
           className="mt-8 grid gap-6"
         >
           <input type="hidden" name="access_key" value="121eb34e-2a3f-4a5a-b4b9-f9e31d279b9a" />
-          <input type="hidden" name="subject" value="Nouveau lead depuisArbovert-31.fr" />
+          <input type="hidden" name="subject" value="Nouveau lead depuis Arbovert-31.fr" />
           <input type="hidden" name="redirect" value="https://www.arbovert-31.fr/#contact" />
           <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
           <div className="grid gap-6 md:grid-cols-2">

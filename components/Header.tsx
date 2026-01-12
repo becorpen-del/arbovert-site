@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { VillesMenuDesktop, VillesMenuMobile } from './VillesMenu';
 
 const navigation = [
-  { label: 'Accueil', href: '/' },
   { label: 'Services', href: '/services-elagage-haute-garonne' },
-  { label: 'Réalisations', href: '/realisations-elagueur-haute-garonne' }
+  { label: 'Réalisations', href: '/realisations-elagueur-haute-garonne' },
+  { label: 'Crédit d\'Impôt', href: '/credit-impot-jardinage' }
 ];
 
 const Header = () => {
@@ -28,7 +28,6 @@ const Header = () => {
               priority
             />
             <div className="hidden flex-col leading-tight md:flex">
-              <span className="font-heading text-xl font-semibold text-forest">ARBOVERT</span>
               <span className="text-xs uppercase tracking-[0.08em] text-night/70">
                 Élagage & entretien
               </span>

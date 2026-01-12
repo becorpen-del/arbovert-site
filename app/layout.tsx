@@ -21,11 +21,7 @@ export const metadata: Metadata = {
   description: 'Entreprise locale d\'élagage, abattage et entretien d\'espaces verts. Intervention rapide dans toute la Haute-Garonne.',
   metadataBase: new URL('https://www.arbovert-31.fr'),
   icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/icon.png', type: 'image/png', sizes: '512x512' }
-    ],
-    apple: '/apple-icon.png'
+    icon: { url: '/favicon.ico', sizes: 'any' }
   }
 };
 

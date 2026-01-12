@@ -126,9 +126,17 @@ export default function HomePage() {
               <p className="mt-4 text-lg text-night/80">
                 Les travaux d'entretien de jardin (tonte de pelouse, taille de haies, débroussaillage) sont éligibles au crédit
                 d'impôt Services à la Personne. Arbovert est un organisme déclaré : nous vous fournissons l'attestation fiscale
-                annuelle pour votre déclaration de revenus. Plafond : 5 000 € de dépenses par an, soit jusqu'à 2 500 € de crédit
+                annuelle pour votre déclaration de revenus. Plafond : 12 000 € de dépenses par an, soit jusqu'à 6 000 € de crédit
                 d'impôt.
               </p>
+              <div className="mt-4">
+                <Link
+                  href="/credit-impot-jardinage"
+                  className="inline-block bg-forest text-white px-6 py-3 rounded-md hover:bg-forest/90 transition-colors font-medium"
+                >
+                  En savoir plus sur le crédit d'impôt 50% →
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -170,8 +178,8 @@ export default function HomePage() {
           </p>
           <div className="mt-6 grid gap-3 text-sm uppercase tracking-wide text-night/70 sm:grid-cols-2 lg:grid-cols-4">
             {interventionCities.map((city) => {
-              const isClickable = city === 'Cugnaux' || city === 'Muret';
-              const slug = city === 'Cugnaux' ? 'elagueur-cugnaux' : city === 'Muret' ? 'elagueur-muret' : '';
+              const isClickable = city === 'Toulouse' || city === 'Cugnaux' || city === 'Muret';
+              const slug = city === 'Toulouse' ? 'elagueur-toulouse' : city === 'Cugnaux' ? 'elagueur-cugnaux' : city === 'Muret' ? 'elagueur-muret' : '';
               const content = (
                 <span className={`rounded-full border border-forest/20 bg-beige/70 px-4 py-2 text-center transition-colors ${
                   isClickable ? 'hover:bg-forest/10 hover:border-forest/40 cursor-pointer' : ''
