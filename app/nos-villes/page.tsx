@@ -37,7 +37,7 @@ const villes = [
   {
     nom: 'Toulouse',
     slug: 'elagueur-toulouse',
-    disponible: false,
+    disponible: true,
     habitants: '500 000',
     codePostal: '31000',
     description: 'Interventions secteur sud-ouest : Mirail, Fontaine-Lestang...',

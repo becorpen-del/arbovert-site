@@ -6,7 +6,7 @@ import Link from 'next/link';
 const villesMenu = [
   { nom: 'Cugnaux', slug: 'elagueur-cugnaux', disponible: true },
   { nom: 'Muret', slug: 'elagueur-muret', disponible: true },
-  { nom: 'Toulouse', slug: 'elagueur-toulouse', disponible: false },
+  { nom: 'Toulouse', slug: 'elagueur-toulouse', disponible: true },
   { nom: 'Tournefeuille', slug: 'elagueur-tournefeuille', disponible: false },
   { nom: 'Blagnac', slug: 'elagueur-blagnac', disponible: false },
   { nom: 'Colomiers', slug: 'elagueur-colomiers', disponible: false },
@@ -87,8 +87,13 @@ export function VillesMenuMobile() {
               className={`block py-2 px-4 transition-colors hover:bg-beige/50 ${
                 !ville.disponible ? 'opacity-50' : ''
               }`}
-              onClick={() => setIsOpen(false)}
-              {...(!ville.disponible && { onClick: (e) => e.preventDefault() })}
+              onClick={(e) => {
+                if (!ville.disponible) {
+                  e.preventDefault();
+                } else {
+                  setIsOpen(false);
+                }
+              }}
             >
               <span className="flex items-center justify-between">
                 <span>Élagueur {ville.nom}</span>
