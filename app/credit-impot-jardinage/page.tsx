@@ -54,10 +54,11 @@ export default function CreditImpotJardinage() {
     if (!montantAnnuel || isNaN(Number(montantAnnuel))) return null;
     
     const montant = Number(montantAnnuel);
-    const creditImpot = montant * 0.5;
+    const montantPlafonne = Math.min(montant, 5000); // Plafond de 5 000 €
+    const creditImpot = montantPlafonne * 0.5;
     const coutReel = montant - creditImpot;
     
-    return { creditImpot, coutReel };
+    return { creditImpot, coutReel, montantPlafonne, depassePlafond: montant > 5000 };
   };
 
   const resultat = calculerCreditImpot();
@@ -84,7 +85,7 @@ export default function CreditImpotJardinage() {
           <p className="text-lg text-night/80 mb-6">
             Le crédit d'impôt pour l'emploi à domicile (services à la personne) vous permet de déduire 
             <strong className="text-forest"> 50% de vos dépenses</strong> d'entretien de jardin dans la limite de 
-            <strong className="text-forest"> 12 000 € par an</strong> (soit jusqu'à 6 000 € de crédit d'impôt).
+            <strong className="text-forest"> 5 000 € par an</strong> (soit jusqu'à 2 500 € de crédit d'impôt).
           </p>
           <p className="text-lg text-night/80 mb-8">
             Arbovert est une entreprise certifiée Services à la Personne (SAP), ce qui vous garantit 
@@ -172,6 +173,11 @@ export default function CreditImpotJardinage() {
                       <span className="text-night/80">Dépenses annuelles :</span>
                       <strong className="text-forest">{Number(montantAnnuel).toLocaleString('fr-FR')} €</strong>
                     </div>
+                    {resultat.depassePlafond && (
+                      <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-2 text-xs text-yellow-800">
+                        ⚠️ Plafond de 5 000 € appliqué (crédit d'impôt max : 2 500 €)
+                      </div>
+                    )}
                     <div className="flex justify-between items-center border-t border-forest/20 pt-3">
                       <span className="text-night/80">Crédit d'impôt 50% :</span>
                       <strong className="text-2xl text-leaf">{resultat.creditImpot.toLocaleString('fr-FR')} €</strong>
@@ -186,6 +192,7 @@ export default function CreditImpotJardinage() {
                 <div className="text-center text-night/60 py-8">
                   <p className="text-lg mb-2">💡</p>
                   <p>Entrez un montant pour calculer votre crédit d'impôt</p>
+                  <p className="text-xs text-night/60 mt-2">Plafond : 5 000 € de dépenses (2 500 € de crédit d'impôt max)</p>
                 </div>
               )}
             </div>
@@ -241,9 +248,9 @@ export default function CreditImpotJardinage() {
               <div className="bg-leaf/10 rounded-2xl p-6">
                 <h3 className="font-heading text-xl text-forest mb-4">Plafond majoré</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>• Plafond standard : <strong>12 000 €</strong> de dépenses</li>
+                  <li>• Plafond standard : <strong>5 000 €</strong> de dépenses</li>
                   <li>• <strong>Majoration +65 ans : +1 500 € par personne</strong></li>
-                  <li>• <strong>Couple de retraités : jusqu'à 15 000 € déductibles !</strong></li>
+                  <li>• <strong>Couple de retraités : jusqu'à 8 000 € déductibles !</strong></li>
                 </ul>
               </div>
               <div className="bg-beige/70 rounded-2xl p-6">
@@ -312,10 +319,10 @@ export default function CreditImpotJardinage() {
             <div className="rounded-2xl border border-forest/10 bg-white p-6 shadow-sm">
               <h3 className="font-heading text-xl text-forest mb-4">Plafonds annuels et limites</h3>
               <ul className="space-y-2 text-sm text-night/80">
-                <li>• <strong>Plafond standard :</strong> 12 000 € de dépenses/an</li>
-                <li>• <strong>Crédit d'impôt max :</strong> 6 000 €/an</li>
+                <li>• <strong>Plafond standard :</strong> 5 000 € de dépenses/an</li>
+                <li>• <strong>Crédit d'impôt max :</strong> 2 500 €/an</li>
                 <li>• <strong>Majoration +65 ans :</strong> +1 500 € par personne</li>
-                <li>• <strong>Couple retraité :</strong> jusqu'à 15 000 € déductibles</li>
+                <li>• <strong>Couple retraité :</strong> jusqu'à 8 000 € déductibles</li>
               </ul>
             </div>
           </div>
@@ -453,9 +460,9 @@ export default function CreditImpotJardinage() {
             <div className="rounded-2xl border border-forest/10 bg-white p-6 shadow-sm">
               <h3 className="font-heading text-lg text-forest mb-2">Quel est le plafond maximum ?</h3>
               <p className="text-night/80">
-                Le plafond standard est de <strong>12 000 € de dépenses par an</strong>, soit un crédit d'impôt maximum de 
-                <strong> 6 000 €</strong>. Pour les retraités de plus de 65 ans, une majoration de 1 500 € par personne s'applique, 
-                portant le plafond à 15 000 € pour un couple de retraités.
+                Le plafond standard est de <strong>5 000 € de dépenses par an</strong>, soit un crédit d'impôt maximum de 
+                <strong> 2 500 €</strong>. Pour les retraités de plus de 65 ans, une majoration de 1 500 € par personne s'applique, 
+                portant le plafond à 8 000 € pour un couple de retraités.
               </p>
             </div>
             <div className="rounded-2xl border border-forest/10 bg-white p-6 shadow-sm">

@@ -126,7 +126,7 @@ export default function HomePage() {
               <p className="mt-4 text-lg text-night/80">
                 Les travaux d'entretien de jardin (tonte de pelouse, taille de haies, débroussaillage) sont éligibles au crédit
                 d'impôt Services à la Personne. Arbovert est un organisme déclaré : nous vous fournissons l'attestation fiscale
-                annuelle pour votre déclaration de revenus. Plafond : 12 000 € de dépenses par an, soit jusqu'à 6 000 € de crédit
+                annuelle pour votre déclaration de revenus. Plafond : 5 000 € de dépenses par an, soit jusqu'à 2 500 € de crédit
                 d'impôt.
               </p>
               <div className="mt-4">
