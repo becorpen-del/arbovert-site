@@ -9,7 +9,7 @@ const villesMenu = [
   { nom: 'Toulouse', slug: 'elagueur-toulouse', disponible: true },
   { nom: 'Tournefeuille', slug: 'elagueur-tournefeuille', disponible: false },
   { nom: 'Blagnac', slug: 'elagueur-blagnac', disponible: false },
-  { nom: 'Colomiers', slug: 'elagueur-colomiers', disponible: false },
+  { nom: 'Colomiers', slug: 'elagueur-colomiers', disponible: true },
 ];
 
 export function VillesMenuDesktop() {

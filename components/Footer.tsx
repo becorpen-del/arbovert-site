@@ -55,6 +55,11 @@ const Footer = () => {
             <h4 className="font-heading text-white mb-2 text-sm uppercase tracking-wide">Nos villes</h4>
             <ul className="space-y-1 text-sm text-white/80">
               <li>
+                <Link href="/elagueur-colomiers" className="transition-colors hover:text-white">
+                  Élagueur Colomiers
+                </Link>
+              </li>
+              <li>
                 <Link href="/elagueur-cugnaux" className="transition-colors hover:text-white">
                   Élagueur Cugnaux
                 </Link>
