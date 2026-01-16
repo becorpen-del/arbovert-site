@@ -42,6 +42,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/elagueur-colomiers`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/elagueur-tournefeuille`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
   ];
 
   return routes;

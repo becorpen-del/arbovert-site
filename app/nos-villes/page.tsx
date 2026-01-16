@@ -45,10 +45,10 @@ const villes = [
   {
     nom: 'Tournefeuille',
     slug: 'elagueur-tournefeuille',
-    disponible: false,
+    disponible: true,
     habitants: '28 000',
     codePostal: '31170',
-    description: 'Entretien régulier d\'espaces verts et élagage préventif',
+    description: 'Intervention dans tous les quartiers : La Ramée, Le Petit Train, Pahin...',
   },
   {
     nom: 'Blagnac',
@@ -61,10 +61,10 @@ const villes = [
   {
     nom: 'Colomiers',
     slug: 'elagueur-colomiers',
-    disponible: false,
+    disponible: true,
     habitants: '40 000',
     codePostal: '31770',
-    description: 'Élagage, abattage et entretien de jardins',
+    description: 'Intervention dans tous les quartiers : En Jacca, Perget, Ramiers...',
   },
   {
     nom: 'Labège',
