@@ -230,7 +230,7 @@ export default function ElagueurColomiers() {
             <div className="rounded-2xl border border-forest/10 bg-beige/50 p-6">
               <h3 className="font-heading text-xl text-forest mb-3">Combien coûte un élagage à Colomiers ?</h3>
               <p className="text-night/80">
-                Le tarif dépend de nombreux facteurs : hauteur de l'arbre, essence, accessibilité, volume de branches à couper. Comptez entre 150€ et 500€ pour un élagage standard, et de 500€ à 1500€ pour un abattage selon la difficulté. Nos devis sont gratuits et détaillés, et nos interventions d'entretien de jardin ouvrent droit au crédit d'impôt de 50%.
+                Le tarif dépend de nombreux facteurs : hauteur de l'arbre, essence, accessibilité, volume de branches à couper. Comptez entre 80€ et 1000€ pour un élagage standard, et de 130€ à 750€ pour un abattage (hors évacuation). Nos devis sont gratuits et détaillés, et nos interventions d'entretien de jardin ouvrent droit au crédit d'impôt de 50%.
               </p>
             </div>
             <div className="rounded-2xl border border-forest/10 bg-beige/50 p-6">

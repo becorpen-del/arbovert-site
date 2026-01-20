@@ -24,7 +24,7 @@ const services = [
   {
     title: "Élagage et taille d'arbres à Blagnac",
     description:
-      "Taille douce, taille de formation ou élagage sécuritaire : nous adaptons nos interventions à chaque arbre pour favoriser une reprise saine. Comptez entre 120€ et 500€ par arbre selon la hauteur et l'accessibilité.",
+      "Taille douce, taille de formation ou élagage sécuritaire : nous adaptons nos interventions à chaque arbre pour favoriser une reprise saine. Comptez entre 80€ et 500€ par arbre selon la hauteur et l'accessibilité (hors évacuation).",
     points: [
       'Diagnostic sanitaire et conseils personnalisés',
       'Techniques de taille sélective pour le houppier',
@@ -104,7 +104,7 @@ const faqData = [
   },
   {
     question: "Combien coûte un élagage à Blagnac ?",
-    answer: "Le tarif dépend de la hauteur, de l'essence et de l'accessibilité. Comptez entre 120€ et 500€ par arbre pour un élagage d'entretien, et de 500€ à 1500€ pour un abattage selon la difficulté. Nos devis sont gratuits et détaillés."
+    answer: "Le tarif dépend de la hauteur, de l'essence et de l'accessibilité. Comptez entre 80€ et 1000€ par arbre pour un élagage d'entretien, et de 130€ à 750€ pour un abattage (hors évacuation). Nos devis sont gratuits et détaillés."
   },
   {
     question: "Intervenez-vous en urgence à Blagnac ?",
@@ -392,22 +392,28 @@ export default function ElagueurBlagnac() {
                 <div className="rounded-2xl bg-white p-6 border border-forest/10">
                   <h3 className="font-heading text-xl text-forest mb-4">Élagage d'entretien</h3>
                   <ul className="space-y-2 text-night/80">
-                    <li>• Arbre &lt; 10 m : <strong>120€ - 250€</strong></li>
-                    <li>• Arbre 10-15 m : <strong>250€ - 400€</strong></li>
-                    <li>• Arbre &gt; 15 m : <strong>400€ - 500€+</strong></li>
+                    <li>• Arbre &lt; 5 m : <strong>80€ - 250€</strong></li>
+                    <li>• Arbre 5-10 m : <strong>250€ - 500€</strong></li>
+                    <li>• Arbre 10-15 m : <strong>500€ - 1000€</strong></li>
+                    <li>• Arbre &gt; 15 m : <strong>800€ - 1500€+</strong></li>
                   </ul>
                 </div>
                 <div className="rounded-2xl bg-white p-6 border border-forest/10">
                   <h3 className="font-heading text-xl text-forest mb-4">Abattage</h3>
                   <ul className="space-y-2 text-night/80">
-                    <li>• Arbre simple : <strong>500€ - 800€</strong></li>
-                    <li>• Arbre difficile d'accès : <strong>800€ - 1200€</strong></li>
-                    <li>• Démontage complexe : <strong>1200€ - 1500€+</strong></li>
+                    <li>• Arbre 2-5 m : <strong>130€ - 230€</strong></li>
+                    <li>• Arbre 5-10 m : <strong>230€ - 370€</strong></li>
+                    <li>• Arbre 10-15 m : <strong>370€ - 550€</strong></li>
+                    <li>• Arbre 15-20 m : <strong>550€ - 650€</strong></li>
+                    <li>• Arbre &gt; 20 m : <strong>650€ - 750€+</strong></li>
                   </ul>
                 </div>
               </div>
-              <p className="text-center mt-6 text-night/70">
-                <strong>Devis gratuit et sans engagement</strong> – Chaque chantier est unique, contactez-nous pour une estimation précise.
+              <p className="text-center mt-6 text-night/70 text-sm">
+                Tarifs indicatifs hors évacuation des déchets.
+              </p>
+              <p className="text-center mt-4 text-night/80 bg-beige/70 rounded-xl p-4">
+                <strong>Certains chantiers spécifiques</strong> (accès difficile, arbre en mauvais état, proximité de lignes électriques, terrain en pente...) peuvent ne pas rentrer dans cette grille tarifaire. <strong>N'hésitez pas à nous contacter</strong> pour un devis personnalisé gratuit et sans engagement.
               </p>
             </div>
           </div>

@@ -24,7 +24,7 @@ const services = [
   {
     title: "Élagage d'entretien à Tournefeuille",
     description:
-      "Taille douce, taille de formation ou élagage sécuritaire : nous adaptons nos interventions à chaque arbre pour favoriser une reprise saine. Comptez entre 120€ et 500€ par arbre selon la hauteur et l'accessibilité.",
+      "Taille douce, taille de formation ou élagage sécuritaire : nous adaptons nos interventions à chaque arbre pour favoriser une reprise saine. Comptez entre 80€ et 500€ par arbre selon la hauteur et l'accessibilité (hors évacuation).",
     points: [
       'Diagnostic sanitaire et conseils personnalisés',
       'Techniques de taille sélective pour le houppier',
@@ -78,7 +78,7 @@ const villesIntervention = ['TOURNEFEUILLE', 'PLAISANCE-DU-TOUCH', 'PIBRAC', 'SA
 const faqData = [
   {
     question: "Combien coûte un élagage à Tournefeuille ?",
-    answer: "Le tarif dépend de la hauteur, de l'essence et de l'accessibilité. Comptez entre 120€ et 500€ par arbre pour un élagage d'entretien, et de 500€ à 1500€ pour un abattage selon la difficulté. Nos devis sont gratuits et détaillés."
+    answer: "Le tarif dépend de la hauteur, de l'essence et de l'accessibilité. Comptez entre 80€ et 1000€ par arbre pour un élagage d'entretien, et de 130€ à 750€ pour un abattage (hors évacuation). Nos devis sont gratuits et détaillés."
   },
   {
     question: "Puis-je bénéficier du crédit d'impôt pour la taille de haies ?",
