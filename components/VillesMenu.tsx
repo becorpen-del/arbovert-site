@@ -8,7 +8,7 @@ const villesMenu = [
   { nom: 'Muret', slug: 'elagueur-muret', disponible: true },
   { nom: 'Toulouse', slug: 'elagueur-toulouse', disponible: true },
   { nom: 'Tournefeuille', slug: 'elagueur-tournefeuille', disponible: true },
-  { nom: 'Blagnac', slug: 'elagueur-blagnac', disponible: false },
+  { nom: 'Blagnac', slug: 'elagueur-blagnac', disponible: true },
   { nom: 'Colomiers', slug: 'elagueur-colomiers', disponible: true },
 ];
 

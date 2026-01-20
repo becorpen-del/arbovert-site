@@ -53,10 +53,10 @@ const villes = [
   {
     nom: 'Blagnac',
     slug: 'elagueur-blagnac',
-    disponible: false,
-    habitants: '26 000',
+    disponible: true,
+    habitants: '27 600',
     codePostal: '31700',
-    description: 'Interventions pour particuliers et collectivités',
+    description: 'Interventions dans tous les quartiers : Centre, Saoulous, Grand Noble, Grenade, Compans...',
   },
   {
     nom: 'Colomiers',

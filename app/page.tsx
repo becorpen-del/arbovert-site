@@ -7,14 +7,14 @@ import ContactForm from '../components/ContactForm';
 import ReviewsWrapper from '@/components/ReviewsWrapper';
 
 export const metadata: Metadata = {
-  title: `Élagage & entretien d'arbres en Haute-Garonne (31) – Arbovert`,
+  title: `Arbovert : Élagage & entretien d'arbres en Haute-Garonne (31)`,
   description:
     `Arbovert, élagueur grimpeur en Haute-Garonne (31) : élagage, abattage, taille de haies, tonte de pelouse et entretien de jardins. Devis gratuit, intervention rapide dans tout le 31.`,
   alternates: {
     canonical: '/'
   },
   openGraph: {
-    title: `Élagage & entretien d'arbres en Haute-Garonne (31) – Arbovert`,
+    title: `Arbovert : Élagage & entretien d'arbres en Haute-Garonne (31)`,
     description: `Arbovert, élagueur grimpeur en Haute-Garonne (31) : élagage, abattage, taille de haies, tonte de pelouse et entretien de jardins. Devis gratuit, intervention rapide dans tout le 31.`,
     type: 'website',
     locale: 'fr_FR',
@@ -178,8 +178,8 @@ export default function HomePage() {
           </p>
           <div className="mt-6 grid gap-3 text-sm uppercase tracking-wide text-night/70 sm:grid-cols-2 lg:grid-cols-4">
             {interventionCities.map((city) => {
-              const isClickable = city === 'Toulouse' || city === 'Cugnaux' || city === 'Muret' || city === 'Colomiers';
-              const slug = city === 'Toulouse' ? 'elagueur-toulouse' : city === 'Cugnaux' ? 'elagueur-cugnaux' : city === 'Muret' ? 'elagueur-muret' : city === 'Colomiers' ? 'elagueur-colomiers' : '';
+              const isClickable = city === 'Toulouse' || city === 'Cugnaux' || city === 'Muret' || city === 'Colomiers' || city === 'Blagnac' || city === 'Tournefeuille';
+              const slug = city === 'Toulouse' ? 'elagueur-toulouse' : city === 'Cugnaux' ? 'elagueur-cugnaux' : city === 'Muret' ? 'elagueur-muret' : city === 'Colomiers' ? 'elagueur-colomiers' : city === 'Blagnac' ? 'elagueur-blagnac' : city === 'Tournefeuille' ? 'elagueur-tournefeuille' : '';
               const content = (
                 <span className={`rounded-full border border-forest/20 bg-beige/70 px-4 py-2 text-center transition-colors ${
                   isClickable ? 'hover:bg-forest/10 hover:border-forest/40 cursor-pointer' : ''

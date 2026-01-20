@@ -70,6 +70,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/elagueur-blagnac" className="transition-colors hover:text-white">
+                  Élagueur Blagnac
+                </Link>
+              </li>
+              <li>
                 <Link href="/nos-villes" className="transition-colors hover:text-white">
                   Toutes nos villes
                 </Link>
