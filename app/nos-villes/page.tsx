@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Nos zones d\'intervention - Élagueur Haute-Garonne | Arbovert',
   description:
-    'Découvrez toutes nos zones d\'intervention en Haute-Garonne : Cugnaux, Muret, Toulouse, Tournefeuille, Blagnac et plus encore.',
+    'Découvrez toutes nos zones d\'intervention en Haute-Garonne : Cugnaux, Muret, Toulouse, Tournefeuille, Blagnac, Balma et plus encore.',
   alternates: {
     canonical: '/nos-villes'
   },
@@ -77,10 +77,10 @@ const villes = [
   {
     nom: 'Balma',
     slug: 'elagueur-balma',
-    disponible: false,
-    habitants: '16 000',
+    disponible: true,
+    habitants: '15 000',
     codePostal: '31130',
-    description: 'Élagage et taille de haies pour particuliers',
+    description: 'Intervention dans tous les quartiers : Centre-ville, Lasbordes, Candelle, Vidailhan, Gramont...',
   },
 ];
 
