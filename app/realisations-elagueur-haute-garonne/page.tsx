@@ -20,6 +20,20 @@ export const metadata: Metadata = {
 
 const realisations: RealisationCardProps[] = [
   {
+    title: "Abattage de deux chênes atteints par le capricorne",
+    location: 'BRAGAYRAC (31)',
+    description:
+      `Intervention d'abattage sur deux chênes fortement dégradés par le capricorne, un insecte xylophage qui fragilise la structure interne du bois. L'état sanitaire des arbres ne permettait plus leur conservation et représentait un risque de chute pour les personnes et les biens. L'abattage a été réalisé de manière maîtrisée et sécurisée, avec débitage sur place et mise en sécurité du bois pour valorisation par le client.`,
+    highlights: [
+      "Abattage sécurisé d'arbres fragilisés par un parasite",
+      'Débitage et mise en sécurité du bois',
+      'Nettoyage complet du chantier'
+    ],
+    footer: `📍 Bragayrac | 🛠️ Abattage d'arbres dangereux`,
+    beforeImage: '/realisations/bragayrac-abattage-chenes.jpg',
+    afterImage: '/realisations/bragayrac-abattage-chenes.jpg'
+  },
+  {
     title: "Démontage d'un peuplier malade",
     location: 'LE FAUGA (31)',
     description:
