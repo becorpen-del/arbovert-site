@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const villes = [
   {
     nom: 'Cugnaux',
-    slug: 'elagueur-cugnaux',
+    slug: 'elagage-cugnaux',
     disponible: true,
     habitants: '18 000',
     codePostal: '31270',
@@ -28,7 +28,7 @@ const villes = [
   },
   {
     nom: 'Muret',
-    slug: 'elagueur-muret',
+    slug: 'elagage-muret',
     disponible: true,
     habitants: '25 000',
     codePostal: '31600',
@@ -36,7 +36,7 @@ const villes = [
   },
   {
     nom: 'Toulouse',
-    slug: 'elagueur-toulouse',
+    slug: 'elagage-toulouse',
     disponible: true,
     habitants: '500 000',
     codePostal: '31000',
@@ -44,7 +44,7 @@ const villes = [
   },
   {
     nom: 'Tournefeuille',
-    slug: 'elagueur-tournefeuille',
+    slug: 'elagage-tournefeuille',
     disponible: true,
     habitants: '28 000',
     codePostal: '31170',
@@ -52,7 +52,7 @@ const villes = [
   },
   {
     nom: 'Blagnac',
-    slug: 'elagueur-blagnac',
+    slug: 'elagage-blagnac',
     disponible: true,
     habitants: '27 600',
     codePostal: '31700',
@@ -60,7 +60,7 @@ const villes = [
   },
   {
     nom: 'Colomiers',
-    slug: 'elagueur-colomiers',
+    slug: 'elagage-colomiers',
     disponible: true,
     habitants: '40 000',
     codePostal: '31770',
@@ -68,7 +68,7 @@ const villes = [
   },
   {
     nom: 'Labège',
-    slug: 'elagueur-labege',
+    slug: 'elagage-labege',
     disponible: false,
     habitants: '4 000',
     codePostal: '31670',
@@ -76,7 +76,7 @@ const villes = [
   },
   {
     nom: 'Balma',
-    slug: 'elagueur-balma',
+    slug: 'elagage-balma',
     disponible: true,
     habitants: '15 000',
     codePostal: '31130',

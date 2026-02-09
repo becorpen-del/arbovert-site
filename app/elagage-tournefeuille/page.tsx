@@ -4,19 +4,19 @@ import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Élagueur à Tournefeuille (31170) | Arbovert - Devis Gratuit 24h',
+  title: 'Élagage à Tournefeuille | Arbovert – Élagueur professionnel (31)',
   description:
-    'Élagueur professionnel à Tournefeuille et ses quartiers. Élagage, abattage, taille de haies. Équipe certifiée CAPA. Devis gratuit sous 24h. Intervention rapide.',
-  keywords: ['élagueur Tournefeuille', 'élagage Tournefeuille', 'élagage Tournefeuille 31170', 'abattage arbre Tournefeuille', 'taille de haie Tournefeuille', 'entretien jardin Tournefeuille', 'arboriste Tournefeuille', 'élagueur grimpeur Tournefeuille'],
+    'Élagage à Tournefeuille : taille douce, abattage sécurisé et entretien d\'arbres par des élagueurs grimpeurs certifiés. Devis gratuit sous 24h en Haute-Garonne.',
+  keywords: ['élagage Tournefeuille', 'élagage Tournefeuille 31170', 'élagueur Tournefeuille', 'abattage arbre Tournefeuille', 'taille de haie Tournefeuille', 'entretien jardin Tournefeuille', 'arboriste Tournefeuille', 'élagueur grimpeur Tournefeuille'],
   alternates: {
-    canonical: '/elagueur-tournefeuille'
+    canonical: '/elagage-tournefeuille'
   },
   openGraph: {
-    title: 'Élagueur Professionnel à Tournefeuille (31170) – Arbovert',
-    description: 'Élagage sécurisé à Tournefeuille avec équipe certifiée CAPA. Intervention rapide 24h, devis gratuit.',
+    title: 'Élagage à Tournefeuille | Arbovert – Élagueur professionnel (31)',
+    description: 'Élagage à Tournefeuille : taille douce, abattage sécurisé et entretien d\'arbres par des élagueurs grimpeurs certifiés. Devis gratuit sous 24h en Haute-Garonne.',
     type: 'website',
     locale: 'fr_FR',
-    url: '/elagueur-tournefeuille'
+    url: '/elagage-tournefeuille'
   },
 };
 
@@ -123,9 +123,9 @@ const jsonLd = {
     {
       "@type": "LocalBusiness",
       "@id": "https://www.arbovert-31.fr/#organization",
-      "name": "Arbovert - Élagueur Tournefeuille",
+      "name": "Arbovert - Élagage Tournefeuille",
       "description": "Élagage, abattage et entretien de jardins à Tournefeuille (31170). Élagueur grimpeur certifié CAPA. Services à la Personne agréé.",
-      "url": "https://www.arbovert-31.fr/elagueur-tournefeuille",
+      "url": "https://www.arbovert-31.fr/elagage-tournefeuille",
       "telephone": "+33648768515",
       "email": "contact@arbovert-31.fr",
       "address": {
@@ -189,8 +189,8 @@ const jsonLd = {
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Élagueur Tournefeuille",
-          "item": "https://www.arbovert-31.fr/elagueur-tournefeuille"
+          "name": "Élagage Tournefeuille",
+          "item": "https://www.arbovert-31.fr/elagage-tournefeuille"
         }
       ]
     },
@@ -224,7 +224,7 @@ export default function ElagueurTournefeuille() {
             <div className="grid md:grid-cols-[60%_40%] gap-8 items-center">
               <div>
                 <h1 className="font-heading text-4xl md:text-5xl text-forest mb-6">
-                  Élagueur à Tournefeuille : élagage et entretien d'arbres en Haute-Garonne (31)
+                  Élagage à Tournefeuille : taille, abattage et entretien de vos arbres
                 </h1>
                 <p className="text-lg md:text-xl text-night/80 leading-relaxed mb-4">
                   <strong>Arbre dangereux, branches mortes ou élagage urgent ?</strong> Risques de chute, dégâts sur votre toiture, intervention coûteuse en catastrophe... Ne prenez pas ces risques.
@@ -374,7 +374,7 @@ export default function ElagueurTournefeuille() {
                 Nous maîtrisons les spécificités locales : sols argilo-calcaires, exposition au vent d'Autan, et réglementation de Toulouse Métropole. Notre connaissance du terrain nous permet d'anticiper les contraintes liées aux grands arbres des propriétés tournefeuillaises.
               </p>
               <p className="text-lg text-night/80">
-                Besoin d'un élagueur dans une commune voisine ? Nous intervenons également à <Link href="/elagueur-cugnaux" className="text-forest underline hover:text-forest/80">Cugnaux</Link>, <Link href="/elagueur-colomiers" className="text-forest underline hover:text-forest/80">Colomiers</Link>, <Link href="/elagueur-toulouse" className="text-forest underline hover:text-forest/80">Toulouse</Link> et dans toute la métropole toulousaine.
+                Besoin d'un élagueur dans une commune voisine ? Nous intervenons également à <Link href="/elagage-cugnaux" className="text-forest underline hover:text-forest/80">Cugnaux</Link>, <Link href="/elagage-colomiers" className="text-forest underline hover:text-forest/80">Colomiers</Link>, <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Toulouse</Link> et dans toute la métropole toulousaine.
               </p>
             </div>
           </div>
@@ -480,7 +480,7 @@ export default function ElagueurTournefeuille() {
 
                 if (hasPage && !isTournefeuille) {
                   return (
-                    <Link key={ville} href={`/elagueur-${slug.toLowerCase()}`}>
+                    <Link key={ville} href={`/elagage-${slug.toLowerCase()}`}>
                       {content}
                     </Link>
                   );

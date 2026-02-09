@@ -4,18 +4,18 @@ import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Élagueur Colomiers (31770) – Arbovert | Élagage, abattage & entretien',
+  title: 'Élagage à Colomiers | Arbovert – Élagueur professionnel (31)',
   description:
-    'Élagueur grimpeur à Colomiers (31770) : élagage, abattage, taille de haies et entretien de jardins. Intervention rapide dans tous les quartiers. Devis gratuit.',
+    'Élagage à Colomiers : taille douce, abattage sécurisé et entretien d\'arbres par des élagueurs grimpeurs certifiés. Devis gratuit sous 24h en Haute-Garonne.',
   alternates: {
-    canonical: '/elagueur-colomiers'
+    canonical: '/elagage-colomiers'
   },
   openGraph: {
-    title: 'Élagueur Colomiers (31770) – Arbovert',
-    description: 'Élagueur grimpeur professionnel à Colomiers. Intervention rapide pour vos travaux d\'élagage et d\'entretien d\'espaces verts.',
+    title: 'Élagage à Colomiers | Arbovert – Élagueur professionnel (31)',
+    description: 'Élagage à Colomiers : taille douce, abattage sécurisé et entretien d\'arbres par des élagueurs grimpeurs certifiés. Devis gratuit sous 24h en Haute-Garonne.',
     type: 'website',
     locale: 'fr_FR',
-    url: '/elagueur-colomiers'
+    url: '/elagage-colomiers'
   },
 };
 
@@ -81,7 +81,7 @@ export default function ElagueurColomiers() {
           <div className="grid md:grid-cols-[60%_40%] gap-8 items-center">
             <div>
               <h1 className="font-heading text-4xl md:text-5xl text-forest mb-6">
-                Élagueur Colomiers (31770)
+                Élagage à Colomiers : taille, abattage et entretien de vos arbres
               </h1>
               <p className="text-lg md:text-xl text-night/80 leading-relaxed">
                 Arbovert intervient rapidement à Colomiers et dans toute la métropole toulousaine pour vos travaux d'élagage, abattage et entretien d'espaces verts. 2ème ville de la métropole avec ses 40 000 habitants, Colomiers bénéficie de notre expertise locale.

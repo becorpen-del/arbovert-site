@@ -434,10 +434,10 @@ export default function CreditImpotJardinage() {
             </div>
           </div>
           <div className="mt-8 text-center">
-            <Link href="/elagueur-toulouse" className="btn btn-primary mr-4">
+            <Link href="/elagage-toulouse" className="btn btn-primary mr-4">
               Nos services à Toulouse
             </Link>
-            <Link href="/elagueur-muret" className="btn border border-forest text-forest hover:bg-forest hover:text-white">
+            <Link href="/elagage-muret" className="btn border border-forest text-forest hover:bg-forest hover:text-white">
               Nos services à Muret
             </Link>
           </div>

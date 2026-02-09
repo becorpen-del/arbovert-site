@@ -55,22 +55,22 @@ const Footer = () => {
             <h4 className="font-heading text-white mb-2 text-sm uppercase tracking-wide">Nos villes</h4>
             <ul className="space-y-1 text-sm text-white/80">
               <li>
-                <Link href="/elagueur-colomiers" className="transition-colors hover:text-white">
+                <Link href="/elagage-colomiers" className="transition-colors hover:text-white">
                   Élagueur Colomiers
                 </Link>
               </li>
               <li>
-                <Link href="/elagueur-cugnaux" className="transition-colors hover:text-white">
+                <Link href="/elagage-cugnaux" className="transition-colors hover:text-white">
                   Élagueur Cugnaux
                 </Link>
               </li>
               <li>
-                <Link href="/elagueur-muret" className="transition-colors hover:text-white">
+                <Link href="/elagage-muret" className="transition-colors hover:text-white">
                   Élagueur Muret
                 </Link>
               </li>
               <li>
-                <Link href="/elagueur-blagnac" className="transition-colors hover:text-white">
+                <Link href="/elagage-blagnac" className="transition-colors hover:text-white">
                   Élagueur Blagnac
                 </Link>
               </li>

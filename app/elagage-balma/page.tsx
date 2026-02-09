@@ -4,19 +4,19 @@ import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Élagage à Balma (31130) | Arbovert - Devis Gratuit 24h',
+  title: 'Élagage à Balma | Arbovert – Élagueur professionnel (31)',
   description:
-    'Élagueur professionnel à Balma. Élagage, abattage, taille haies. Crédit d\'impôt -50%. Intervention rapide tous quartiers. ☎️ 06 48 76 85 15',
-  keywords: ['élagage balma', 'élagueur balma', 'élagage balma 31130', 'abattage arbre balma', 'taille de haie balma', 'entretien jardin balma', 'arboriste balma', 'élagueur grimpeur balma', 'élagage lasbordes', 'élagage vidailhan'],
+    'Élagage à Balma : taille douce, abattage sécurisé et entretien d\'arbres par des élagueurs grimpeurs certifiés. Devis gratuit sous 24h en Haute-Garonne.',
+  keywords: ['élagage balma', 'élagage balma 31130', 'élagueur balma', 'abattage arbre balma', 'taille de haie balma', 'entretien jardin balma', 'arboriste balma', 'élagueur grimpeur balma', 'élagage lasbordes', 'élagage vidailhan'],
   alternates: {
-    canonical: '/elagueur-balma'
+    canonical: '/elagage-balma'
   },
   openGraph: {
-    title: 'Élagage professionnel à Balma (31130) – Arbovert',
-    description: 'Élagueur certifié à Balma. Crédit d\'impôt -50% sur taille haies et entretien jardin. Devis gratuit 24h.',
+    title: 'Élagage à Balma | Arbovert – Élagueur professionnel (31)',
+    description: 'Élagage à Balma : taille douce, abattage sécurisé et entretien d\'arbres par des élagueurs grimpeurs certifiés. Devis gratuit sous 24h en Haute-Garonne.',
     type: 'website',
     locale: 'fr_FR',
-    url: '/elagueur-balma'
+    url: '/elagage-balma'
   },
 };
 
@@ -126,7 +126,7 @@ const jsonLd = {
       "@id": "https://www.arbovert-31.fr/#organization",
       "name": "Arbovert - Élagage Balma",
       "description": "Élagueur professionnel à Balma (31130). Élagage, abattage, taille de haies, entretien jardins. Crédit d'impôt 50%. Devis gratuit 24h.",
-      "url": "https://www.arbovert-31.fr/elagueur-balma",
+      "url": "https://www.arbovert-31.fr/elagage-balma",
       "telephone": "+33648768515",
       "email": "contact@arbovert-31.fr",
       "address": {
@@ -191,8 +191,8 @@ const jsonLd = {
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Élagueur Balma",
-          "item": "https://www.arbovert-31.fr/elagueur-balma"
+          "name": "Élagage Balma",
+          "item": "https://www.arbovert-31.fr/elagage-balma"
         }
       ]
     },
@@ -237,7 +237,7 @@ export default function ElagueurBalma() {
                 </div>
 
                 <h1 className="font-heading text-4xl md:text-5xl text-forest mb-6">
-                  Élagage & entretien d'arbres à Balma (31130)
+                  Élagage à Balma : taille, abattage et entretien de vos arbres
                 </h1>
                 <p className="text-lg md:text-xl text-night/80 leading-relaxed mb-4">
                   Vous cherchez un <strong>élagueur professionnel à Balma</strong> ? Arbovert intervient rapidement dans tous les quartiers : <strong>Lasbordes, Candelle, Vidailhan, Centre-ville, Gramont</strong>. Notre équipe certifiée pratique l'élagage raisonné, l'abattage sécurisé et l'entretien complet de jardins.
@@ -502,7 +502,7 @@ export default function ElagueurBalma() {
                 <strong>Conseil local</strong> : À Balma, privilégiez l'élagage des platanes et érables entre novembre et février. Pour le quartier Lasbordes, attention aux réglementations PLU pour les arbres en limite de propriété.
               </p>
               <p className="text-lg text-night/80">
-                Besoin d'un élagueur dans une commune voisine ? Nous intervenons également à <Link href="/elagueur-toulouse" className="text-forest underline hover:text-forest/80">Toulouse</Link>, <Link href="/elagueur-blagnac" className="text-forest underline hover:text-forest/80">Blagnac</Link>, <Link href="/elagueur-colomiers" className="text-forest underline hover:text-forest/80">Colomiers</Link> et dans toute la métropole toulousaine.
+                Besoin d'un élagueur dans une commune voisine ? Nous intervenons également à <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Toulouse</Link>, <Link href="/elagage-blagnac" className="text-forest underline hover:text-forest/80">Blagnac</Link>, <Link href="/elagage-colomiers" className="text-forest underline hover:text-forest/80">Colomiers</Link> et dans toute la métropole toulousaine.
               </p>
             </div>
           </div>
@@ -618,7 +618,7 @@ export default function ElagueurBalma() {
 
                 if (hasPage && !isBalma) {
                   return (
-                    <Link key={ville} href={`/elagueur-${slug.toLowerCase()}`}>
+                    <Link key={ville} href={`/elagage-${slug.toLowerCase()}`}>
                       {content}
                     </Link>
                   );
@@ -662,17 +662,17 @@ export default function ElagueurBalma() {
                 <div>
                   <h3 className="font-heading text-lg text-forest mb-3">Nos autres zones d'intervention :</h3>
                   <ul className="space-y-2 text-night/80">
-                    <li>🌳 <Link href="/elagueur-toulouse" className="text-forest underline hover:text-forest/80">Élagage à Toulouse</Link> - Métropole</li>
-                    <li>🌳 <Link href="/elagueur-blagnac" className="text-forest underline hover:text-forest/80">Élagueur à Blagnac</Link> - Proximité aéroport</li>
-                    <li>🌳 <Link href="/elagueur-tournefeuille" className="text-forest underline hover:text-forest/80">Taille haies Tournefeuille</Link> - Ouest métropole</li>
+                    <li>🌳 <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Élagage à Toulouse</Link> - Métropole</li>
+                    <li>🌳 <Link href="/elagage-blagnac" className="text-forest underline hover:text-forest/80">Élagueur à Blagnac</Link> - Proximité aéroport</li>
+                    <li>🌳 <Link href="/elagage-tournefeuille" className="text-forest underline hover:text-forest/80">Taille haies Tournefeuille</Link> - Ouest métropole</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="font-heading text-lg text-forest mb-3">Et aussi :</h3>
                   <ul className="space-y-2 text-night/80">
-                    <li>🌳 <Link href="/elagueur-colomiers" className="text-forest underline hover:text-forest/80">Abattage Colomiers</Link> - 2ème ville 31</li>
-                    <li>🌳 <Link href="/elagueur-muret" className="text-forest underline hover:text-forest/80">Élagueur Muret</Link> - Sud Haute-Garonne</li>
-                    <li>🌳 <Link href="/elagueur-cugnaux" className="text-forest underline hover:text-forest/80">Élagage Cugnaux</Link> - Sud-ouest</li>
+                    <li>🌳 <Link href="/elagage-colomiers" className="text-forest underline hover:text-forest/80">Abattage Colomiers</Link> - 2ème ville 31</li>
+                    <li>🌳 <Link href="/elagage-muret" className="text-forest underline hover:text-forest/80">Élagueur Muret</Link> - Sud Haute-Garonne</li>
+                    <li>🌳 <Link href="/elagage-cugnaux" className="text-forest underline hover:text-forest/80">Élagage Cugnaux</Link> - Sud-ouest</li>
                   </ul>
                 </div>
               </div>

@@ -179,7 +179,7 @@ export default function HomePage() {
           <div className="mt-6 grid gap-3 text-sm uppercase tracking-wide text-night/70 sm:grid-cols-2 lg:grid-cols-4">
             {interventionCities.map((city) => {
               const isClickable = city === 'Toulouse' || city === 'Cugnaux' || city === 'Muret' || city === 'Colomiers' || city === 'Blagnac' || city === 'Tournefeuille';
-              const slug = city === 'Toulouse' ? 'elagueur-toulouse' : city === 'Cugnaux' ? 'elagueur-cugnaux' : city === 'Muret' ? 'elagueur-muret' : city === 'Colomiers' ? 'elagueur-colomiers' : city === 'Blagnac' ? 'elagueur-blagnac' : city === 'Tournefeuille' ? 'elagueur-tournefeuille' : '';
+              const slug = city === 'Toulouse' ? 'elagage-toulouse' : city === 'Cugnaux' ? 'elagage-cugnaux' : city === 'Muret' ? 'elagage-muret' : city === 'Colomiers' ? 'elagage-colomiers' : city === 'Blagnac' ? 'elagage-blagnac' : city === 'Tournefeuille' ? 'elagage-tournefeuille' : '';
               const content = (
                 <span className={`rounded-full border border-forest/20 bg-beige/70 px-4 py-2 text-center transition-colors ${
                   isClickable ? 'hover:bg-forest/10 hover:border-forest/40 cursor-pointer' : ''

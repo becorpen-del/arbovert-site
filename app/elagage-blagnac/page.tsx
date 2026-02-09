@@ -4,19 +4,19 @@ import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Élagueur à Blagnac (31700) | Arbovert - Devis Gratuit 24h',
+  title: 'Élagage à Blagnac | Arbovert – Élagueur professionnel (31)',
   description:
-    'Élagueur professionnel à Blagnac et ses quartiers. Élagage, abattage, taille de haies. Équipe certifiée CAPA. Devis gratuit sous 24h. Intervention rapide.',
-  keywords: ['élagueur Blagnac', 'élagage Blagnac', 'élagage Blagnac 31700', 'abattage arbre Blagnac', 'taille de haie Blagnac', 'entretien jardin Blagnac', 'arboriste Blagnac', 'élagueur grimpeur Blagnac'],
+    'Élagage à Blagnac : taille douce, abattage sécurisé et entretien d\'arbres par des élagueurs grimpeurs certifiés. Devis gratuit sous 24h en Haute-Garonne.',
+  keywords: ['élagage Blagnac', 'élagage Blagnac 31700', 'élagueur Blagnac', 'abattage arbre Blagnac', 'taille de haie Blagnac', 'entretien jardin Blagnac', 'arboriste Blagnac', 'élagueur grimpeur Blagnac'],
   alternates: {
-    canonical: '/elagueur-blagnac'
+    canonical: '/elagage-blagnac'
   },
   openGraph: {
-    title: 'Élagueur Professionnel à Blagnac (31700) – Arbovert',
-    description: 'Élagage sécurisé à Blagnac avec équipe certifiée CAPA. Intervention rapide 24h, devis gratuit.',
+    title: 'Élagage à Blagnac | Arbovert – Élagueur professionnel (31)',
+    description: 'Élagage à Blagnac : taille douce, abattage sécurisé et entretien d\'arbres par des élagueurs grimpeurs certifiés. Devis gratuit sous 24h en Haute-Garonne.',
     type: 'website',
     locale: 'fr_FR',
-    url: '/elagueur-blagnac'
+    url: '/elagage-blagnac'
   },
 };
 
@@ -123,9 +123,9 @@ const jsonLd = {
     {
       "@type": "LocalBusiness",
       "@id": "https://www.arbovert-31.fr/#organization",
-      "name": "Arbovert - Élagueur Blagnac",
+      "name": "Arbovert - Élagage Blagnac",
       "description": "Élagage, abattage et entretien de jardins à Blagnac (31700). Élagueur grimpeur certifié CAPA. Services à la Personne agréé.",
-      "url": "https://www.arbovert-31.fr/elagueur-blagnac",
+      "url": "https://www.arbovert-31.fr/elagage-blagnac",
       "telephone": "+33648768515",
       "email": "contact@arbovert-31.fr",
       "address": {
@@ -189,8 +189,8 @@ const jsonLd = {
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Élagueur Blagnac",
-          "item": "https://www.arbovert-31.fr/elagueur-blagnac"
+          "name": "Élagage Blagnac",
+          "item": "https://www.arbovert-31.fr/elagage-blagnac"
         }
       ]
     },
@@ -224,7 +224,7 @@ export default function ElagueurBlagnac() {
             <div className="grid md:grid-cols-[60%_40%] gap-8 items-center">
               <div>
                 <h1 className="font-heading text-4xl md:text-5xl text-forest mb-6">
-                  Élagueur à Blagnac : élagage et entretien d'arbres en Haute-Garonne (31)
+                  Élagage à Blagnac : taille, abattage et entretien de vos arbres
                 </h1>
                 <p className="text-lg md:text-xl text-night/80 leading-relaxed mb-4">
                   <strong>Arbre dangereux, branches mortes ou élagage urgent ?</strong> Risques de chute, dégâts sur votre toiture, intervention coûteuse en catastrophe... Ne prenez pas ces risques.
@@ -374,7 +374,7 @@ export default function ElagueurBlagnac() {
                 Nous maîtrisons les essences locales typiques de Blagnac : <strong>platanes, peupliers, saules, chênes, pins et cèdres</strong>. Notre connaissance du terrain nous permet d'anticiper les contraintes liées au climat local et à l'exposition au vent d'Autan.
               </p>
               <p className="text-lg text-night/80">
-                Besoin d'un élagueur dans une commune voisine ? Nous intervenons également à <Link href="/elagueur-colomiers" className="text-forest underline hover:text-forest/80">Colomiers</Link>, <Link href="/elagueur-tournefeuille" className="text-forest underline hover:text-forest/80">Tournefeuille</Link>, <Link href="/elagueur-toulouse" className="text-forest underline hover:text-forest/80">Toulouse</Link> et dans toute la métropole toulousaine.
+                Besoin d'un élagueur dans une commune voisine ? Nous intervenons également à <Link href="/elagage-colomiers" className="text-forest underline hover:text-forest/80">Colomiers</Link>, <Link href="/elagage-tournefeuille" className="text-forest underline hover:text-forest/80">Tournefeuille</Link>, <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Toulouse</Link> et dans toute la métropole toulousaine.
               </p>
             </div>
           </div>
@@ -480,7 +480,7 @@ export default function ElagueurBlagnac() {
 
                 if (hasPage && !isBlagnac) {
                   return (
-                    <Link key={ville} href={`/elagueur-${slug.toLowerCase()}`}>
+                    <Link key={ville} href={`/elagage-${slug.toLowerCase()}`}>
                       {content}
                     </Link>
                   );
