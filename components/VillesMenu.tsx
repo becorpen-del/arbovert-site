@@ -4,12 +4,13 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 const villesMenu = [
-  { nom: 'Cugnaux', slug: 'elagueur-cugnaux', disponible: true },
-  { nom: 'Muret', slug: 'elagueur-muret', disponible: true },
-  { nom: 'Toulouse', slug: 'elagueur-toulouse', disponible: true },
-  { nom: 'Tournefeuille', slug: 'elagueur-tournefeuille', disponible: true },
-  { nom: 'Blagnac', slug: 'elagueur-blagnac', disponible: true },
-  { nom: 'Colomiers', slug: 'elagueur-colomiers', disponible: true },
+  { nom: 'Cugnaux', slug: 'elagage-cugnaux', disponible: true },
+  { nom: 'Muret', slug: 'elagage-muret', disponible: true },
+  { nom: 'Toulouse', slug: 'elagage-toulouse', disponible: true },
+  { nom: 'Tournefeuille', slug: 'elagage-tournefeuille', disponible: true },
+  { nom: 'Blagnac', slug: 'elagage-blagnac', disponible: true },
+  { nom: 'Colomiers', slug: 'elagage-colomiers', disponible: true },
+  { nom: 'Balma', slug: 'elagage-balma', disponible: true },
 ];
 
 export function VillesMenuDesktop() {

@@ -207,8 +207,41 @@ export default function ElagueurToulouse() {
         </div>
       </section>
 
-      {/* CTA Final */}
+      {/* Section Liens internes */}
       <section className="py-16 md:py-20 bg-white">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="font-heading text-xl text-forest mb-4">Nos services</h3>
+              <ul className="space-y-2 text-night/80">
+                <li><Link href="/services-elagage-haute-garonne" className="text-forest underline hover:text-forest/80">Tous nos services d'élagage en Haute-Garonne</Link></li>
+                <li><Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">Voir nos réalisations</Link></li>
+                <li><Link href="/credit-impot-jardinage" className="text-forest underline hover:text-forest/80">Crédit d'impôt jardinage 50%</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-heading text-xl text-forest mb-4">Villes voisines</h3>
+              <ul className="space-y-2 text-night/80">
+                <li><Link href="/elagage-blagnac" className="text-forest underline hover:text-forest/80">Élagage à Blagnac</Link></li>
+                <li><Link href="/elagage-colomiers" className="text-forest underline hover:text-forest/80">Élagage à Colomiers</Link></li>
+                <li><Link href="/elagage-balma" className="text-forest underline hover:text-forest/80">Élagage à Balma</Link></li>
+                <li><Link href="/elagage-tournefeuille" className="text-forest underline hover:text-forest/80">Élagage à Tournefeuille</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-heading text-xl text-forest mb-4">Autres communes</h3>
+              <ul className="space-y-2 text-night/80">
+                <li><Link href="/elagage-cugnaux" className="text-forest underline hover:text-forest/80">Élagage à Cugnaux</Link></li>
+                <li><Link href="/elagage-muret" className="text-forest underline hover:text-forest/80">Élagage à Muret</Link></li>
+                <li><Link href="/nos-villes" className="text-forest underline hover:text-forest/80">Toutes nos villes d'intervention</Link></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Final */}
+      <section className="py-16 md:py-20 bg-beige">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl border border-forest/10 bg-white p-8 md:p-12 shadow-sm text-center">
             <h2 className="font-heading text-3xl md:text-4xl text-forest mb-6">

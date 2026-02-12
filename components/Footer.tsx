@@ -55,23 +55,38 @@ const Footer = () => {
             <h4 className="font-heading text-white mb-2 text-sm uppercase tracking-wide">Nos villes</h4>
             <ul className="space-y-1 text-sm text-white/80">
               <li>
+                <Link href="/elagage-toulouse" className="transition-colors hover:text-white">
+                  Élagage Toulouse
+                </Link>
+              </li>
+              <li>
                 <Link href="/elagage-colomiers" className="transition-colors hover:text-white">
-                  Élagueur Colomiers
+                  Élagage Colomiers
                 </Link>
               </li>
               <li>
                 <Link href="/elagage-cugnaux" className="transition-colors hover:text-white">
-                  Élagueur Cugnaux
+                  Élagage Cugnaux
                 </Link>
               </li>
               <li>
                 <Link href="/elagage-muret" className="transition-colors hover:text-white">
-                  Élagueur Muret
+                  Élagage Muret
                 </Link>
               </li>
               <li>
                 <Link href="/elagage-blagnac" className="transition-colors hover:text-white">
-                  Élagueur Blagnac
+                  Élagage Blagnac
+                </Link>
+              </li>
+              <li>
+                <Link href="/elagage-tournefeuille" className="transition-colors hover:text-white">
+                  Élagage Tournefeuille
+                </Link>
+              </li>
+              <li>
+                <Link href="/elagage-balma" className="transition-colors hover:text-white">
+                  Élagage Balma
                 </Link>
               </li>
               <li>
