@@ -113,6 +113,14 @@ const faqData = [
   {
     question: "Êtes-vous assuré pour les travaux d'élagage ?",
     answer: "Oui, Arbovert dispose d'une assurance responsabilité civile professionnelle couvrant l'ensemble de nos interventions d'élagage, d'abattage et d'entretien de jardins à Blagnac et dans toute la Haute-Garonne."
+  },
+  {
+    question: "Dans quels quartiers de Blagnac intervenez-vous ?",
+    answer: "Nous couvrons l'ensemble de Blagnac : centre-ville, Andromède, Beauzelle, Odyssud, Grand Noble, Ritouret, Constellation, ainsi que les zones résidentielles proches de la Garonne. Nous intervenons également pour les copropriétés et les espaces verts de syndics."
+  },
+  {
+    question: "Quels arbres trouve-t-on couramment à Blagnac ?",
+    answer: "Blagnac possède un patrimoine arboré riche grâce à sa proximité avec la Garonne : peupliers, saules et frênes en bord de fleuve, platanes le long des avenues, chênes et tilleuls dans les quartiers résidentiels. Le quartier Andromède, plus récent, comporte beaucoup de haies (photinias, lauriers) et de jeunes arbres d'ornement."
   }
 ];
 
@@ -164,6 +172,13 @@ const jsonLd = {
         }
       ],
       "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "ratingCount": "28",
+        "reviewCount": "28"
+      },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],

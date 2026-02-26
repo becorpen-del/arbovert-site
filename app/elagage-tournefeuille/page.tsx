@@ -113,6 +113,14 @@ const faqData = [
   {
     question: "Êtes-vous assuré pour les travaux d'élagage ?",
     answer: "Oui, Arbovert dispose d'une assurance responsabilité civile professionnelle couvrant l'ensemble de nos interventions d'élagage, d'abattage et d'entretien de jardins à Tournefeuille et dans toute la Haute-Garonne."
+  },
+  {
+    question: "Dans quels quartiers de Tournefeuille intervenez-vous ?",
+    answer: "Nous couvrons toute la commune de Tournefeuille : centre-ville, La Ramée, Pahin, Laoueilla, Roquettes, La Paderne, Le Petit Train, ainsi que tous les quartiers pavillonnaires. Nous intervenons aussi à Plaisance-du-Touch et Cugnaux, communes limitrophes."
+  },
+  {
+    question: "Quels arbres sont fréquents à Tournefeuille ?",
+    answer: "Tournefeuille est une commune verdoyante avec de nombreux jardins privés. On y trouve des chênes, des pins parasols et maritimes, des platanes, ainsi que beaucoup de haies de cyprès de Leyland, thuyas et lauriers. Le parc de La Ramée abrite des essences variées. Les fruitiers (cerisiers, pruniers, pommiers) sont aussi très présents dans les jardins."
   }
 ];
 
@@ -164,6 +172,13 @@ const jsonLd = {
         }
       ],
       "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "ratingCount": "28",
+        "reviewCount": "28"
+      },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -374,7 +389,7 @@ export default function ElagueurTournefeuille() {
                 Nous maîtrisons les spécificités locales : sols argilo-calcaires, exposition au vent d'Autan, et réglementation de Toulouse Métropole. Notre connaissance du terrain nous permet d'anticiper les contraintes liées aux grands arbres des propriétés tournefeuillaises.
               </p>
               <p className="text-lg text-night/80">
-                Besoin d'un élagueur dans une commune voisine ? Nous intervenons également à <Link href="/elagage-cugnaux" className="text-forest underline hover:text-forest/80">Cugnaux</Link>, <Link href="/elagage-colomiers" className="text-forest underline hover:text-forest/80">Colomiers</Link>, <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Toulouse</Link> et dans toute la métropole toulousaine.
+                Besoin d'un élagueur dans une commune voisine ? Nous intervenons également à <Link href="/elagage-cugnaux" className="text-forest underline hover:text-forest/80">Cugnaux</Link>, <Link href="/elagage-colomiers" className="text-forest underline hover:text-forest/80">Colomiers</Link>, <Link href="/elagage-blagnac" className="text-forest underline hover:text-forest/80">Blagnac</Link>, <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Toulouse</Link> et dans toute la métropole toulousaine.
               </p>
             </div>
           </div>

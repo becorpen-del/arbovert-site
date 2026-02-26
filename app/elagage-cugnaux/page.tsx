@@ -72,9 +72,118 @@ const services = [
 
 const villesIntervention = ['TOULOUSE', 'MURET', 'CUGNAUX', 'COLOMIERS', 'BLAGNAC', 'TOURNEFEUILLE', 'LABÈGE', 'BALMA'];
 
+const faqData = [
+  {
+    question: "Quelle est la meilleure période pour élaguer un arbre à Cugnaux ?",
+    answer: "La période idéale dépend de l'essence de l'arbre. Pour les feuillus (chênes, platanes, frênes), la taille hivernale (novembre-mars) est recommandée pendant le repos végétatif. Pour les résineux et persistants, le printemps ou l'automne sont préférables. La proximité de la Garonne et le climat de Cugnaux favorisent une croissance rapide, nécessitant un entretien régulier."
+  },
+  {
+    question: "Faut-il une autorisation pour abattre un arbre à Cugnaux ?",
+    answer: "À Cugnaux, l'abattage peut nécessiter une déclaration préalable selon le PLU de Toulouse Métropole. Les arbres classés, remarquables ou situés en zone protégée requièrent une autorisation. Si votre arbre est en limite de propriété, les distances légales s'appliquent (2m pour les arbres de plus de 2m de haut). Nous vous accompagnons dans ces démarches."
+  },
+  {
+    question: "Combien coûte un élagage à Cugnaux ?",
+    answer: "Le tarif dépend de la hauteur, de l'essence et de l'accessibilité. Comptez entre 80€ et 1 000€ par arbre pour un élagage d'entretien, et de 130€ à 750€ pour un abattage (hors évacuation). Les travaux d'entretien de jardin ouvrent droit au crédit d'impôt de 50%. Nos devis sont gratuits et sans engagement."
+  },
+  {
+    question: "L'élagage est-il déductible des impôts ?",
+    answer: "L'élagage et l'abattage ne sont pas éligibles au crédit d'impôt. En revanche, la taille de haies, la tonte, le débroussaillage et l'entretien courant de jardin bénéficient du crédit d'impôt de 50% dans le cadre des Services à la Personne. Arbovert est agréé SAP et vous fournit l'attestation fiscale annuelle."
+  },
+  {
+    question: "Intervenez-vous en urgence à Cugnaux ?",
+    answer: "Oui, nous proposons un service d'intervention rapide sous 24h pour les situations d'urgence à Cugnaux : arbre menaçant de tomber, branche cassée sur une toiture, danger immédiat pour la sécurité. Contactez-nous au 06 48 76 85 15."
+  },
+  {
+    question: "Êtes-vous assuré pour les travaux d'élagage ?",
+    answer: "Oui, Arbovert dispose d'une assurance responsabilité civile professionnelle couvrant l'ensemble de nos interventions d'élagage, d'abattage et d'entretien de jardins à Cugnaux et dans toute la Haute-Garonne."
+  },
+  {
+    question: "Dans quels quartiers de Cugnaux intervenez-vous ?",
+    answer: "Nous couvrons l'ensemble de Cugnaux : centre-ville, quartier des Music'Halles, Vivier Maçon, Le Barry, Les Music'Halles, ainsi que les zones pavillonnaires et lotissements. Nous intervenons aussi à Villeneuve-Tolosane et Tournefeuille, communes voisines."
+  },
+  {
+    question: "Quels arbres sont courants à Cugnaux ?",
+    answer: "Cugnaux étant une commune résidentielle avec de nombreux jardins, on y trouve beaucoup de haies (lauriers, thuyas, cyprès de Leyland), des pins parasols dans les lotissements, des chênes et tilleuls le long des rues, ainsi que de nombreux fruitiers. Les peupliers sont aussi présents dans les zones proches du Touch."
+  }
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.arbovert-31.fr/#organization",
+      "name": "Arbovert - Élagage Cugnaux",
+      "description": "Élagage, abattage et entretien de jardins à Cugnaux (31270). Élagueur grimpeur certifié CAPA. Services à la Personne agréé.",
+      "url": "https://www.arbovert-31.fr/elagage-cugnaux",
+      "telephone": "+33648768515",
+      "email": "contact@arbovert-31.fr",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cugnaux",
+        "postalCode": "31270",
+        "addressRegion": "Occitanie",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.5367,
+        "longitude": 1.3450
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Cugnaux", "postalCode": "31270" },
+        { "@type": "City", "name": "Toulouse" },
+        { "@type": "City", "name": "Muret" },
+        { "@type": "City", "name": "Villeneuve-Tolosane" },
+        { "@type": "City", "name": "Frouzins" },
+        { "@type": "City", "name": "Seysses" },
+        { "@type": "City", "name": "Tournefeuille" }
+      ],
+      "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "ratingCount": "28",
+        "reviewCount": "28"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.arbovert-31.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Nos villes", "item": "https://www.arbovert-31.fr/nos-villes" },
+        { "@type": "ListItem", "position": 3, "name": "Élagage Cugnaux", "item": "https://www.arbovert-31.fr/elagage-cugnaux" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqData.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    }
+  ]
+};
+
 export default function ElagueurCugnaux() {
   return (
-    <div className="space-y-0">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="space-y-0">
       {/* Hero Section - Fond beige avec layout 60/40 */}
       <section className="py-16 md:py-20 bg-beige">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -207,8 +316,23 @@ export default function ElagueurCugnaux() {
         </div>
       </section>
 
-      {/* Section Liens internes */}
+      {/* Section FAQ */}
       <section className="py-16 md:py-20 bg-white">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <h2 className="section-heading text-center mb-12">Questions fréquentes sur l'élagage à Cugnaux</h2>
+          <div className="space-y-6">
+            {faqData.map((faq, index) => (
+              <div key={index} className="rounded-2xl border border-forest/10 bg-beige/50 p-6">
+                <h3 className="font-heading text-xl text-forest mb-3">{faq.question}</h3>
+                <p className="text-night/80">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section Liens internes */}
+      <section className="py-16 md:py-20 bg-beige">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
@@ -225,6 +349,8 @@ export default function ElagueurCugnaux() {
                 <li><Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Élagage à Toulouse</Link></li>
                 <li><Link href="/elagage-muret" className="text-forest underline hover:text-forest/80">Élagage à Muret</Link></li>
                 <li><Link href="/elagage-tournefeuille" className="text-forest underline hover:text-forest/80">Élagage à Tournefeuille</Link></li>
+                <li><Link href="/elagage-roques" className="text-forest underline hover:text-forest/80">Élagage à Roques</Link></li>
+                <li><Link href="/elagage-seysses" className="text-forest underline hover:text-forest/80">Élagage à Seysses</Link></li>
               </ul>
             </div>
             <div>
@@ -267,5 +393,6 @@ export default function ElagueurCugnaux() {
         <ContactForm />
       </div>
     </div>
+    </>
   );
 }

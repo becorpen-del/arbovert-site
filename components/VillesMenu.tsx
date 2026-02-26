@@ -4,13 +4,19 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 const villesMenu = [
-  { nom: 'Cugnaux', slug: 'elagage-cugnaux', disponible: true },
-  { nom: 'Muret', slug: 'elagage-muret', disponible: true },
   { nom: 'Toulouse', slug: 'elagage-toulouse', disponible: true },
-  { nom: 'Tournefeuille', slug: 'elagage-tournefeuille', disponible: true },
-  { nom: 'Blagnac', slug: 'elagage-blagnac', disponible: true },
   { nom: 'Colomiers', slug: 'elagage-colomiers', disponible: true },
+  { nom: 'Blagnac', slug: 'elagage-blagnac', disponible: true },
+  { nom: 'Tournefeuille', slug: 'elagage-tournefeuille', disponible: true },
+  { nom: 'Muret', slug: 'elagage-muret', disponible: true },
+  { nom: 'Cugnaux', slug: 'elagage-cugnaux', disponible: true },
   { nom: 'Balma', slug: 'elagage-balma', disponible: true },
+  { nom: 'Labège', slug: 'elagage-labege', disponible: true },
+  { nom: 'Ramonville', slug: 'elagage-ramonville', disponible: true },
+  { nom: 'Castanet-Tolosan', slug: 'elagage-castanet-tolosan', disponible: true },
+  { nom: 'Portet-sur-Garonne', slug: 'elagage-portet-sur-garonne', disponible: true },
+  { nom: 'Roques', slug: 'elagage-roques', disponible: true },
+  { nom: 'Seysses', slug: 'elagage-seysses', disponible: true },
 ];
 
 export function VillesMenuDesktop() {

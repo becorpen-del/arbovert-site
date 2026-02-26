@@ -72,9 +72,123 @@ const services = [
 
 const villesIntervention = ['COLOMIERS', 'TOULOUSE', 'BLAGNAC', 'TOURNEFEUILLE', 'PIBRAC', 'CORNEBARRIEU', 'LÉGUEVIN', 'PLAISANCE-DU-TOUCH'];
 
+const faqData = [
+  {
+    question: "Ai-je besoin d'une autorisation pour élaguer à Colomiers ?",
+    answer: "À Colomiers, l'élagage d'arbres en propriété privée ne nécessite généralement pas d'autorisation, sauf pour les arbres remarquables ou classés. En revanche, si votre arbre est en limite de propriété, vous devez respecter les distances légales (2m pour les arbres de plus de 2m de haut). L'abattage peut nécessiter une déclaration préalable en mairie selon le PLU. Nous vous accompagnons dans ces démarches."
+  },
+  {
+    question: "Quelle est la meilleure période pour élaguer à Colomiers ?",
+    answer: "Le climat de Colomiers permet d'élaguer presque toute l'année. Les périodes optimales sont l'hiver (novembre-mars) pour les arbres caducs et l'été après la floraison pour les persistants. Évitez les périodes de montée de sève (mars-avril) et de forte chaleur (juillet-août). Notre équipe vous conseille selon l'essence et l'état sanitaire de vos arbres."
+  },
+  {
+    question: "Combien coûte un élagage à Colomiers ?",
+    answer: "Le tarif dépend de nombreux facteurs : hauteur de l'arbre, essence, accessibilité, volume de branches à couper. Comptez entre 80€ et 1 000€ pour un élagage standard, et de 130€ à 750€ pour un abattage (hors évacuation). Nos devis sont gratuits et détaillés, et nos interventions d'entretien de jardin ouvrent droit au crédit d'impôt de 50%."
+  },
+  {
+    question: "Intervenez-vous en urgence à Colomiers ?",
+    answer: "Oui, nous proposons un service d'intervention rapide pour les situations d'urgence : arbre menaçant de tomber, branche cassée sur une toiture, danger immédiat pour la sécurité. Contactez-nous et nous évaluons la situation sous 24h pour planifier une intervention sécurisée."
+  },
+  {
+    question: "L'élagage est-il déductible des impôts à Colomiers ?",
+    answer: "L'élagage et l'abattage ne sont pas éligibles au crédit d'impôt car considérés comme travaux spécialisés. En revanche, la taille de haies, la tonte de pelouse et l'entretien courant de jardin bénéficient du crédit d'impôt de 50% dans le cadre des Services à la Personne. Arbovert est agréé SAP et vous fournit l'attestation fiscale annuelle."
+  },
+  {
+    question: "Êtes-vous assuré pour les travaux d'élagage à Colomiers ?",
+    answer: "Oui, Arbovert dispose d'une assurance responsabilité civile professionnelle couvrant l'ensemble de nos interventions d'élagage, d'abattage et d'entretien de jardins à Colomiers et dans toute la Haute-Garonne. Nos élagueurs sont certifiés CAPA Travaux Forestiers."
+  },
+  {
+    question: "Dans quels quartiers de Colomiers intervenez-vous ?",
+    answer: "Nous couvrons l'ensemble de Colomiers : centre-ville, En Jacca, Ramassiers, Val d'Aran, Naspe, Cabirol, Perget, Les Marots, ainsi que les zones pavillonnaires et les lotissements. Nous intervenons aussi pour les copropriétés et les syndics."
+  },
+  {
+    question: "Que faites-vous des déchets verts après un élagage à Colomiers ?",
+    answer: "Nous broyons les branches sur place lorsque c'est possible pour produire un paillage valorisable. Les bois plus importants sont évacués en filière de recyclage. Le brûlage des déchets verts est interdit à Colomiers. Nous laissons systématiquement un chantier propre après intervention."
+  },
+  {
+    question: "Quels arbres sont fréquents à Colomiers ?",
+    answer: "Colomiers possède un patrimoine arboré varié : chênes, pins parasols et pins maritimes dans les lotissements, platanes le long des avenues, cyprès de Leyland en haies, ainsi que de nombreux fruitiers (cerisiers, pruniers, figuiers) dans les jardins. Le développement récent de la ville a aussi multiplié les haies de photinias et de lauriers."
+  }
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.arbovert-31.fr/#organization",
+      "name": "Arbovert - Élagage Colomiers",
+      "description": "Élagage, abattage et entretien de jardins à Colomiers (31770). Élagueur grimpeur certifié CAPA. Services à la Personne agréé.",
+      "url": "https://www.arbovert-31.fr/elagage-colomiers",
+      "telephone": "+33648768515",
+      "email": "contact@arbovert-31.fr",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Colomiers",
+        "postalCode": "31770",
+        "addressRegion": "Occitanie",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.6111,
+        "longitude": 1.3367
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Colomiers", "postalCode": "31770" },
+        { "@type": "City", "name": "Toulouse" },
+        { "@type": "City", "name": "Blagnac" },
+        { "@type": "City", "name": "Tournefeuille" },
+        { "@type": "City", "name": "Pibrac" },
+        { "@type": "City", "name": "Cornebarrieu" },
+        { "@type": "City", "name": "Léguevin" },
+        { "@type": "City", "name": "Plaisance-du-Touch" }
+      ],
+      "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "ratingCount": "28",
+        "reviewCount": "28"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.arbovert-31.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Nos villes", "item": "https://www.arbovert-31.fr/nos-villes" },
+        { "@type": "ListItem", "position": 3, "name": "Élagage Colomiers", "item": "https://www.arbovert-31.fr/elagage-colomiers" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqData.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    }
+  ]
+};
+
 export default function ElagueurColomiers() {
   return (
-    <div className="space-y-0">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="space-y-0">
       {/* Hero Section - Fond beige avec layout 60/40 */}
       <section className="py-16 md:py-20 bg-beige">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -215,30 +329,12 @@ export default function ElagueurColomiers() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading text-center mb-12">Questions fréquentes sur l'élagage à Colomiers</h2>
           <div className="space-y-6">
-            <div className="rounded-2xl border border-forest/10 bg-beige/50 p-6">
-              <h3 className="font-heading text-xl text-forest mb-3">Ai-je besoin d'une autorisation pour élaguer à Colomiers ?</h3>
-              <p className="text-night/80">
-                À Colomiers, l'élagage d'arbres en propriété privée ne nécessite généralement pas d'autorisation, sauf pour les arbres remarquables ou classés. En revanche, si votre arbre est en limite de propriété, vous devez respecter les distances légales (2m pour les arbres de plus de 2m de haut). L'abattage peut nécessiter une déclaration préalable en mairie selon le PLU. Nous vous accompagnons dans ces démarches.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-forest/10 bg-beige/50 p-6">
-              <h3 className="font-heading text-xl text-forest mb-3">Quelle est la meilleure période pour élaguer à Colomiers ?</h3>
-              <p className="text-night/80">
-                Le climat de Colomiers permet d'élaguer presque toute l'année. Les périodes optimales sont l'hiver (novembre-mars) pour les arbres caducs et l'été après la floraison pour les persistants. Évitez les périodes de montée de sève (mars-avril) et de forte chaleur (juillet-août). Notre équipe vous conseille selon l'essence et l'état sanitaire de vos arbres.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-forest/10 bg-beige/50 p-6">
-              <h3 className="font-heading text-xl text-forest mb-3">Combien coûte un élagage à Colomiers ?</h3>
-              <p className="text-night/80">
-                Le tarif dépend de nombreux facteurs : hauteur de l'arbre, essence, accessibilité, volume de branches à couper. Comptez entre 80€ et 1000€ pour un élagage standard, et de 130€ à 750€ pour un abattage (hors évacuation). Nos devis sont gratuits et détaillés, et nos interventions d'entretien de jardin ouvrent droit au crédit d'impôt de 50%.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-forest/10 bg-beige/50 p-6">
-              <h3 className="font-heading text-xl text-forest mb-3">Intervenez-vous en urgence à Colomiers ?</h3>
-              <p className="text-night/80">
-                Oui, nous proposons un service d'intervention rapide pour les situations d'urgence : arbre menaçant de tomber, branche cassée sur une toiture, danger immédiat pour la sécurité. Contactez-nous et nous évaluons la situation sous 24h pour planifier une intervention sécurisée.
-              </p>
-            </div>
+            {faqData.map((faq, index) => (
+              <div key={index} className="rounded-2xl border border-forest/10 bg-beige/50 p-6">
+                <h3 className="font-heading text-xl text-forest mb-3">{faq.question}</h3>
+                <p className="text-night/80">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -303,5 +399,6 @@ export default function ElagueurColomiers() {
         <ContactForm />
       </div>
     </div>
+    </>
   );
 }

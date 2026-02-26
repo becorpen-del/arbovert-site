@@ -114,6 +114,14 @@ const faqData = [
   {
     question: "Êtes-vous assuré pour les travaux d'élagage ?",
     answer: "Oui, Arbovert dispose d'une assurance responsabilité civile professionnelle couvrant l'ensemble de nos interventions d'élagage, d'abattage et d'entretien de jardins à Balma et dans toute la Haute-Garonne. Guillaume est certifié CAPA Travaux Forestiers. Nous respectons strictement les normes de sécurité (EPI, balisage chantier)."
+  },
+  {
+    question: "Quels arbres sont typiques des jardins à Balma ?",
+    answer: "Balma se distingue par ses coteaux boisés (Pech-David côté sud-est) où dominent les chênes verts et pédonculés. Dans les quartiers résidentiels, on trouve des pins parasols, des cèdres, des tilleuls et de nombreux fruitiers. Les haies de lauriers, photinias et cyprès de Leyland sont très courantes dans les lotissements récents."
+  },
+  {
+    question: "Que faites-vous des déchets verts après l'élagage ?",
+    answer: "Nous broyons les branches sur place pour produire un paillage valorisable dans votre jardin. Les bois volumineux et troncs sont évacués vers des filières de recyclage. Le brûlage est interdit à Balma et dans toute la métropole toulousaine. Nous repartons toujours avec un chantier propre et dégagé."
   }
 ];
 
@@ -165,6 +173,13 @@ const jsonLd = {
         }
       ],
       "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "ratingCount": "28",
+        "reviewCount": "28"
+      },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -665,6 +680,8 @@ export default function ElagueurBalma() {
                     <li>🌳 <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Élagage à Toulouse</Link> - Métropole</li>
                     <li>🌳 <Link href="/elagage-blagnac" className="text-forest underline hover:text-forest/80">Élagueur à Blagnac</Link> - Proximité aéroport</li>
                     <li>🌳 <Link href="/elagage-tournefeuille" className="text-forest underline hover:text-forest/80">Taille haies Tournefeuille</Link> - Ouest métropole</li>
+                    <li>🌳 <Link href="/elagage-ramonville" className="text-forest underline hover:text-forest/80">Élagage à Ramonville</Link> - Sud-est Toulouse</li>
+                    <li>🌳 <Link href="/elagage-labege" className="text-forest underline hover:text-forest/80">Élagage à Labège</Link> - Sud-est métropole</li>
                   </ul>
                 </div>
                 <div>

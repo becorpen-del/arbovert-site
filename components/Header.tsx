@@ -4,8 +4,10 @@ import { VillesMenuDesktop, VillesMenuMobile } from './VillesMenu';
 
 const navigation = [
   { label: 'Services', href: '/services-elagage-haute-garonne' },
+  { label: 'Tarifs', href: '/tarif-elagage-haute-garonne' },
   { label: 'Réalisations', href: '/realisations-elagueur-haute-garonne' },
-  { label: 'Crédit d\'Impôt', href: '/credit-impot-jardinage' }
+  { label: 'Crédit d\'Impôt', href: '/credit-impot-jardinage' },
+  { label: 'Blog', href: '/blog' }
 ];
 
 const Header = () => {

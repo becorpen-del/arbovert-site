@@ -6,7 +6,8 @@ const Footer = () => {
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 text-sm sm:px-6 lg:px-8 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p className="font-heading text-lg">Arbovert – Élagage & entretien d'arbres en Haute-Garonne (31)</p>
-          <p className="mt-2 text-white/80">Numéro SIRET : 99082260300017</p>
+          <p className="mt-2 text-white/80">9 Quartier Gironne, 31220 Saint-Julien-sur-Garonne</p>
+          <p className="text-white/80">SIRET : 99082260300017</p>
           <div className="mt-4 flex items-center gap-3">
             <span className="text-white/80">Suivez-nous :</span>
             <a
@@ -65,16 +66,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/elagage-cugnaux" className="transition-colors hover:text-white">
-                  Élagage Cugnaux
-                </Link>
-              </li>
-              <li>
-                <Link href="/elagage-muret" className="transition-colors hover:text-white">
-                  Élagage Muret
-                </Link>
-              </li>
-              <li>
                 <Link href="/elagage-blagnac" className="transition-colors hover:text-white">
                   Élagage Blagnac
                 </Link>
@@ -85,8 +76,48 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/elagage-muret" className="transition-colors hover:text-white">
+                  Élagage Muret
+                </Link>
+              </li>
+              <li>
+                <Link href="/elagage-cugnaux" className="transition-colors hover:text-white">
+                  Élagage Cugnaux
+                </Link>
+              </li>
+              <li>
                 <Link href="/elagage-balma" className="transition-colors hover:text-white">
                   Élagage Balma
+                </Link>
+              </li>
+              <li>
+                <Link href="/elagage-labege" className="transition-colors hover:text-white">
+                  Élagage Labège
+                </Link>
+              </li>
+              <li>
+                <Link href="/elagage-ramonville" className="transition-colors hover:text-white">
+                  Élagage Ramonville
+                </Link>
+              </li>
+              <li>
+                <Link href="/elagage-castanet-tolosan" className="transition-colors hover:text-white">
+                  Élagage Castanet-Tolosan
+                </Link>
+              </li>
+              <li>
+                <Link href="/elagage-portet-sur-garonne" className="transition-colors hover:text-white">
+                  Élagage Portet-sur-Garonne
+                </Link>
+              </li>
+              <li>
+                <Link href="/elagage-roques" className="transition-colors hover:text-white">
+                  Élagage Roques
+                </Link>
+              </li>
+              <li>
+                <Link href="/elagage-seysses" className="transition-colors hover:text-white">
+                  Élagage Seysses
                 </Link>
               </li>
               <li>

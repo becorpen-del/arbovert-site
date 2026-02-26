@@ -4,13 +4,13 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Nos zones d\'intervention - Élagueur Haute-Garonne | Arbovert',
   description:
-    'Découvrez toutes nos zones d\'intervention en Haute-Garonne : Cugnaux, Muret, Toulouse, Tournefeuille, Blagnac, Balma et plus encore.',
+    'Découvrez toutes nos zones d\'intervention en Haute-Garonne (31) : Toulouse, Colomiers, Blagnac, Muret, Cugnaux, Balma, Labège, Ramonville, Castanet-Tolosan, Portet-sur-Garonne et plus. Devis gratuit.',
   alternates: {
     canonical: '/nos-villes'
   },
   openGraph: {
     title: 'Nos zones d\'intervention - Élagueur Haute-Garonne | Arbovert',
-    description: 'Découvrez toutes nos zones d\'intervention en Haute-Garonne : Cugnaux, Muret, Toulouse, Tournefeuille, Blagnac et plus encore.',
+    description: 'Découvrez toutes nos zones d\'intervention en Haute-Garonne (31) : Toulouse, Colomiers, Blagnac, Muret, Cugnaux, Balma et 7 autres communes. Devis gratuit.',
     type: 'website',
     locale: 'fr_FR',
     url: '/nos-villes'
@@ -69,10 +69,10 @@ const villes = [
   {
     nom: 'Labège',
     slug: 'elagage-labege',
-    disponible: false,
+    disponible: true,
     habitants: '4 000',
     codePostal: '31670',
-    description: 'Interventions ponctuelles et entretien régulier',
+    description: 'Intervention dans la zone Innopole, les quartiers résidentiels et les lotissements pavillonnaires.',
   },
   {
     nom: 'Balma',
@@ -81,6 +81,46 @@ const villes = [
     habitants: '15 000',
     codePostal: '31130',
     description: 'Intervention dans tous les quartiers : Centre-ville, Lasbordes, Candelle, Vidailhan, Gramont...',
+  },
+  {
+    nom: 'Ramonville',
+    slug: 'elagage-ramonville',
+    disponible: true,
+    habitants: '14 000',
+    codePostal: '31520',
+    description: 'Interventions le long du Canal du Midi, quartiers résidentiels et copropriétés.',
+  },
+  {
+    nom: 'Castanet-Tolosan',
+    slug: 'elagage-castanet-tolosan',
+    disponible: true,
+    habitants: '15 000',
+    codePostal: '31320',
+    description: 'Élagage sur les coteaux du Lauragais, quartiers pavillonnaires et abords du Canal du Midi.',
+  },
+  {
+    nom: 'Portet-sur-Garonne',
+    slug: 'elagage-portet-sur-garonne',
+    disponible: true,
+    habitants: '10 000',
+    codePostal: '31120',
+    description: 'Intervention au confluent Garonne-Ariège, zones résidentielles et bords de rivière.',
+  },
+  {
+    nom: 'Roques',
+    slug: 'elagage-roques',
+    disponible: true,
+    habitants: '5 500',
+    codePostal: '31120',
+    description: 'Élagage en bord de Garonne, quartiers pavillonnaires et propriétés semi-rurales.',
+  },
+  {
+    nom: 'Seysses',
+    slug: 'elagage-seysses',
+    disponible: true,
+    habitants: '4 000',
+    codePostal: '31600',
+    description: 'Entretien de grands jardins, propriétés boisées et haies dans ce village semi-rural.',
   },
 ];
 

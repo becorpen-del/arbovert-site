@@ -72,9 +72,120 @@ const services = [
 
 const villesIntervention = ['TOULOUSE', 'MURET', 'CUGNAUX', 'COLOMIERS', 'BLAGNAC', 'TOURNEFEUILLE', 'LABÈGE', 'BALMA'];
 
+const faqData = [
+  {
+    question: "Quelle est la meilleure période pour élaguer un arbre à Toulouse ?",
+    answer: "La période idéale dépend de l'essence. Pour les feuillus (platanes, chênes), la taille hivernale (novembre-mars) est recommandée car l'arbre est en repos végétatif. Pour les résineux (pins parasols) et les persistants (lauriers), le printemps ou l'automne sont préférables. À Toulouse, le climat doux permet des interventions sur une large période, mais nous évitons la montée de sève (mars-avril) et les fortes chaleurs estivales."
+  },
+  {
+    question: "Faut-il une autorisation pour abattre un arbre à Toulouse ?",
+    answer: "À Toulouse, l'abattage peut nécessiter une déclaration préalable selon le PLU de Toulouse Métropole : arbres classés, arbres remarquables, ou situés en zone protégée. Dans certains quartiers (Côte Pavée, Saint-Simon, Pouvourville), des règles spécifiques s'appliquent. Nous vous accompagnons dans les démarches administratives avant toute intervention."
+  },
+  {
+    question: "Combien coûte un élagage à Toulouse ?",
+    answer: "Le tarif varie selon la hauteur, l'essence, l'accessibilité et le volume de branches. Comptez entre 80€ et 1 000€ par arbre pour un élagage d'entretien, et de 130€ à 750€ pour un abattage (hors évacuation). Les travaux d'entretien de jardin (tonte, taille de haies) ouvrent droit au crédit d'impôt de 50%. Nos devis sont gratuits et détaillés."
+  },
+  {
+    question: "L'élagage est-il déductible des impôts ?",
+    answer: "L'élagage et l'abattage ne sont pas éligibles au crédit d'impôt car considérés comme travaux spécialisés. En revanche, la taille de haies, la tonte de pelouse, le débroussaillage et l'entretien courant de jardin bénéficient du crédit d'impôt de 50% dans le cadre des Services à la Personne. Arbovert est agréé SAP et vous fournit l'attestation fiscale annuelle."
+  },
+  {
+    question: "Intervenez-vous en urgence à Toulouse ?",
+    answer: "Oui, nous proposons un service d'intervention rapide sous 24h pour les situations d'urgence : arbre menaçant de tomber, branche cassée sur une toiture, arbre fragilisé après une tempête ou le vent d'Autan, danger immédiat pour la sécurité des personnes. Contactez-nous au 06 48 76 85 15."
+  },
+  {
+    question: "Dans quels quartiers de Toulouse intervenez-vous ?",
+    answer: "Nous intervenons dans tous les quartiers de Toulouse : Mirail, Fontaine-Lestang, Bellefontaine, Reynerie, Empalot, Minimes, Croix-Daurade, Côte Pavée, Saint-Simon, Pouvourville, Rangueil, Lardenne, Purpan et tous les autres. Nous couvrons aussi l'ensemble de l'agglomération toulousaine."
+  },
+  {
+    question: "Comment se déroule une intervention d'élagage à Toulouse ?",
+    answer: "Après un premier contact téléphonique, nous réalisons un diagnostic sur place pour évaluer l'arbre, son environnement et les contraintes d'accès. Nous vous remettons un devis détaillé sous 24h. Le jour de l'intervention, nous balisons la zone, réalisons la taille (sur corde ou nacelle selon l'accès), broyons les branches et nettoyons le chantier avant de partir."
+  },
+  {
+    question: "Quels types d'arbres élaguer à Toulouse et en Haute-Garonne ?",
+    answer: "Nous intervenons sur toutes les essences présentes à Toulouse : platanes (très fréquents le long des boulevards et du Canal du Midi), chênes verts et pédonculés, pins parasols et pins maritimes, cyprès, cèdres, tilleuls, érables, ainsi que les fruitiers (cerisiers, pruniers, figuiers). Chaque essence nécessite une technique et une période de taille adaptées."
+  },
+  {
+    question: "Que faites-vous des déchets verts après un élagage ?",
+    answer: "Nous broyons les branches sur place lorsque c'est possible, ce qui produit un paillage valorisable pour votre jardin. Les bois plus importants et les troncs sont évacués vers des filières de recyclage. Le brûlage des déchets verts est interdit à Toulouse et dans toute la métropole. Nous laissons un chantier propre et dégagé après chaque intervention."
+  }
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.arbovert-31.fr/#organization",
+      "name": "Arbovert - Élagage Toulouse",
+      "description": "Élagage, abattage et entretien de jardins à Toulouse (31000). Élagueur grimpeur certifié CAPA. Services à la Personne agréé.",
+      "url": "https://www.arbovert-31.fr/elagage-toulouse",
+      "telephone": "+33648768515",
+      "email": "contact@arbovert-31.fr",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toulouse",
+        "postalCode": "31000",
+        "addressRegion": "Occitanie",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.6047,
+        "longitude": 1.4442
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Toulouse", "postalCode": "31000" },
+        { "@type": "City", "name": "Blagnac" },
+        { "@type": "City", "name": "Colomiers" },
+        { "@type": "City", "name": "Tournefeuille" },
+        { "@type": "City", "name": "Balma" }
+      ],
+      "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "ratingCount": "28",
+        "reviewCount": "28"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.arbovert-31.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Nos villes", "item": "https://www.arbovert-31.fr/nos-villes" },
+        { "@type": "ListItem", "position": 3, "name": "Élagage Toulouse", "item": "https://www.arbovert-31.fr/elagage-toulouse" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqData.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    }
+  ]
+};
+
 export default function ElagueurToulouse() {
   return (
-    <div className="space-y-0">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="space-y-0">
       {/* Hero Section - Fond beige avec layout 60/40 */}
       <section className="py-16 md:py-20 bg-beige">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -207,8 +318,23 @@ export default function ElagueurToulouse() {
         </div>
       </section>
 
-      {/* Section Liens internes */}
+      {/* Section FAQ */}
       <section className="py-16 md:py-20 bg-white">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <h2 className="section-heading text-center mb-12">Questions fréquentes sur l'élagage à Toulouse</h2>
+          <div className="space-y-6">
+            {faqData.map((faq, index) => (
+              <div key={index} className="rounded-2xl border border-forest/10 bg-beige/50 p-6">
+                <h3 className="font-heading text-xl text-forest mb-3">{faq.question}</h3>
+                <p className="text-night/80">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section Liens internes */}
+      <section className="py-16 md:py-20 bg-beige">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
@@ -226,6 +352,7 @@ export default function ElagueurToulouse() {
                 <li><Link href="/elagage-colomiers" className="text-forest underline hover:text-forest/80">Élagage à Colomiers</Link></li>
                 <li><Link href="/elagage-balma" className="text-forest underline hover:text-forest/80">Élagage à Balma</Link></li>
                 <li><Link href="/elagage-tournefeuille" className="text-forest underline hover:text-forest/80">Élagage à Tournefeuille</Link></li>
+                <li><Link href="/elagage-ramonville" className="text-forest underline hover:text-forest/80">Élagage à Ramonville</Link></li>
               </ul>
             </div>
             <div>
@@ -267,5 +394,6 @@ export default function ElagueurToulouse() {
         <ContactForm />
       </div>
     </div>
+    </>
   );
 }

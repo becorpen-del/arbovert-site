@@ -36,9 +36,71 @@ const highlightShots = [
   }
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.arbovert-31.fr/#organization",
+      "name": "Arbovert",
+      "description": "Entreprise d'élagage, abattage et entretien d'espaces verts en Haute-Garonne (31). Élagueurs grimpeurs certifiés CAPA. Services à la Personne agréé – crédit d'impôt 50%.",
+      "url": "https://www.arbovert-31.fr",
+      "telephone": "+33648768515",
+      "email": "contact@arbovert-31.fr",
+      "image": "https://www.arbovert-31.fr/Arbovert-sans-fond.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9 Quartier Gironne",
+        "addressLocality": "Saint-Julien-sur-Garonne",
+        "postalCode": "31220",
+        "addressRegion": "Occitanie",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Toulouse", "postalCode": "31000" },
+        { "@type": "City", "name": "Muret", "postalCode": "31600" },
+        { "@type": "City", "name": "Cugnaux", "postalCode": "31270" },
+        { "@type": "City", "name": "Colomiers", "postalCode": "31770" },
+        { "@type": "City", "name": "Blagnac", "postalCode": "31700" },
+        { "@type": "City", "name": "Tournefeuille", "postalCode": "31170" },
+        { "@type": "City", "name": "Balma", "postalCode": "31130" },
+        { "@type": "City", "name": "Labège", "postalCode": "31670" }
+      ],
+      "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "ratingCount": "28",
+        "reviewCount": "28"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61583601120009",
+        "https://www.instagram.com/sarl.arbovert/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://www.arbovert-31.fr",
+      "name": "Arbovert – Élagage & entretien d'arbres en Haute-Garonne",
+      "publisher": { "@id": "https://www.arbovert-31.fr/#organization" }
+    }
+  ]
+};
+
 export default function HomePage() {
   return (
     <div className="space-y-[50px]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Hero />
 
       <section className="section">

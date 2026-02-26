@@ -20,6 +20,20 @@ export const metadata: Metadata = {
 
 const realisations: RealisationCardProps[] = [
   {
+    title: "Taille de sécurisation d'un eucalyptus menaçant",
+    location: 'CAZÈRES (31)',
+    description:
+      `Suite aux fortes rafales de vent, une cliente nous a sollicités pour intervenir sur un eucalyptus devenu trop imposant et perçu comme menaçant pour son habitation. Afin de réduire la prise au vent et sécuriser la zone, une taille de sécurisation a été réalisée. Une approche en deux temps pour garantir la sécurité tout en accompagnant la cliente dans sa décision : abattage complet prévu à terme.`,
+    highlights: [
+      'Réduction de la prise au vent pour limiter les risques immédiats',
+      'Intervention rapide suite aux intempéries',
+      'Abattage complet programmé à terme'
+    ],
+    footer: `📍 Cazères | 🛠️ Taille de sécurisation & élagage préventif`,
+    beforeImage: '/realisations/cazeres-avant.jpg',
+    afterImage: '/realisations/cazeres-apres.jpg'
+  },
+  {
     title: "Abattage de deux chênes atteints par le capricorne",
     location: 'BRAGAYRAC (31)',
     description:
