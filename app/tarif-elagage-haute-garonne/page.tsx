@@ -3,16 +3,16 @@ import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Tarifs Élagage en Haute-Garonne | Arbovert – Grille Tarifaire 2025',
+  title: 'Tarifs Élagage en Haute-Garonne | Arbovert – Grille Tarifaire 2026',
   description:
-    'Tarifs élagage, abattage, taille de haies, tonte et débroussaillage en Haute-Garonne (31). Grille tarifaire 2025 transparente. Crédit d\'impôt 50%. Devis gratuit sous 24h.',
+    'Tarifs élagage, abattage, taille de haies, tonte et débroussaillage en Haute-Garonne (31). Grille tarifaire 2026 transparente. Crédit d\'impôt 50%. Devis gratuit sous 24h.',
   keywords: ['tarif élagage', 'prix élagage toulouse', 'tarif élagueur haute-garonne', 'prix abattage arbre', 'devis élagage', 'coût élagage arbre', 'tarif taille haie', 'prix tonte pelouse', 'tarif débroussaillage'],
   alternates: {
     canonical: '/tarif-elagage-haute-garonne'
   },
   openGraph: {
-    title: 'Tarifs Élagage en Haute-Garonne | Arbovert – Grille Tarifaire 2025',
-    description: 'Grille tarifaire 2025 complète : élagage, abattage, taille de haies, tonte, débroussaillage en Haute-Garonne. Crédit d\'impôt 50%.',
+    title: 'Tarifs Élagage en Haute-Garonne | Arbovert – Grille Tarifaire 2026',
+    description: 'Grille tarifaire 2026 complète : élagage, abattage, taille de haies, tonte, débroussaillage en Haute-Garonne. Crédit d\'impôt 50%.',
     type: 'website',
     locale: 'fr_FR',
     url: '/tarif-elagage-haute-garonne'
@@ -149,7 +149,7 @@ export default function TarifsElagage() {
         <section className="py-16 md:py-20 bg-beige">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="font-heading text-4xl md:text-5xl text-forest mb-6">
-              Grille tarifaire 2025 – Élagage et entretien de jardins
+              Grille tarifaire 2026 – Élagage et entretien de jardins
             </h1>
             <p className="text-lg md:text-xl text-night/80 leading-relaxed mb-4 max-w-3xl mx-auto">
               Tarifs indicatifs pour tous nos services en Haute-Garonne. <strong>Devis gratuit et personnalisé sous 24h</strong> après visite sur place.
