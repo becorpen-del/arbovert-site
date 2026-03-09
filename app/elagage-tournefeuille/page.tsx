@@ -388,8 +388,11 @@ export default function ElagueurTournefeuille() {
               <p className="text-lg text-night/80 mb-4">
                 Nous maîtrisons les spécificités locales : sols argilo-calcaires, exposition au vent d'Autan, et réglementation de Toulouse Métropole. Notre connaissance du terrain nous permet d'anticiper les contraintes liées aux grands arbres des propriétés tournefeuillaises.
               </p>
-              <p className="text-lg text-night/80">
+              <p className="text-lg text-night/80 mb-4">
                 Besoin d'un élagueur dans une commune voisine ? Nous intervenons également à <Link href="/elagage-cugnaux" className="text-forest underline hover:text-forest/80">Cugnaux</Link>, <Link href="/elagage-colomiers" className="text-forest underline hover:text-forest/80">Colomiers</Link>, <Link href="/elagage-blagnac" className="text-forest underline hover:text-forest/80">Blagnac</Link>, <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Toulouse</Link> et dans toute la métropole toulousaine.
+              </p>
+              <p className="text-lg text-night/80">
+                Consultez nos articles pour en savoir plus : <Link href="/blog/taille-douce-vs-taille-severe" className="text-forest underline hover:text-forest/80">taille douce vs taille sévère, quelle méthode choisir</Link>, <Link href="/blog/quand-elaguer-arbres-toulouse" className="text-forest underline hover:text-forest/80">quand élaguer vos arbres à Toulouse et ses environs</Link> et <Link href="/blog/entretien-jardin-printemps" className="text-forest underline hover:text-forest/80">l'entretien de jardin au printemps</Link>.
               </p>
             </div>
           </div>

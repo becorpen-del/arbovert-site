@@ -51,6 +51,12 @@ const Footer = () => {
             <Link href="/#contact" className="transition-colors hover:text-white">
               Contact
             </Link>
+            <Link href="/mentions-legales" className="transition-colors hover:text-white">
+              Mentions légales
+            </Link>
+            <Link href="/politique-de-confidentialite" className="transition-colors hover:text-white">
+              Confidentialité
+            </Link>
           </div>
           <div className="border-t border-white/20 pt-4 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-6 lg:ml-6">
             <h4 className="font-heading text-white mb-2 text-sm uppercase tracking-wide">Nos villes</h4>
@@ -71,58 +77,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/elagage-tournefeuille" className="transition-colors hover:text-white">
-                  Élagage Tournefeuille
-                </Link>
-              </li>
-              <li>
-                <Link href="/elagage-muret" className="transition-colors hover:text-white">
-                  Élagage Muret
-                </Link>
-              </li>
-              <li>
-                <Link href="/elagage-cugnaux" className="transition-colors hover:text-white">
-                  Élagage Cugnaux
-                </Link>
-              </li>
-              <li>
-                <Link href="/elagage-balma" className="transition-colors hover:text-white">
-                  Élagage Balma
-                </Link>
-              </li>
-              <li>
-                <Link href="/elagage-labege" className="transition-colors hover:text-white">
-                  Élagage Labège
-                </Link>
-              </li>
-              <li>
-                <Link href="/elagage-ramonville" className="transition-colors hover:text-white">
-                  Élagage Ramonville
-                </Link>
-              </li>
-              <li>
-                <Link href="/elagage-castanet-tolosan" className="transition-colors hover:text-white">
-                  Élagage Castanet-Tolosan
-                </Link>
-              </li>
-              <li>
-                <Link href="/elagage-portet-sur-garonne" className="transition-colors hover:text-white">
-                  Élagage Portet-sur-Garonne
-                </Link>
-              </li>
-              <li>
-                <Link href="/elagage-roques" className="transition-colors hover:text-white">
-                  Élagage Roques
-                </Link>
-              </li>
-              <li>
-                <Link href="/elagage-seysses" className="transition-colors hover:text-white">
-                  Élagage Seysses
-                </Link>
-              </li>
-              <li>
                 <Link href="/nos-villes" className="transition-colors hover:text-white">
-                  Toutes nos villes
+                  Toutes nos villes →
                 </Link>
               </li>
             </ul>

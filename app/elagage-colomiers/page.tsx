@@ -317,8 +317,17 @@ export default function ElagueurColomiers() {
             <p className="text-lg text-night/80 mb-4">
               Nous intervenons dans tous les quartiers de Colomiers : <strong>En Jacca</strong> (centre-ville historique avec platanes et chênes centenaires), <strong>Perget</strong> (zone pavillonnaire aux haies de lauriers et thuyas), <strong>Ramiers</strong> (pins parasols près de la zone commerciale) et le secteur du <strong>Lycée International</strong> (jeunes plantations nécessitant des tailles de formation).
             </p>
-            <p className="text-lg text-night/80">
+            <p className="text-lg text-night/80 mb-4">
               Notre connaissance du terrain columérin nous permet d'adapter nos interventions aux spécificités locales : proximité des lignes électriques, sols argileux typiques de la région et exposition au vent d'Autan qui fragilise certaines essences.
+            </p>
+            <p className="text-lg text-night/80 mb-4">
+              <strong>Réglementation et PLU à Colomiers :</strong> la commune fait partie de Toulouse Métropole et est soumise au Plan Local d'Urbanisme intercommunal (PLUi-H). L'abattage d'arbres de plus de 2 mètres peut nécessiter une déclaration préalable, en particulier dans les zones pavillonnaires protégées ou à proximité des espaces boisés classés. Les arbres situés à moins de 2 mètres de la limite de propriété doivent respecter la hauteur maximale de 2 mètres (article 671 du Code civil). Nous vous accompagnons dans toutes les démarches administratives nécessaires.
+            </p>
+            <p className="text-lg text-night/80 mb-4">
+              Les <strong>essences d'arbres les plus courantes à Colomiers</strong> incluent les platanes communs le long des grands boulevards, les chênes pédonculés et chênes verts dans les parcs et jardins privés, ainsi que les pins parasols et pins maritimes très présents dans les lotissements des années 1980-2000. Les cyprès de Provence et cyprès de Leyland forment de nombreuses haies brise-vent, tandis que les lauriers-palme et photinias sont privilégiés pour les clôtures végétales récentes. On retrouve également une belle variété de fruitiers : figuiers, cerisiers, pruniers d'Ente et pommiers dans les jardins familiaux.
+            </p>
+            <p className="text-lg text-night/80">
+              Découvrez nos <Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">réalisations d'élagage en Haute-Garonne</Link> pour des exemples concrets de nos interventions. Consultez aussi notre article sur <Link href="/blog/quand-elaguer-arbres-toulouse" className="text-forest underline hover:text-forest/80">les meilleures périodes pour élaguer vos arbres</Link> et notre guide sur <Link href="/blog/reglementation-elagage-haute-garonne" className="text-forest underline hover:text-forest/80">la réglementation de l'élagage en Haute-Garonne</Link>.
             </p>
           </div>
         </div>

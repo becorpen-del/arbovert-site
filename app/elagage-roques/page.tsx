@@ -432,8 +432,11 @@ export default function ElagageRoques() {
               <p className="text-lg text-night/80 mb-4">
                 L'ambiance semi-rurale de Roques génère aussi une <strong>forte demande en débroussaillage</strong>. Les grands terrains en bordure de zone agricole, les parcelles non clôturées et les jardins prolongés par des espaces naturels nécessitent un entretien régulier pour rester praticables et éviter la prolifération de ronces et de végétation invasive.
               </p>
-              <p className="text-lg text-night/80">
+              <p className="text-lg text-night/80 mb-4">
                 Nous intervenons aussi dans les communes voisines : <Link href="/elagage-muret" className="text-forest underline hover:text-forest/80">Muret</Link>, <Link href="/elagage-cugnaux" className="text-forest underline hover:text-forest/80">Cugnaux</Link>, <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Toulouse</Link> et Portet-sur-Garonne.
+              </p>
+              <p className="text-lg text-night/80">
+                Retrouvez nos conseils d'experts sur notre blog : <Link href="/blog/entretien-jardin-printemps" className="text-forest underline hover:text-forest/80">l'entretien de jardin au printemps</Link>, <Link href="/blog/prix-elagage-toulouse" className="text-forest underline hover:text-forest/80">les prix de l'élagage en Haute-Garonne</Link> et <Link href="/blog/taille-douce-vs-taille-severe" className="text-forest underline hover:text-forest/80">taille douce vs taille sévère : quelle méthode choisir</Link>. Consultez également nos <Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">réalisations récentes</Link>.
               </p>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import AuthorCard from '@/components/AuthorCard';
 
 export const metadata: Metadata = {
   title: 'Entretien de jardin au printemps à Toulouse : le guide complet | Arbovert',
@@ -25,9 +26,15 @@ const jsonLd = {
       "datePublished": "2026-04-15",
       "dateModified": "2026-04-15",
       "author": {
-        "@type": "Organization",
-        "name": "Arbovert",
-        "url": "https://www.arbovert-31.fr"
+        "@type": "Person",
+        "name": "Guillaume",
+        "jobTitle": "Co-gérant & élagueur grimpeur",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Arbovert",
+          "url": "https://www.arbovert-31.fr"
+        },
+        "image": "https://www.arbovert-31.fr/guillaume.jpg"
       },
       "publisher": {
         "@type": "Organization",
@@ -118,6 +125,15 @@ export default function EntretienJardinPrintemps() {
           </div>
         </section>
 
+        <AuthorCard
+          name="Guillaume"
+          role="Co-gérant & élagueur grimpeur — CAPA Travaux Forestiers"
+          bio="6 ans dans l'armée, passionné de trail et de nature. Mon credo : un travail soigné et le respect de chaque arbre."
+          photo="/guillaume.jpg"
+          datePublished="2026-04-15"
+          dateModified="2026-04-15"
+        />
+
         {/* Contenu article */}
         <article className="py-16 md:py-20 bg-white">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 prose-custom">
@@ -156,7 +172,7 @@ export default function EntretienJardinPrintemps() {
                   </div>
                 </div>
                 <p className="text-lg text-night/80">
-                  En résumé, le printemps est une <strong>fenêtre d'intervention stratégique</strong> en Haute-Garonne. C'est le moment de corriger les dégâts de l'hiver, de préparer vos arbres et arbustes pour la saison de croissance, et de poser les bases d'un jardin sain et esthétique pour tout l'été. Un entretien printanier bien mené, c'est aussi <strong>moins de travail (et de dépenses) en été et en automne</strong>.
+                  En résumé, le printemps est une <strong>fenêtre d'intervention stratégique</strong> en Haute-Garonne. C'est le moment de corriger les dégâts de l'hiver, de préparer vos arbres et arbustes pour la saison de croissance, et de poser les bases d'un jardin sain et esthétique pour tout l'été. Un entretien printanier bien mené, c'est aussi <strong>moins de travail (et de dépenses) en été et en automne</strong>. Pour voir des exemples concrets d'interventions printanières, consultez nos <Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">réalisations avant/après en Haute-Garonne</Link>.
                 </p>
               </div>
             </section>

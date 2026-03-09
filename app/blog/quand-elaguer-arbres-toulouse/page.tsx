@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import AuthorCard from '@/components/AuthorCard';
 
 export const metadata: Metadata = {
   title: 'Quand élaguer vos arbres à Toulouse ? Calendrier et périodes | Arbovert',
@@ -28,9 +29,15 @@ const jsonLd = {
       "datePublished": "2026-03-01",
       "dateModified": "2026-03-01",
       "author": {
-        "@type": "Organization",
-        "name": "Arbovert",
-        "url": "https://www.arbovert-31.fr"
+        "@type": "Person",
+        "name": "Guillaume",
+        "jobTitle": "Co-gérant & élagueur grimpeur",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Arbovert",
+          "url": "https://www.arbovert-31.fr"
+        },
+        "image": "https://www.arbovert-31.fr/guillaume.jpg"
       },
       "publisher": {
         "@type": "Organization",
@@ -112,6 +119,15 @@ export default function QuandElaguer() {
             </p>
           </div>
         </section>
+
+        <AuthorCard
+          name="Guillaume"
+          role="Co-gérant & élagueur grimpeur — CAPA Travaux Forestiers"
+          bio="6 ans dans l'armée, passionné de trail et de nature. Mon credo : un travail soigné et le respect de chaque arbre."
+          photo="/guillaume.jpg"
+          datePublished="2026-03-01"
+          dateModified="2026-03-01"
+        />
 
         {/* Contenu article */}
         <article className="py-16 md:py-20 bg-white">
@@ -331,7 +347,7 @@ export default function QuandElaguer() {
                   <div className="rounded-2xl bg-white p-6 border border-forest/10">
                     <h3 className="font-heading text-lg text-forest mb-3">Vent d'Autan</h3>
                     <p className="text-night/80 text-sm">
-                      Le vent d'Autan (sud-est) peut souffler à 60-100 km/h. Les arbres mal élagués ou fragilisés sont particulièrement vulnérables. Un <strong>élagage préventif avant l'automne</strong> réduit la prise au vent et limite les risques de casse.
+                      Le vent d'Autan (sud-est) peut souffler à 60-100 km/h. Les arbres mal élagués ou fragilisés sont particulièrement vulnérables. Un <strong>élagage préventif avant l'automne</strong> réduit la prise au vent et limite les risques de casse. Découvrez nos <Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">réalisations avant/après</Link> incluant des interventions de sécurisation après intempéries.
                     </p>
                   </div>
                   <div className="rounded-2xl bg-white p-6 border border-forest/10">
@@ -388,7 +404,7 @@ export default function QuandElaguer() {
                   La <strong>haute saison</strong> pour les élagueurs en Haute-Garonne se situe entre <strong>mars et avril</strong>. C'est la période où les demandes explosent et les délais s'allongent.
                 </p>
                 <p className="text-lg text-night/80 mb-4">
-                  <strong>Notre recommandation :</strong> demandez votre devis dès <strong>janvier-février</strong> pour planifier une intervention en début de printemps. Vous bénéficierez de meilleurs délais et pourrez comparer sereinement les devis.
+                  <strong>Notre recommandation :</strong> demandez votre devis dès <strong>janvier-février</strong> pour planifier une intervention en début de printemps. Vous bénéficierez de meilleurs délais et pourrez comparer sereinement les devis. Pour vous faire une idée du travail réalisé, parcourez nos <Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">exemples de chantiers récents en Haute-Garonne</Link>.
                 </p>
                 <p className="text-lg text-night/80">
                   Pour les <strong>urgences</strong> (arbre menaçant, dégâts de tempête), nous intervenons toute l'année. Consultez notre page <Link href="/elagage-urgence-toulouse" className="text-forest underline hover:text-forest/80">élagage d'urgence à Toulouse</Link>.

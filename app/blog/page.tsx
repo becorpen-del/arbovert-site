@@ -19,6 +19,13 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: 'Tempête Nils en Haute-Garonne : retour sur nos interventions d\'urgence',
+    description: 'La tempête Nils du 12 février 2026 a causé des dégâts considérables en Haute-Garonne. Retour terrain sur les interventions d\'urgence d\'Arbovert : dégagement de voiries, sécurisation d\'arbres, dégagement de toitures.',
+    href: '/blog/tempete-nils-haute-garonne',
+    date: '2026-02-18',
+    category: 'Urgence',
+  },
+  {
     title: 'Chenille processionnaire à Toulouse : dangers, traitement et prévention',
     description: 'Comment lutter contre la chenille processionnaire du pin à Toulouse ? Identification, dangers pour la santé, traitements efficaces et calendrier d\'intervention.',
     href: '/blog/chenille-processionnaire-toulouse',

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import AuthorCard from '@/components/AuthorCard';
 
 export const metadata: Metadata = {
   title: 'Taille douce vs taille sévère : quelle méthode pour vos arbres ? | Arbovert',
@@ -25,9 +26,15 @@ const jsonLd = {
       "datePublished": "2026-05-01",
       "dateModified": "2026-05-01",
       "author": {
-        "@type": "Organization",
-        "name": "Arbovert",
-        "url": "https://www.arbovert-31.fr"
+        "@type": "Person",
+        "name": "Guillaume",
+        "jobTitle": "Co-gérant & élagueur grimpeur",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Arbovert",
+          "url": "https://www.arbovert-31.fr"
+        },
+        "image": "https://www.arbovert-31.fr/guillaume.jpg"
       },
       "publisher": {
         "@type": "Organization",
@@ -117,6 +124,15 @@ export default function TailleDouceVsTailleSevere() {
             </p>
           </div>
         </section>
+
+        <AuthorCard
+          name="Guillaume"
+          role="Co-gérant & élagueur grimpeur — CAPA Travaux Forestiers"
+          bio="6 ans dans l'armée, passionné de trail et de nature. Mon credo : un travail soigné et le respect de chaque arbre."
+          photo="/guillaume.jpg"
+          datePublished="2026-05-01"
+          dateModified="2026-05-01"
+        />
 
         {/* Contenu article */}
         <article className="py-16 md:py-20 bg-white">
@@ -493,7 +509,7 @@ export default function TailleDouceVsTailleSevere() {
                   <div className="rounded-2xl bg-leaf/5 p-6 border border-leaf/20">
                     <h3 className="font-heading text-lg text-forest mb-3">L'approche Arbovert : 100% taille douce</h3>
                     <p className="text-night/80">
-                      Chez Arbovert, nous pratiquons <strong>exclusivement la taille douce</strong>, sauf cas exceptionnels de sécurité absolue. Nos élagueurs grimpeurs sont formés aux techniques de taille raisonnée et respectent systématiquement les principes fondamentaux : respect du bourrelet cicatriciel, coupes de petit diamètre, conservation de l'architecture naturelle. Nous prenons le temps d'observer chaque arbre avant d'intervenir, d'expliquer nos choix au client et de planifier les interventions futures. C'est notre engagement pour la santé de vos arbres et la beauté de votre jardin.
+                      Chez Arbovert, nous pratiquons <strong>exclusivement la taille douce</strong>, sauf cas exceptionnels de sécurité absolue. Nos élagueurs grimpeurs sont formés aux techniques de taille raisonnée et respectent systématiquement les principes fondamentaux : respect du bourrelet cicatriciel, coupes de petit diamètre, conservation de l'architecture naturelle. Nous prenons le temps d'observer chaque arbre avant d'intervenir, d'expliquer nos choix au client et de planifier les interventions futures. C'est notre engagement pour la santé de vos arbres et la beauté de votre jardin. Consultez nos <Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">réalisations avant/après</Link> pour voir des exemples concrets de taille douce et d'interventions respectueuses.
                     </p>
                   </div>
                 </div>
@@ -528,7 +544,7 @@ export default function TailleDouceVsTailleSevere() {
                 <div className="rounded-3xl border border-forest/10 bg-beige/50 p-8 shadow-sm">
                   <h3 className="font-heading text-lg text-forest mb-3">Comment reconnaître un élagueur qui pratique la taille douce ?</h3>
                   <p className="text-night/80">
-                    Plusieurs indices permettent d'identifier un élagueur adepte de la taille douce. Il <strong>prend le temps d'observer l'arbre</strong> avant d'intervenir et vous explique ses choix de coupe. Il respecte le bourrelet cicatriciel, ne coupe jamais de branches de plus de 10 cm de diamètre sauf nécessité absolue, et <strong>ne supprime jamais plus de 30% du houppier</strong>. Il possède généralement une certification professionnelle (CS Taille et Soins des Arbres ou équivalent) et peut vous montrer des exemples de ses réalisations. Méfiez-vous des prestataires qui proposent de « tout couper » pour un prix très bas : c'est souvent le signe d'une taille sévère déguisée. N'hésitez pas à demander des photos avant/après de chantiers précédents.
+                    Plusieurs indices permettent d'identifier un élagueur adepte de la taille douce. Il <strong>prend le temps d'observer l'arbre</strong> avant d'intervenir et vous explique ses choix de coupe. Il respecte le bourrelet cicatriciel, ne coupe jamais de branches de plus de 10 cm de diamètre sauf nécessité absolue, et <strong>ne supprime jamais plus de 30% du houppier</strong>. Il possède généralement une certification professionnelle (CS Taille et Soins des Arbres ou équivalent) et peut vous montrer des exemples de ses réalisations. Méfiez-vous des prestataires qui proposent de « tout couper » pour un prix très bas : c'est souvent le signe d'une taille sévère déguisée. N'hésitez pas à demander des photos avant/après de chantiers précédents — à titre d'exemple, voici <Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">nos réalisations en Haute-Garonne</Link>.
                   </p>
                 </div>
               </div>

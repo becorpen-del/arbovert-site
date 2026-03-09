@@ -388,8 +388,11 @@ export default function ElagueurBlagnac() {
               <p className="text-lg text-night/80 mb-4">
                 Nous maîtrisons les essences locales typiques de Blagnac : <strong>platanes, peupliers, saules, chênes, pins et cèdres</strong>. Notre connaissance du terrain nous permet d'anticiper les contraintes liées au climat local et à l'exposition au vent d'Autan.
               </p>
-              <p className="text-lg text-night/80">
+              <p className="text-lg text-night/80 mb-4">
                 Besoin d'un élagueur dans une commune voisine ? Nous intervenons également à <Link href="/elagage-colomiers" className="text-forest underline hover:text-forest/80">Colomiers</Link>, <Link href="/elagage-tournefeuille" className="text-forest underline hover:text-forest/80">Tournefeuille</Link>, <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Toulouse</Link> et dans toute la métropole toulousaine.
+              </p>
+              <p className="text-lg text-night/80">
+                Pour approfondir vos connaissances, consultez nos articles : <Link href="/blog/quand-elaguer-arbres-toulouse" className="text-forest underline hover:text-forest/80">quand élaguer vos arbres dans la région toulousaine</Link>, <Link href="/blog/reglementation-elagage-haute-garonne" className="text-forest underline hover:text-forest/80">la réglementation de l'élagage en Haute-Garonne</Link> et <Link href="/blog/prix-elagage-toulouse" className="text-forest underline hover:text-forest/80">les prix de l'élagage à Toulouse et ses environs</Link>.
               </p>
             </div>
           </div>

@@ -431,8 +431,11 @@ export default function ElagageCastanetTolosan() {
               <p className="text-lg text-night/80 mb-4">
                 Le <strong>climat sud-toulousain</strong> (été chaud et sec, hiver doux) favorise une croissance rapide des végétaux. La sécheresse estivale peut fragiliser les arbres matures, notamment les chênes sur coteaux exposés.
               </p>
-              <p className="text-lg text-night/80">
+              <p className="text-lg text-night/80 mb-4">
                 Nous intervenons aussi dans les communes voisines : <Link href="/elagage-ramonville" className="text-forest underline hover:text-forest/80">Ramonville</Link>, <Link href="/elagage-labege" className="text-forest underline hover:text-forest/80">Labège</Link>, <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Toulouse sud</Link> et Auzeville-Tolosane.
+              </p>
+              <p className="text-lg text-night/80">
+                Pour en savoir plus, consultez nos articles : <Link href="/blog/quand-elaguer-arbres-toulouse" className="text-forest underline hover:text-forest/80">quand élaguer vos arbres dans la région toulousaine</Link>, <Link href="/blog/taille-douce-vs-taille-severe" className="text-forest underline hover:text-forest/80">taille douce vs taille sévère</Link> et <Link href="/blog/prix-elagage-toulouse" className="text-forest underline hover:text-forest/80">les prix de l'élagage à Toulouse et ses environs</Link>.
               </p>
             </div>
           </div>

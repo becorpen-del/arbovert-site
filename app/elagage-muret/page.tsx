@@ -313,8 +313,17 @@ export default function ElagueurMuret() {
             <p className="text-lg text-night/80 mb-4">
               Les essences locales typiques incluent les <strong>platanes</strong> alignés en centre-bourg, les <strong>chênes pédonculés</strong>, les <strong>frênes communs</strong>, les <strong>pins parasols</strong> et de nombreux <strong>arbres fruitiers</strong> dans les jardins des particuliers. La proximité de la Garonne et les sols alluviaux favorisent un développement vigoureux de la végétation, nécessitant un entretien régulier et adapté.
             </p>
-            <p className="text-lg text-night/80">
+            <p className="text-lg text-night/80 mb-4">
               Nous réalisons chaque intervention dans le respect des <strong>normes de sécurité</strong>, du <strong>voisinage</strong> et du <strong>patrimoine végétal</strong>, avec un diagnostic phytosanitaire préalable et un matériel professionnel certifié. Nos interventions sont adaptées aux contraintes urbaines de Muret : accès restreints, proximité des habitations, lignes électriques aériennes.
+            </p>
+            <p className="text-lg text-night/80 mb-4">
+              <strong>Réglementation et PLU à Muret :</strong> contrairement aux communes de Toulouse Métropole, Muret dispose de son propre Plan Local d'Urbanisme. L'abattage d'arbres dans les zones classées, notamment le long des berges de la Garonne (zone PPRI), est soumis à des règles strictes. Les arbres remarquables identifiés dans le PLU nécessitent une autorisation spécifique avant tout abattage ou élagage sévère. En limite de propriété, les dispositions du Code civil s'appliquent : un arbre de plus de 2 mètres doit être planté à au moins 2 mètres de la clôture. Notre équipe vous accompagne dans l'ensemble des démarches administratives.
+            </p>
+            <p className="text-lg text-night/80 mb-4">
+              Le patrimoine arboré de Muret est particulièrement riche grâce à la confluence des influences atlantiques et méditerranéennes. On y trouve des <strong>peupliers noirs et peupliers blancs</strong> le long de la Garonne, des <strong>chênes pédonculés et chênes pubescents</strong> sur les coteaux, des <strong>frênes communs</strong> dans les zones humides, et de nombreux <strong>platanes à feuilles d'érable</strong> qui bordent les avenues du centre-ville. Les jardins privés accueillent une grande diversité de fruitiers : <strong>pruniers d'Ente, cerisiers Burlat, figuiers, noyers et pommiers</strong>. Les haies sont composées principalement de lauriers-palme, de troènes et de cyprès de Leyland.
+            </p>
+            <p className="text-lg text-night/80">
+              Retrouvez nos <Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">réalisations d'élagage récentes en Haute-Garonne</Link> pour voir des exemples concrets de nos interventions. Pour en savoir plus sur les bonnes pratiques, consultez notre article sur <Link href="/blog/taille-douce-vs-taille-severe" className="text-forest underline hover:text-forest/80">la taille douce vs la taille sévère</Link> et notre guide sur <Link href="/blog/prix-elagage-toulouse" className="text-forest underline hover:text-forest/80">les prix de l'élagage dans la région toulousaine</Link>.
             </p>
           </div>
         </div>

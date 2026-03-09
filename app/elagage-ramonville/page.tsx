@@ -430,8 +430,11 @@ export default function ElagageRamonville() {
               <p className="text-lg text-night/80 mb-4">
                 <strong>Spécificité importante :</strong> le <strong>métro ligne B</strong> (station Ramonville) génère un flux piéton important. Les arbres à proximité des axes de circulation piétonne doivent être élagués régulièrement pour la sécurité des passants.
               </p>
-              <p className="text-lg text-night/80">
+              <p className="text-lg text-night/80 mb-4">
                 Nous intervenons aussi dans les communes voisines : <Link href="/elagage-labege" className="text-forest underline hover:text-forest/80">Labège</Link>, <Link href="/elagage-balma" className="text-forest underline hover:text-forest/80">Balma</Link>, <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Toulouse sud</Link> et Castanet-Tolosan.
+              </p>
+              <p className="text-lg text-night/80">
+                Consultez nos articles pour en savoir plus : <Link href="/blog/quand-elaguer-arbres-toulouse" className="text-forest underline hover:text-forest/80">quand élaguer vos arbres à Toulouse et ses environs</Link>, <Link href="/blog/reglementation-elagage-haute-garonne" className="text-forest underline hover:text-forest/80">la réglementation de l'élagage en Haute-Garonne</Link> et <Link href="/blog/entretien-jardin-printemps" className="text-forest underline hover:text-forest/80">l'entretien de jardin au printemps</Link>.
               </p>
             </div>
           </div>

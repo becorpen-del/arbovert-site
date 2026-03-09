@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import AuthorCard from '@/components/AuthorCard';
 
 export const metadata: Metadata = {
   title: 'Prix élagage 2026 à Toulouse : tarifs, devis et conseils | Arbovert',
@@ -27,9 +28,15 @@ const jsonLd = {
       "datePublished": "2026-04-01",
       "dateModified": "2026-04-01",
       "author": {
-        "@type": "Organization",
-        "name": "Arbovert",
-        "url": "https://www.arbovert-31.fr"
+        "@type": "Person",
+        "name": "Guillaume",
+        "jobTitle": "Co-gérant & élagueur grimpeur",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Arbovert",
+          "url": "https://www.arbovert-31.fr"
+        },
+        "image": "https://www.arbovert-31.fr/guillaume.jpg"
       },
       "publisher": {
         "@type": "Organization",
@@ -119,6 +126,15 @@ export default function PrixElagageToulouse() {
             </p>
           </div>
         </section>
+
+        <AuthorCard
+          name="Guillaume"
+          role="Co-gérant & élagueur grimpeur — CAPA Travaux Forestiers"
+          bio="6 ans dans l'armée, passionné de trail et de nature. Mon credo : un travail soigné et le respect de chaque arbre."
+          photo="/guillaume.jpg"
+          datePublished="2026-04-01"
+          dateModified="2026-04-01"
+        />
 
         {/* Contenu article */}
         <article className="py-16 md:py-20 bg-white">
@@ -307,7 +323,7 @@ export default function PrixElagageToulouse() {
                   <div className="rounded-2xl bg-white p-6 border border-leaf/20">
                     <h3 className="font-heading text-lg text-forest mb-2">Privilégiez l'entretien régulier</h3>
                     <p className="text-night/80">
-                      Un arbre taillé régulièrement (tous les 3 à 5 ans) nécessite un élagage <strong>léger et rapide</strong>, donc moins coûteux. À l'inverse, un arbre négligé pendant 10 ou 15 ans nécessite une intervention lourde avec des coupes importantes et un volume de déchets considérable. Sur le long terme, l'entretien régulier revient <strong>30 à 50% moins cher</strong> que des interventions ponctuelles de rattrapage.
+                      Un arbre taillé régulièrement (tous les 3 à 5 ans) nécessite un élagage <strong>léger et rapide</strong>, donc moins coûteux. À l'inverse, un arbre négligé pendant 10 ou 15 ans nécessite une intervention lourde avec des coupes importantes et un volume de déchets considérable. Sur le long terme, l'entretien régulier revient <strong>30 à 50% moins cher</strong> que des interventions ponctuelles de rattrapage. Consultez nos <Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">réalisations avant/après</Link> pour voir la différence concrète entre un entretien régulier et une intervention de rattrapage.
                     </p>
                   </div>
 
@@ -486,7 +502,7 @@ export default function PrixElagageToulouse() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="flex-shrink-0 w-7 h-7 rounded-full bg-leaf/20 flex items-center justify-center text-forest font-heading text-sm">7</span>
-                    <span><strong>Avis clients vérifiables</strong> — consultez les avis Google, les photos de réalisations et demandez des références de chantiers récents dans votre quartier.</span>
+                    <span><strong>Avis clients vérifiables</strong> — consultez les avis Google, les <Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">photos de réalisations avant/après</Link> et demandez des références de chantiers récents dans votre quartier.</span>
                   </li>
                 </ul>
               </div>

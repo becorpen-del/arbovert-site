@@ -433,8 +433,11 @@ export default function ElagagePortetSurGaronne() {
               <p className="text-lg text-night/80 mb-4">
                 Dans les <strong>quartiers résidentiels</strong> (Les Cèdres, Chemin de Boudou), les grands jardins abritent des <strong>pins maritimes, chênes verts, cèdres</strong> et de nombreux <strong>arbres fruitiers</strong>. Les haies de lauriers et de cyprès de Leyland y sont omniprésentes et requièrent deux tailles annuelles minimum pour conserver un aspect soigné.
               </p>
-              <p className="text-lg text-night/80">
+              <p className="text-lg text-night/80 mb-4">
                 Besoin d'un élagueur dans une commune voisine ? Nous intervenons également à <Link href="/elagage-muret" className="text-forest underline hover:text-forest/80">Muret</Link>, <Link href="/elagage-cugnaux" className="text-forest underline hover:text-forest/80">Cugnaux</Link>, <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Toulouse</Link> et dans toute la métropole.
+              </p>
+              <p className="text-lg text-night/80">
+                Pour approfondir vos connaissances sur l'entretien de vos arbres à Portet-sur-Garonne, consultez nos articles : <Link href="/blog/quand-elaguer-arbres-toulouse" className="text-forest underline hover:text-forest/80">quand élaguer vos arbres en Haute-Garonne</Link>, <Link href="/blog/reglementation-elagage-haute-garonne" className="text-forest underline hover:text-forest/80">la réglementation en vigueur</Link> et <Link href="/blog/tempete-nils-haute-garonne" className="text-forest underline hover:text-forest/80">les conséquences de la tempête Nils sur les arbres de la région</Link>. Découvrez aussi nos <Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">réalisations en Haute-Garonne</Link>.
               </p>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import AuthorCard from '@/components/AuthorCard';
 
 export const metadata: Metadata = {
   title: 'Chenille processionnaire à Toulouse : dangers, traitement et prévention | Arbovert',
@@ -25,9 +26,15 @@ const jsonLd = {
       "datePublished": "2026-05-15",
       "dateModified": "2026-05-15",
       "author": {
-        "@type": "Organization",
-        "name": "Arbovert",
-        "url": "https://www.arbovert-31.fr"
+        "@type": "Person",
+        "name": "Guillaume",
+        "jobTitle": "Co-gérant & élagueur grimpeur",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Arbovert",
+          "url": "https://www.arbovert-31.fr"
+        },
+        "image": "https://www.arbovert-31.fr/guillaume.jpg"
       },
       "publisher": {
         "@type": "Organization",
@@ -117,6 +124,15 @@ export default function ChenilleProcessionnaire() {
             </p>
           </div>
         </section>
+
+        <AuthorCard
+          name="Guillaume"
+          role="Co-gérant & élagueur grimpeur — CAPA Travaux Forestiers"
+          bio="6 ans dans l'armée, passionné de trail et de nature. Mon credo : un travail soigné et le respect de chaque arbre."
+          photo="/guillaume.jpg"
+          datePublished="2026-05-15"
+          dateModified="2026-05-15"
+        />
 
         {/* Contenu article */}
         <article className="py-16 md:py-20 bg-white">

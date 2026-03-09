@@ -432,8 +432,11 @@ export default function ElagageLabege() {
               <p className="text-lg text-night/80 mb-4">
                 <strong>Attention particulière</strong> : la proximité du Canal du Midi impose des précautions sanitaires. Le chancre coloré du platane, maladie fongique dévastatrice, se transmet par les outils de coupe. Arbovert désinfecte systématiquement son matériel entre chaque arbre.
               </p>
-              <p className="text-lg text-night/80">
+              <p className="text-lg text-night/80 mb-4">
                 Besoin d'un élagueur dans une commune voisine ? Nous intervenons également à <Link href="/elagage-ramonville" className="text-forest underline hover:text-forest/80">Ramonville</Link>, <Link href="/elagage-balma" className="text-forest underline hover:text-forest/80">Balma</Link>, <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Toulouse</Link> et dans toute la métropole.
+              </p>
+              <p className="text-lg text-night/80">
+                Pour approfondir vos connaissances, consultez nos articles : <Link href="/blog/taille-douce-vs-taille-severe" className="text-forest underline hover:text-forest/80">taille douce vs taille sévère</Link>, <Link href="/blog/reglementation-elagage-haute-garonne" className="text-forest underline hover:text-forest/80">la réglementation de l'élagage en Haute-Garonne</Link> et <Link href="/blog/prix-elagage-toulouse" className="text-forest underline hover:text-forest/80">les prix de l'élagage à Toulouse et ses environs</Link>.
               </p>
             </div>
           </div>

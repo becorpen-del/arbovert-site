@@ -174,6 +174,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/blog/tempete-nils-haute-garonne`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    // Pages legales
+    {
+      url: `${baseUrl}/mentions-legales`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/politique-de-confidentialite`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
   ];
 
   return routes;

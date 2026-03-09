@@ -309,8 +309,20 @@ export default function ElagueurCugnaux() {
             <p className="text-lg text-night/80 mb-4">
               Nous effectuons nos interventions dans le respect des végétaux, des <strong>normes de sécurité</strong> et du <strong>voisinage</strong>, avec un matériel professionnel régulièrement contrôlé. Chaque chantier fait l'objet d'un <strong>diagnostic préalable</strong> pour garantir des travaux adaptés à l'âge, l'essence et l'état sanitaire de vos arbres.
             </p>
-            <p className="text-lg text-night/80">
+            <p className="text-lg text-night/80 mb-4">
               La proximité de la Garonne et le climat toulousain favorisent le développement rapide de la végétation, nécessitant un entretien régulier. Les platanes alignés en bord de voirie, les pins parasols caractéristiques de nos jardins et les haies de lauriers palmes requièrent une attention particulière aux périodes de taille optimales.
+            </p>
+            <p className="text-lg text-night/80 mb-4">
+              Nous intervenons dans tous les quartiers de Cugnaux : <strong>centre-ville</strong> avec ses platanes et tilleuls centenaires, <strong>Vivier Maçon</strong> et ses lotissements récents aux haies de lauriers et photinias, <strong>Le Barry</strong> et ses propriétés arborées avec chênes et pins, ainsi que les secteurs proches du <strong>Touch</strong> où les saules, frênes et peupliers nécessitent un suivi régulier en raison de la proximité de la rivière.
+            </p>
+            <p className="text-lg text-night/80 mb-4">
+              <strong>Réglementation et PLU à Cugnaux :</strong> la commune fait partie de Toulouse Métropole et est soumise au PLUi-H (Plan Local d'Urbanisme intercommunal). L'abattage d'arbres peut nécessiter une déclaration préalable de travaux, particulièrement dans les espaces boisés classés et les zones protégées identifiées dans le document d'urbanisme. Les arbres en limite de propriété doivent respecter les distances légales du Code civil (2 mètres minimum pour les arbres de plus de 2 mètres de haut). Si votre terrain est situé en zone inondable (le long du Touch), des contraintes supplémentaires peuvent s'appliquer. Nous vous accompagnons dans toutes ces démarches.
+            </p>
+            <p className="text-lg text-night/80 mb-4">
+              Les <strong>essences d'arbres dominantes à Cugnaux</strong> reflètent le caractère résidentiel de la commune : <strong>chênes pédonculés et chênes verts</strong> dans les parcs et grands jardins, <strong>platanes à feuilles d'érable</strong> le long des avenues principales, <strong>pins parasols et pins maritimes</strong> dans les lotissements des années 1980-1990. Les <strong>cyprès de Leyland et thuyas</strong> forment la majorité des haies séparatives, tandis que les <strong>lauriers-palme et photinias</strong> sont privilégiés dans les constructions plus récentes. On trouve aussi de nombreux <strong>fruitiers</strong> (cerisiers, pruniers, figuiers, pommiers) dans les jardins familiaux, ainsi que des <strong>tilleuls et érables</strong> dans les espaces publics.
+            </p>
+            <p className="text-lg text-night/80">
+              Découvrez nos <Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">réalisations d'élagage en Haute-Garonne</Link> pour des exemples concrets de nos chantiers. Consultez aussi nos articles de blog : <Link href="/blog/quand-elaguer-arbres-toulouse" className="text-forest underline hover:text-forest/80">quand élaguer vos arbres dans la région toulousaine</Link> et <Link href="/blog/reglementation-elagage-haute-garonne" className="text-forest underline hover:text-forest/80">la réglementation de l'élagage en Haute-Garonne</Link>.
             </p>
           </div>
         </div>

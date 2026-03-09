@@ -516,8 +516,11 @@ export default function ElagueurBalma() {
               <p className="text-lg text-night/80 mb-4">
                 <strong>Conseil local</strong> : À Balma, privilégiez l'élagage des platanes et érables entre novembre et février. Pour le quartier Lasbordes, attention aux réglementations PLU pour les arbres en limite de propriété.
               </p>
-              <p className="text-lg text-night/80">
+              <p className="text-lg text-night/80 mb-4">
                 Besoin d'un élagueur dans une commune voisine ? Nous intervenons également à <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Toulouse</Link>, <Link href="/elagage-blagnac" className="text-forest underline hover:text-forest/80">Blagnac</Link>, <Link href="/elagage-colomiers" className="text-forest underline hover:text-forest/80">Colomiers</Link> et dans toute la métropole toulousaine.
+              </p>
+              <p className="text-lg text-night/80">
+                Pour en savoir plus, lisez nos articles : <Link href="/blog/reglementation-elagage-haute-garonne" className="text-forest underline hover:text-forest/80">la réglementation de l'élagage en Haute-Garonne</Link>, <Link href="/blog/quand-elaguer-arbres-toulouse" className="text-forest underline hover:text-forest/80">quand élaguer vos arbres à Toulouse et ses environs</Link> et <Link href="/blog/chenille-processionnaire-toulouse" className="text-forest underline hover:text-forest/80">la chenille processionnaire : comment protéger vos pins</Link>.
               </p>
             </div>
           </div>

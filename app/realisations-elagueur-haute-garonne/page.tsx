@@ -20,6 +20,34 @@ export const metadata: Metadata = {
 
 const realisations: RealisationCardProps[] = [
   {
+    title: "Urgence tempête — Interventions de mise en sécurité",
+    location: 'HAUTE-GARONNE (31)',
+    description:
+      `Suite à la tempête du 12 février 2026, Arbovert a été mobilisé en urgence sur plusieurs interventions simultanées en Haute-Garonne. Dégagement de voiries obstruées par des arbres tombés, mise en sécurité de zones menacées et dégagement de toitures pour permettre l'intervention des couvreurs. Des missions menées à bien dans l'urgence pour la tranquillité et la sécurité des riverains.`,
+    highlights: [
+      'Dégagement de la voirie bloquée par des arbres',
+      "Intervention d'urgence pour mise en sécurité",
+      'Dégagement des toitures pour les couvreurs'
+    ],
+    footer: `📍 Haute-Garonne | 🛠️ Intervention d'urgence après tempête`,
+    beforeImage: '/realisations/tempete-avant.jpg',
+    afterImage: '/realisations/tempete-apres.jpg'
+  },
+  {
+    title: "Démontage d'un grand tilleul incliné après intempéries",
+    location: 'BEAUMONT-SUR-LÈZE (31)',
+    description:
+      `Suite aux intempéries, ce tilleul s'est fortement incliné, menaçant directement la maison ainsi que les arbres situés juste en dessous, qu'il fallait impérativement préserver. Une intervention technique qui a nécessité un démontage progressif et maîtrisé, une gestion précise des rétentions et la protection des végétaux environnants. Un chantier délicat, mené avec rigueur et précision pour protéger les biens… et le vivant.`,
+    highlights: [
+      'Démontage progressif et maîtrisé',
+      'Gestion précise des rétentions',
+      'Protection des végétaux environnants préservés'
+    ],
+    footer: `📍 Beaumont-sur-Lèze | 🛠️ Abattage & démontage d'arbres dangereux`,
+    beforeImage: '/realisations/beaumont-avant.jpg',
+    afterImage: '/realisations/beaumont-apres.jpg'
+  },
+  {
     title: "Taille de sécurisation d'un eucalyptus menaçant",
     location: 'CAZÈRES (31)',
     description:
@@ -169,7 +197,7 @@ export default function RealisationsPage() {
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="font-heading text-4xl text-forest">Nos réalisations d'élagage et d'entretien d'espaces verts</h1>
           <p className="mt-4 text-lg text-night/80">
-            Quelques chantiers récents menés en Haute-Garonne : élagage, abattage, taille de haies et entretien complet de jardins.
+            Quelques chantiers récents menés en Haute-Garonne : élagage, abattage, taille de haies et entretien complet de jardins. Chaque intervention est réalisée en <Link href="/blog/taille-douce-vs-taille-severe" className="text-forest underline hover:text-forest/80">taille douce et raisonnée</Link>, dans le respect de la <Link href="/blog/reglementation-elagage-haute-garonne" className="text-forest underline hover:text-forest/80">réglementation en vigueur</Link>.
           </p>
         </div>
       </header>
@@ -188,6 +216,38 @@ export default function RealisationsPage() {
               <p className="mt-2 text-night/80">{reason.text}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="font-heading text-3xl text-forest text-center mb-8">Articles liés</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Link href="/blog/taille-douce-vs-taille-severe" className="group rounded-2xl border border-forest/10 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+              <p className="font-heading text-forest group-hover:text-forest/80 transition-colors mb-2">Taille douce vs taille sévère</p>
+              <p className="text-sm text-night/60">Comprendre les deux approches d'élagage et leurs conséquences sur vos arbres</p>
+            </Link>
+            <Link href="/blog/prix-elagage-toulouse" className="group rounded-2xl border border-forest/10 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+              <p className="font-heading text-forest group-hover:text-forest/80 transition-colors mb-2">Prix élagage à Toulouse en 2026</p>
+              <p className="text-sm text-night/60">Tarifs moyens, facteurs de prix et astuces pour réduire la facture</p>
+            </Link>
+            <Link href="/blog/quand-elaguer-arbres-toulouse" className="group rounded-2xl border border-forest/10 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+              <p className="font-heading text-forest group-hover:text-forest/80 transition-colors mb-2">Quand élaguer vos arbres ?</p>
+              <p className="text-sm text-night/60">Calendrier et périodes idéales par essence en Haute-Garonne</p>
+            </Link>
+            <Link href="/blog/reglementation-elagage-haute-garonne" className="group rounded-2xl border border-forest/10 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+              <p className="font-heading text-forest group-hover:text-forest/80 transition-colors mb-2">Réglementation élagage 2026</p>
+              <p className="text-sm text-night/60">Droits, obligations et zones protégées en Haute-Garonne</p>
+            </Link>
+            <Link href="/blog/entretien-jardin-printemps" className="group rounded-2xl border border-forest/10 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+              <p className="font-heading text-forest group-hover:text-forest/80 transition-colors mb-2">Entretien de jardin au printemps</p>
+              <p className="text-sm text-night/60">Guide mois par mois pour préparer votre jardin en Haute-Garonne</p>
+            </Link>
+            <Link href="/blog/chenille-processionnaire-toulouse" className="group rounded-2xl border border-forest/10 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+              <p className="font-heading text-forest group-hover:text-forest/80 transition-colors mb-2">Chenille processionnaire</p>
+              <p className="text-sm text-night/60">Dangers, traitements et prévention à Toulouse</p>
+            </Link>
+          </div>
         </div>
       </section>
 

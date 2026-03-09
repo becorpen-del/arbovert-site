@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import AuthorCard from '@/components/AuthorCard';
 
 export const metadata: Metadata = {
   title: 'Réglementation élagage 2026 : droits, obligations et voisinage | Arbovert',
@@ -28,9 +29,15 @@ const jsonLd = {
       "datePublished": "2026-03-15",
       "dateModified": "2026-03-15",
       "author": {
-        "@type": "Organization",
-        "name": "Arbovert",
-        "url": "https://www.arbovert-31.fr"
+        "@type": "Person",
+        "name": "Guillaume",
+        "jobTitle": "Co-gérant & élagueur grimpeur",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Arbovert",
+          "url": "https://www.arbovert-31.fr"
+        },
+        "image": "https://www.arbovert-31.fr/guillaume.jpg"
       },
       "publisher": {
         "@type": "Organization",
@@ -120,6 +127,15 @@ export default function ReglementationElagage() {
             </p>
           </div>
         </section>
+
+        <AuthorCard
+          name="Guillaume"
+          role="Co-gérant & élagueur grimpeur — CAPA Travaux Forestiers"
+          bio="6 ans dans l'armée, passionné de trail et de nature. Mon credo : un travail soigné et le respect de chaque arbre."
+          photo="/guillaume.jpg"
+          datePublished="2026-03-15"
+          dateModified="2026-03-15"
+        />
 
         {/* Contenu article */}
         <article className="py-16 md:py-20 bg-white">
@@ -285,7 +301,7 @@ export default function ReglementationElagage() {
                   <div className="rounded-2xl bg-white p-6 border border-forest/10">
                     <h3 className="font-heading text-lg text-forest mb-2">Zones Natura 2000 et ZNIEFF</h3>
                     <p className="text-night/80">
-                      La Haute-Garonne compte plusieurs zones naturelles protégées (Garonne, coteaux de Pech-David, forêt de Bouconne). L'abattage d'arbres dans ces zones peut nécessiter une <strong>évaluation d'incidences Natura 2000</strong>. Renseignez-vous auprès de la DDT (Direction Départementale des Territoires) de Haute-Garonne.
+                      La Haute-Garonne compte plusieurs zones naturelles protégées (Garonne, coteaux de Pech-David, forêt de Bouconne). L'abattage d'arbres dans ces zones peut nécessiter une <strong>évaluation d'incidences Natura 2000</strong>. Renseignez-vous auprès de la DDT (Direction Départementale des Territoires) de Haute-Garonne. Arbovert est intervenu dans plusieurs de ces zones sensibles — découvrez nos <Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">réalisations en zone contrainte</Link>, notamment près de l'aéroport de Blagnac et en bord de Garonne.
                     </p>
                   </div>
                 </div>
@@ -510,7 +526,7 @@ export default function ReglementationElagage() {
                   </li>
                 </ul>
                 <p className="text-lg text-night/80">
-                  Chez Arbovert, nos élagueurs sont <strong>certifiés CAPA</strong> (Certificat d'Aptitude Professionnelle Agricole) et formés à la réglementation en vigueur. Nous intervenons dans toute la Haute-Garonne en respectant l'ensemble des normes environnementales et sanitaires.
+                  Chez Arbovert, nos élagueurs sont <strong>certifiés CAPA</strong> (Certificat d'Aptitude Professionnelle Agricole) et formés à la réglementation en vigueur. Nous intervenons dans toute la Haute-Garonne en respectant l'ensemble des normes environnementales et sanitaires. Parcourez nos <Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">réalisations avant/après</Link> pour voir des exemples concrets de chantiers réalisés dans le respect de la réglementation.
                 </p>
               </div>
             </section>

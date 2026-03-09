@@ -436,6 +436,9 @@ export default function ElagageSeysses() {
               <p className="text-lg text-night/80">
                 Le <strong>vent d'Autan</strong>, fréquent dans la vallée de la Garonne, soumet les arbres à des contraintes mécaniques importantes. Notre élagage de réduction de voilure permet de diminuer la prise au vent et de prévenir les casses de branches. Nous intervenons aussi dans les communes proches : <Link href="/elagage-muret" className="text-forest underline hover:text-forest/80">Muret</Link>, <Link href="/elagage-cugnaux" className="text-forest underline hover:text-forest/80">Cugnaux</Link> et <Link href="/elagage-toulouse" className="text-forest underline hover:text-forest/80">Toulouse sud</Link>.
               </p>
+              <p className="text-lg text-night/80">
+                Pour en savoir plus sur l'entretien de vos arbres, parcourez nos articles : <Link href="/blog/chenille-processionnaire-toulouse" className="text-forest underline hover:text-forest/80">comment lutter contre la chenille processionnaire</Link>, <Link href="/blog/quand-elaguer-arbres-toulouse" className="text-forest underline hover:text-forest/80">les meilleures périodes pour élaguer</Link> et <Link href="/blog/reglementation-elagage-haute-garonne" className="text-forest underline hover:text-forest/80">la réglementation de l'élagage en Haute-Garonne</Link>. Découvrez aussi nos <Link href="/realisations-elagueur-haute-garonne" className="text-forest underline hover:text-forest/80">réalisations d'élagage</Link>.
+              </p>
             </div>
           </div>
         </section>
